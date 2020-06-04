@@ -1,0 +1,99 @@
+/* User Story #1: I can see a title with id="title" in H1 sized text. */
+#title {
+    color: white;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    text-shadow: 2px 2px 4px #fff;
+    font-size: 2em; 
+    font-weight: bolder;
+}
+
+/* User Story #2: I can see a short explanation with id="description" in P sized text. */
+#description {
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #fff;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+}
+
+/* User Story #3: I can see a form with id="survey-form". */
+#survey-form {
+    color: black;
+}
+
+/* User Story #4: Inside the form element, I am required to enter my name in a field with id="name". */
+#name {
+    color: black;
+}
+
+/* User Story #5: Inside the form element, I am required to enter an email in a field with id="email". */
+/* User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. */
+#email {
+    color: black;
+}
+
+/* User Story #7: Inside the form, I can enter a number in a field with id="number". */
+/* User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. */
+/* User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. */
+#number {
+    color: black;
+}
+
+/* hover change color*/
+#name:hover, #email:hover, #number:hover, #dropdown:hover {
+    background-color: rgb(32, 218, 193);
+}
+
+
+/* User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". */
+/* User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. */
+#name-label {
+    color: black;
+}
+
+#email-label {
+    color: black;
+}
+
+#number-label {
+    color: black;
+}
+
+/* User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". */
+#dropdown {
+    color: black;
+}
+
+/* User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. */
+/* User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. */
+/* User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. */
+
+/* User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. */
+#submit {
+    color: black;
+}
+
+#submit:hover {
+    color: white;
+    background-color: rgb(32, 218, 193);
+}
+
+#card {
+    background-color: rgba(245, 245, 245, 0.801); 
+    margin: 20px;
+    border: rgb(32, 218, 193) solid 5px;
+    border-radius: 2.5%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'DM Mono', monospace;
+}
+
+body {
+    background-image: url(https://wallpaperaccess.com/full/1428481.jpg);
+    animation: moveIt 50s linear infinite;
+}
+
+@keyframes moveIt {
+    from {background-position: left;}
+    to {background-position: right;}
+}

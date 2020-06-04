@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 survey form</title>
+    <link rel="stylesheet" href="2-survey-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        function CheckJobs(val) {
+            var element = document.getElementById('other');
+            if (val == 'Select your current job' || val == 'others')
+                element.style.display = 'block';
+            else
+                element.style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="title">
+        Computer Programming Languages Survey Form
+    </div>
+
+    <p id="description">“Everybody should learn to program a computer, because it teaches you how to think.” - Steve
+        Jobs</p>
+
+    <div id="card">
+        <form id="survey-form" action="/action_page.php">
+
+            <table>
+
+                <tr>
+                    <td><label id="name-label" for="name">Name</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="Enter your name" required /></td>
+                </tr>
+
+                <tr>
+                    <td><label id="email-label" for="email">Email</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="Enter your Email" required /></td>
+                </tr>
+
+                <tr>
+                    <td><label id="number-label" for="number">Age (optional)</label></td>
+                    <td><input type="number" name="age" id="number" min="15" max="100" placeholder="Age" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>What is your job?</p>
+                    </td>
+                    <td><select name="job" id="dropdown" required onchange="CheckJobs(this.value);">
+                            <option disabled selected value>Select your current job</option>
+                            <option value="student">Student</option>
+                            <option value="frontend">Front-end web developer</option>
+                            <option value="backend">Back-end web developer</option>
+                            <option value="fullstack">Full-stack web developer</option>
+                            <option value="data">Data Analyst</option>
+                            <option value="software">Software Engineer</option>
+                            <option value="preferNo">Prefer not to say</option>
+                            <option value="others">Other (please specify)</option>
+                        </select>
+                        <input type="text" name="job" id="other" style="display:none;"></td>
+                </tr>
+            </table>
+            
+            <p>What is your gender?</p>
+            <label for="gender-male">
+                <input name="user-gender" value="male" type="radio">
+                Male
+            </label for="gender-female">
+            <label>
+                <input name="user-gender" value="female" type="radio">
+                Female
+            </label>
+            <label for="gender-other">
+                <input name="user-gender" value="other" type="radio">
+                Other
+            </label>
+
+            <br>
+
+            <p>What computer programming languages do you use? (check all that apply)</p>
+            <label for="html/css">
+                <input name="skill" value="html/css" type="checkbox">
+                HTML/CSS
+            </label>
+            <label for="js">
+                <input name="skill" value="js" type="checkbox">
+                JavaScript
+            </label>
+            <label for="php">
+                <input name="skill" value="php" type="checkbox">
+                PHP
+            </label>
+            <label for="sql">
+                <input name="skill" value="sql" type="checkbox">
+                SQL
+            </label>
+            <label for="java">
+                <input name="skill" value="java" type="checkbox">
+                Java
+            </label>
+            <label for="ruby">
+                <input name="skill" value="ruby" type="checkbox">
+                Ruby
+            </label>
+            <label for="python">
+                <input name="skill" value="python" type="checkbox">
+                Python
+            </label>
+            <label for="r">
+                <input name="skill" value="r" type="checkbox">
+                R
+            </label>
+            <label for="c">
+                <input name="skill" value="c" type="checkbox">
+                C/C++
+            </label>
+            <label for="go">
+                <input name="skill" value="go" type="checkbox">
+                Go
+            </label>
+
+            <br>
+
+            <p>Any other computer programming languages do you use?</p>
+            <textarea name="comment" style="width: 50%; height: 60px;"></textarea>
+
+            <br>
+
+            <div>
+                <button type="submit" id="submit">
+                    Submit
+                </button>
+            </div>
+    </div>
+    </form>
+    </div>
+
+</body>
+
+</html>
