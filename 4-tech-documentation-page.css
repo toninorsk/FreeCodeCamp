@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+body {
+    background-color: rgb(237, 237, 245);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). */
+#main-doc {
+    background-color: rgba(172, 226, 172, 0.644);
+    border-radius: 1.5%;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. */
+/* User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. */
+/* User Story #5: The .main-section elements should contain at least 10 p elements total (not each). */
+/* User Story #6: The .main-section elements should contain at least 5 code elements total (not each). */
+/* User Story #7: The .main-section elements should contain at least 5 li items total (not each). */
+.main-section {
+    color: black;
+}
+
+header {
+    font-size: 2em;
+    color: rgb(8, 44, 80);
+    text-align: center;
+}
+
+article {
+    margin: 10px;
+}
+
+/* User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). */
+
+/* User Story #8: I can see a nav element with a corresponding id="navbar". */
+/* User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation. */
+/* User Story #11: The header element in the navbar must come before any link (a) elements in the navbar. */
+/* User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. */
+#navbar {
+    background-color: rgba(122, 218, 122, 0.644);
+    border-radius: 3%;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+/* User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. */
+/* User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). */
+/* User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. */
+.nav-link {
+    color: black;
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    width: 75%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 255, 0, 0.8);
+    width: 78%;
+    color: rgb(197, 197, 86);
+}
+
+
+li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* User Story #15: My Technical Documentation page should use at least one media query. */
+
+.topic {
+    background-color: rgb(231, 225, 225);
+}
+
+.topic-label {
+    color: rgb(7, 121, 13); 
+    text-shadow: 2px 2px 4px rgb(95, 93, 93);
+}
+
+
+/* Up to top button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 255, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+#myBtn:hover {
+    background-color: rgba(0, 255, 0, 0.8);
+}
+
+
+/* For mobile phone: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
