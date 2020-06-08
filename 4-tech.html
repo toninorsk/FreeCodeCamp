@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 tech documentation</title>
+    <link rel="stylesheet" href="4-tech.css">
+</head>
+
+<body>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <nav id="navbar">
+        <header>Computer Science Fundamentals</header>
+        <ul>
+            <li><a class="nav-link" href="#overview">Overview</a></li>
+            <!-- Introduction to Network -->
+            <li><a class="nav-link topic" href="#Introduction_to_Networking">Introduction to Networking</a></li>
+            <li><a class="nav-link" href="#Computer_Networking">Computer Networking</a></li>
+            <li><a class="nav-link" href="#Application_Layer">Application Layer</a></li>
+            <li><a class="nav-link" href="#Transport_Layer">Transport Layer</a></li>
+            <li><a class="nav-link" href="#Network_Layer">Network Layer</a></li>
+            <li><a class="nav-link" href="#Link_Layer">Link Layer</a></li>
+            <li><a class="nav-link" href="#Overview_of_Network_Security">Overview of Network Security</a></li>
+
+            <!-- Computer Hardware and Operating Systems -->
+            <li><a class="nav-link topic" href="#Computer_Hardware_and_Operating_Systems">Computer Hardware and
+                    Operating
+                    Systems</a></li>
+            <li><a class="nav-link" href="#Fundamentals_of_System_Hardware">Fundamentals of System Hardware</a></li>
+            <li><a class="nav-link" href="#Introduction_to_Operating_Systems">Introduction to Operating Systems</a></li>
+            <li><a class="nav-link" href="#Processes_and_Threads">Processes and Threads</a></li>
+            <li><a class="nav-link" href="#Thread_Concurrency_and_Deadlocks">Thread Concurrency and
+                    Deadlocks</a>
+            </li>
+            <li><a class="nav-link" href="#Memory_Management">Memory Management</a></li>
+
+            <!-- Basics of Computing and Programming -->
+            <li><a class="nav-link topic" href="#Basics_of_Computing_and_Programming">Basics of Computing and
+                    Programming</a></li>
+            <li><a class="nav-link" href="#Positional_Number_Systems">Positional Number Systems</a></li>
+            <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+            <li><a class="nav-link" href="#Numerical_Data_Type_and_Arithmetic_Expressions">Numerical Data Type and
+                    Arithmetic Expressions</a></li>
+            <li><a class="nav-link" href="#Branching_Statement">Branching Statement</a></li>
+            <li><a class="nav-link" href="#Iterative_Statement">Iterative Statement</a></li>
+            <li><a class="nav-link" href="#Strings">Strings</a></li>
+            <li><a class="nav-link" href="#Functions">Functions</a></li>
+            <li><a class="nav-link" href="#Lists">Lists</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <img src="https://engineering.nyu.edu/sites/default/files/2019-01/tandon_long_color.png" alt="nyu-logo"
+            width="50%">
+        <section class="main-section" id="overview">
+            <header class="topic-label" style="color: white;">Overview</header>
+            <article>
+                <div>
+                    <img src="https://i.ibb.co/ypNGvxG/71338470-2391737664213895-8146683023476129792-o.jpg"
+                        alt="nattawoot" class="prof-img" style="display: inline; vertical-align: middle;">
+                    Nattawoot Denduangchai
+                </div>
+
+                <div>
+                    <p>
+                        <a href="https://www.edx.org/microbachelors/nyux-computer-science-fundamentals">MicroBachelors
+                            Program in Computer Science Fundamentals</a>, New York University Tandon School of
+                        Engineering
+                    </p>
+                </div>
+                <p>Computer Hardware & Operating Systems outline:</p>
+                <ol>
+                    <li>Fundamentals of system hardware</li>
+                    <li>Introduction to OS concepts</li>
+                    <li>OS processes and threads</li>
+                    <li>Thread concurrency and deadlocks</li>
+                    <li>Memory management</li>
+                </ol>
+
+                <p>Computer Networking outline:</p>
+                <ol>
+                    <li>Computer networking overview</li>
+                    <li>Computer networking architecture: application, transport, network and link layers
+                    </li>
+                    <li>Network Security overview</li>
+                </ol>
+
+                <p>Basics of Computing & Programming outline:</p>
+                <ol>
+                    <li>Positional number systems</li>
+                    <li>Hello world</li>
+                    <li>Numerical data types and arithmetic expressions</li>
+                    <li>Branching statements</li>
+                    <li>Iterative/Loop statements</li>
+                    <li>Strings & Functions</li>
+                    <li>Array-based sequences/Lists</li>
+                </ol>
+
+                <table>
+                    <tr>
+
+                        <td>
+                    <tr>
+                        <td><img class="prof-img"
+                                src="https://prod-discovery.edx-cdn.org/media/people/profile_images/e99ea239-08ff-4adf-909e-8588acee2c9a-4c955ea6f447.png"
+                                alt="Aspen"></td>
+                        <td><img class="prof-img"
+                                src="https://prod-discovery.edx-cdn.org/media/people/profile_images/ac3b4379-db65-4b27-94f8-a0eb866a9aaa-4163411cfb6f.png"
+                                alt="Itay"></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.edx.org/bio/aspen-olmsted">Aspen Olmsted</a><br>Adjunct
+                            Professor<br>New York University Tandon School of Engineering</td>
+                        <td><a href="https://www.edx.org/bio/itay-tal">Itay Tal</a><br>Industry Assistant
+                            Professor<br>New York University Tandon School of Engineering</td>
+                    </tr>
+                    </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                    <tr>
+                        <td><img class="prof-img"
+                                src="https://prod-discovery.edx-cdn.org/media/people/profile_images/6576bc19-192d-48d8-8166-989884a304c7-493af8e3be12.png"
+                                alt="Rafail"></td>
+                        <td><img class="prof-img"
+                                src="https://prod-discovery.edx-cdn.org/media/people/profile_images/6a06ec8a-73f5-42c9-86d6-761ba23a8318-1c5fb223fedc.png"
+                                alt="Daniel"></td>
+                    </tr>
+                    </td>
+                    <td>
+                        <tr>
+                            <td><a href="https://www.edx.org/bio/rafail-portnoy">Rafail Portnoy</a><br>Professor<br>New
+                                York University Tandon School of Engineering</td>
+                            <td><a href="https://www.edx.org/bio/daniel-katz-braunschweig">Daniel
+                                    Katz-Braunschweig</a><br>Senior Lecturer<br>New York University Tandon School of
+                                Engineering</td>
+                        </tr>
+                    </td>
+                    </tr>
+                </table>
+
+            </article>
+        </section>
+        <!-- Introduction to Network -->
+        <section class="main-section" id="Introduction_to_Networking">
+            <header class="topic-label" style="color: white;">Introduction to Networking</header>
+            <br>
+        </section>
+        <section class="main-section" id="Computer_Networking">
+            <header>Computer Networking</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Application_Layer">
+            <header>Application Layer</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Transport_Layer">
+            <header>Transport Layer</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Network_Layer">
+            <header>Network Layer</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Link_Layer">
+            <header>Link Layer</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Overview_of_Network_Security">
+            <header>Overview of Network Security</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <!-- Computer Hardware and Operating Systems -->
+        <section class="main-section" id="Computer_Hardware_and_Operating_Systems">
+            <header class="topic-label" style="color: white;">Computer Hardware and Operating Systems</header>
+        </section>
+        <br>
+        <section class="main-section" id="Fundamentals_of_System_Hardware">
+            <header>Fundamentals of System Hardware</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction_to_Operating_Systems">
+            <header>Introduction to Operating Systems</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Processes_and_Threads">
+            <header>Processes and Threads</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Thread_Concurrency_and_Deadlocks">
+            <header>Thread Concurrency and Deadlocks</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Memory_Management">
+            <header>Memory Management</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <!-- Basics of Computing and Programming -->
+        <section class="main-section" id="Basics_of_Computing_and_Programming">
+            <header class="topic-label" style="color: white;">Basics of Computing and Programming</header>
+        </section>
+        <br>
+        <section class="main-section" id="Positional_Number_Systems">
+            <header>Positional Number Systems</header>
+            <article>
+                <p class="minor-topic">Digital Data</p>
+                <p>Data in the computer memory is represented using units that can each be in one of two states (0 and
+                    1).</p>
+                <p>Data is represented digitally, using binary numbers</p>
+                <p>Kinds of data:</p>
+                <ul>
+                    <li>Number : represented in binary</li>
+                    <li>Text : each character is mapped to a number</li>
+                    <li>Images : matrix of pixels' colors. Each colors represented as (R, G, B) levels (0 - 255)</li>
+                    <li>Video : sequence of image</li>
+                    <li>Audio : sampled voltage levels</li>
+                </ul>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/875px-ASCII-Table-wide.svg.png"
+                    alt="ASCII-Table" width="80%" style="margin: 0 auto; display: block;">
+                <!-- https://simple.wikipedia.org/wiki/ASCII -->
+
+                <p class="minor-topic">Base Conversions: Equivalent Representations</p>
+                <p>(13)<sub>10</sub> = (1101)<sub>2</sub> = (23)<sub>5</sub> = (15)<sub>8</sub> = (D)<sub>16</sub></p>
+                <p>Representation of number N in base b<sub>1</sub> &rarr; Representation of number N in base
+                    b<sub>2</sub></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Decimal (base-10)</td>
+                            <td>Binary (base-2)</td>
+                            <td>Quinary (base-5)</td>
+                            <td>Octal (base-8)</td>
+                            <td>Hexadecimal (base-16)</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0000 0000</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>00</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0000 0001</td>
+                            <td>001</td>
+                            <td>001</td>
+                            <td>01</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0000 0010</td>
+                            <td>002</td>
+                            <td>002</td>
+                            <td>02</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0000 0011</td>
+                            <td>003</td>
+                            <td>003</td>
+                            <td>03</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>0000 0100</td>
+                            <td>004</td>
+                            <td>004</td>
+                            <td>04</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>0000 0101</td>
+                            <td>010</td>
+                            <td>005</td>
+                            <td>05</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>0000 0110</td>
+                            <td>011</td>
+                            <td>006</td>
+                            <td>06</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>0000 0111</td>
+                            <td>012</td>
+                            <td>007</td>
+                            <td>07</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>0000 1000</td>
+                            <td>013</td>
+                            <td>010</td>
+                            <td>08</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>0000 1001</td>
+                            <td>014</td>
+                            <td>011</td>
+                            <td>09</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>0000 1010</td>
+                            <td>020</td>
+                            <td>012</td>
+                            <td>0A</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>0000 1011</td>
+                            <td>021</td>
+                            <td>013</td>
+                            <td>0B</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>0000 1100</td>
+                            <td>022</td>
+                            <td>014</td>
+                            <td>0C</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>0000 1101</td>
+                            <td>023</td>
+                            <td>015</td>
+                            <td>0D</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>0000 1110</td>
+                            <td>024</td>
+                            <td>016</td>
+                            <td>0E</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>0000 1111</td>
+                            <td>030</td>
+                            <td>017</td>
+                            <td>0F</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>0001 0000</td>
+                            <td>031</td>
+                            <td>020</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>0001 0001</td>
+                            <td>032</td>
+                            <td>021</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>0001 0011</td>
+                            <td>034</td>
+                            <td>023</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>0001 0100</td>
+                            <td>040</td>
+                            <td>024</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>0001 0101</td>
+                            <td>041</td>
+                            <td>025</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>0001 0110</td>
+                            <td>042</td>
+                            <td>026</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>99</td>
+                            <td>0110 0011</td>
+                            <td>344</td>
+                            <td>143</td>
+                            <td>63</td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>0110 0100</td>
+                            <td>400</td>
+                            <td>144</td>
+                            <td>64</td>
+                        </tr>
+                        <tr>
+                            <td>101</td>
+                            <td>0110 0101</td>
+                            <td>401</td>
+                            <td>145</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>0110 0110</td>
+                            <td>402</td>
+                            <td>146</td>
+                            <td>66</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="minor-topic">Base Conversions: To Decimal</p>
+
+                <p>N in base b &rarr; N in decimal</p>
+
+                <p>(a<sub>n</sub> ... a<sub>2</sub> a<sub>1</sub> a<sub>0</sub>)<sub>b</sub> = (a<sub>0</sub> *
+                    b<sup>0</sup>) + (a<sub>1</sub> * b<sup>1</sup>) + (a<sub>2</sub> * b<sup>2</sup>) + ... +
+                    (a<sub>n</sub> * b<sup>n</sup>)</p>
+                <table>
+                    <tr>
+                        <td>(375)<sub>10</sub></td>
+                        <td> = </td>
+                        <td>(5 * 10<sup>0</sup>) + (7 * 10<sup>1</sup>) + (3 * 10<sup>2</sup>) </td>
+                        <td> = </td>
+                        <td>5 + 70 + 300</td>
+                        <td> = </td>
+                        <td>375</td>
+                    </tr>
+                    <tr>
+                        <td>(125)<sub>8</sub></td>
+                        <td> = </td>
+                        <td>(5 * 8<sup>0</sup>) + (2 * 8<sup>1</sup>) + (1 * 8<sup>2</sup>) </td>
+                        <td> = </td>
+                        <td>5 + 16 + 64</td>
+                        <td> = </td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>(1011)<sup>2</sup></td>
+                        <td> = </td>
+                        <td>(1 * 2<sup>0</sup>) + (1 * 2<sup>1</sup>) + (0 * 2<sup>2</sup>) + (1 * 2<sup>3</sup>) </td>
+                        <td> = </td>
+                        <td>1 + 2 + 0 + 8</td>
+                        <td> = </td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>(3b2)<sup>16</sup></td>
+                        <td> = </td>
+                        <td>(2 * 16<sup>0</sup>) + (b * 16<sup>1</sup>) + (3 * 16<sup>2</sup>) </td>
+                        <td> = </td>
+                        <td>2 + 176 + 768</td>
+                        <td> = </td>
+                        <td>946</td>
+                    </tr>
+                </table>
+
+                <p>N in decimal &rarr; N in base b</p>
+                <p>decimal &rarr; base b (demonstrated on b = 2)</p>
+
+                <table>
+                    <tr>
+                        <td colspan="11">(75)<sub>10</sub> = (0100 1011)<sub>2</sub></td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>2<sup>9</sup></td>
+                        <td>2<sup>8</sup></td>
+                        <td>2<sup>7</sup></td>
+                        <td>2<sup>6</sup></td>
+                        <td>2<sup>5</sup></td>
+                        <td>2<sup>4</sup></td>
+                        <td>2<sup>3</sup></td>
+                        <td>2<sup>2</sup></td>
+                        <td>2<sup>1</sup></td>
+                        <td>2<sup>0</sup></td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>512</td>
+                        <td>256</td>
+                        <td>128</td>
+                        <td>64</td>
+                        <td>32</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <p class="minor-topic">Binary to Hexadecimal (Technique)</p>
+                <p>N in binary &harr; N in hexadecimal</p>
+                <table>
+                    <tr>
+                        <td>Hex Digit</td>
+                        <td>4-Bit Binary</td>
+                        <td>Hex Digit</td>
+                        <td>4-Bit Binary</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0000</td>
+                        <td>8</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0001</td>
+                        <td>9</td>
+                        <td>1001</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>0010</td>
+                        <td>a</td>
+                        <td>1010</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>0011</td>
+                        <td>b</td>
+                        <td>1011</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>0100</td>
+                        <td>c</td>
+                        <td>1100</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>0101</td>
+                        <td>d</td>
+                        <td>1101</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>0110</td>
+                        <td>e</td>
+                        <td>1110</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>0111</td>
+                        <td>f</td>
+                        <td>1111</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(3b9)<sub>16</sub> = (0011 1011 1001)<sub>2</sub></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(0110 1101 0011)<sub>2</sub> = (6d3)<sub>16</sub></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(0110 1101 0011)<sub>2</sub></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(1 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup>) + (1 * 2<sup>4</sup> + 0 * 2<sup>5</sup> + 1 * 2<sup>6</sup> + 1 * 2<sup>7</sup>) + (0 * 2<sup>8</sup> + 1 * 2<sup>9</sup> + 1 * 2<sup>10</sup> + 0 * 2<sup>11</sup>)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(1 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup>) * 2<sup>0</sup> + (1 * 2<sup>0</sup> + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup> + 1 * 2<sup>3</sup>) * 2<sup>4</sup> + (0 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 1 * 2<sup>2</sup> + 0 * 2<sup>3</sup>) * 2 <sup>8</sup></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(3) * 2<sup>0</sup> + (13) * 2<sup>4</sup> + (6) * 2<sup>8</sup></td>
+                    </tr>
+                </table>
+            </article>
+            <hr>
+        </section>
+        <section class="main-section" id="Hello_World">
+            <header>Hello World</header>
+            <article>
+                <p>
+                    In computer science we design algorithms to solve computational problems. We then implement them in
+                    a formal programming language which would be executed by a computer.
+                </p>
+
+                <p>When stating a computational problem:</p>
+                <ul>
+                    <li>Define set of legal inputs</li>
+                    <li>Define the required output, for each input</li>
+                </ul>
+
+                <p>Example:</p>
+                <p>The Sorting Problem</p>
+                <p>input: A sequence of numbers &lta<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>&gt </p>
+                <p>output: A reordering &ltb<sub>1</sub>, b<sub>2</sub>, ..., b<sub>n</sub>&gt of the input sequence,
+                    such that: b<sub>1</sub> &le; b<sub>2</sub> &le; ... &le; b<sub>n</sub></p>
+
+                <p class="minor-topic">Algorithm</p>
+                <p>Algorithm for sorting n=2 numbers:</p>
+                <code>
+    1. print "Please enter two numbers"
+    2. number<sub>1</sub> &larr; (read a number from the user)
+    3. number<sub>2</sub> &larr; (read a number from the user)
+    4.  if(number<sub>1</sub> &lt; number<sub>2</sub>):
+                4.1. print number<sub>1</sub>
+                4.2. print number<sub>2</sub>
+        else:
+                4.1. print number<sub>2</sub>
+                4.2. print number<sub>1</sub>
+                </code>
+
+                <p class="minor-topic">Process of Executing a Program</p>
+                <p>In computer science we design algorithms to solve computational problems. We then implement them in a
+                    formal programming language which would be executed by a computer.</p>
+
+                <img src="https://i.ibb.co/ZGTJw7Z/Screen-Shot-2563-06-07-at-20-16-14.png" alt="executing a program"
+                    width="50%" style="margin: 0 auto; display: block;">
+
+                <p class="minor-topic">To build Process</p>
+                <code>
+    <u>High-Level Language</u>: Python
+    1. print("what is your name?")                          
+    2. user_name = input()                                  
+    3. print("Hi", user_name, ", welcome to python")
+    
+    &darr; translation &darr;
+
+    <u>Machine Language</u>
+    01101011
+    10100010
+    10011100
+        :
+    01001001
+                </code>
+                <p>Kinds of translations:</p>
+                <ul>
+                    <li>Compilation
+                        <p>Complied languages are converted directly into machine code that processor can execute. As a
+                            result, they tend to be faster and more efficient to execute than interpreted languages.
+                            They also give the developer more control over hardware aspects, like memory management and
+                            CPU usage.</p>
+                        <p>Examples of pure compiled languages are C, C++, Erlang, Haskell, Rust, and Go.</p>
+                    </li>
+                    <li>Interpretation
+                        <p>Interpreters run through a program line by line and execute each command. Here, if the author
+                            decides he wants to use a different kind of olive oil, he could scratch the old one out and
+                            add the new one. Your translator friends can then convey that change to you as it happens.
+                        </p>
+                        <p>Examples of common interpreted languages are PHP, Ruby, Python, and JavaScript.</p>
+                    </li>
+                </ul>
+
+                <!-- https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/ -->
+
+                <p class="minor-topic">Basic Interaction with the Python Interpreter</p>
+                <p>class int - integer and float</p>
+                <code>
+    &gt;&gt;&gt; 12
+    12
+    &gt;&gt;&gt; 12+5
+    17
+    &gt;&gt;&gt; type(12)
+    &lt;class'int'&gt;
+    &gt;&gt;&gt; 4.5
+    4.5
+    &gt;&gt;&gt; type(4.5)
+    &lt;class'float'&gt;
+    &gt;&gt;&gt; 12/5
+    2.4
+    &gt;&gt;&gt; 12/2
+    6.0
+    &gt;&gt;&gt; type(6.0)
+    &lt;class'float'&gt;
+                </code>
+                <p>variables</p>
+                <code>
+    &gt;&gt;&gt; x = 12
+    &gt;&gt;&gt; x
+    12
+    &gt;&gt;&gt; type(x)
+    &lt;class'int'&gt;
+    &gt;&gt;&gt; y = x + 5
+    &gt;&gt;&gt; y = y + 1
+    &gt;&gt;&gt; y
+    18
+                </code>
+                <p>class str - string</p>
+                <code>
+    &gt;&gt;&gt;"abc"
+    'abc'
+    &gt;&gt;&gt; type("abc")
+    &lt;class'str'&gt;
+    &gt;&gt;&gt; "abc" + "def"
+    'abcdef'
+    &gt;&gt;&gt; "abc" * 3
+    'abcabcabc'
+    &gt;&gt;&gt; "abc" + 4
+    <span class="error">Traceback (most recent call last): File "&lt;input&gt;", line 1, in &lt;module&gt; TypeError: Can't convert 'int' object to str implicity</span>
+    &gt;&gt;&gt; "abc" - "def"
+    <span class="error">Traceback (most recent call last): File "&lt;input&gt;", line 1, in &lt;module&gt; TypeError: unsupported operand type(s) for -: 'str' and 'str'</span>
+                </code>
+
+                <p class="minor-topic">Input and Output</p>
+                <code>
+    &gt;&gt;&gt; x = input()
+    &gt;? abc
+    &gt;&gt;&gt; x
+    &gt;&gt;&gt; type(x)
+    &lt;class'str'&gt;
+
+    &gt;&gt;&gt; x = input()
+    &gt;? 12
+    &gt;&gt;&gt; x
+    '12'
+    &gt;&gt;&gt; type(x)
+    &lt;class'str'&gt;
+
+    &gt;&gt;&gt; "abc"
+    'abc'
+    &gt;&gt;&gt; print("abc")
+    abc
+    &gt;&gt;&gt; print(4)
+    4
+    &gt;&gt;&gt; x = input()
+    &gt;? abc
+    &gt;&gt;&gt; x 
+    'abc'
+    &gt;&gt;&gt; print(x)
+    abc
+                </code>
+                <p class="minor-topic">Welcome to Python</p>
+                <p><b>Problem</b>: write a program that reads from the user their name, and welcome them to Python.</p>
+                <p>Environment: Pycharm CE</p>
+                <p><u>Example</u></p>
+                <p>Please enter your name:</p>
+                <i>Mike</i>
+                <p>Hi Mike, welcome to Python!</p>
+
+                <code>
+    &gt;&gt;&gt; print('Please enter your name:')
+    &gt;&gt;&gt; user_name = input()
+    &gt;&gt;&gt; output_sentence = 'Hi ' + user_name + ', welcome to Pyhton!'
+    &gt;&gt;&gt; print(output_sentence)
+    <hr>
+    Run: Please enter your name:
+         &gt;? Mike
+         Hi Mike, welcome to Python!
+                </code>
+
+                <p class="minor-topic">Addiing Numbers</p>
+                <p><b>Problem</b>: write a program that reads from the user two numbers, and prints their sum.</p>
+
+                <p><u>Example</u></p>
+                <p>Please enter two numbers in two separate lines:</p>
+                7 <br>
+                5 <br>
+                7 + 5 = 12
+
+                <code>
+    &gt;&gt;&gt; print('Please enter two numbers, in two separate lines:')
+    &gt;&gt;&gt; num1 = input()
+    &gt;&gt;&gt; num2 = input()
+
+    &gt;&gt;&gt; sum = num1 + num2
+
+    &gt;&gt;&gt; print(sum)
+    &gt;&gt;&gt; print(type(sum))
+    <hr>
+    Run: Please enter two numbers, in two separate lines:
+         &gt;? 7
+         &gt;? 5
+         75
+         &lt;class 'str'&gt;
+                </code>
+                <p>convert default str to int:</p>
+
+                <code>
+    &gt;&gt;&gt; print('Please enter two numbers, in two separate lines:')
+    &gt;&gt;&gt; num1_str = input()
+    &gt;&gt;&gt; num1 = int(num1_str)
+
+    &gt;&gt;&gt; num2_str = input()
+    &gt;&gt;&gt; num2 = int(num2_str)
+
+    &gt;&gt;&gt; sum = num1 + num2
+
+    &gt;&gt;&gt; print(sum)
+    &gt;&gt;&gt; print(type(sum))
+    <hr>
+    Run: Please enter two numbers, in two separate lines:
+         &gt;? 7
+         &gt;? 5
+         12
+         &lt;class 'int'&gt;
+                </code>
+                <p>shorten code:</p>
+                <code>
+    &gt;&gt;&gt; print('Please enter two numbers, in two separate lines:')
+
+    &gt;&gt;&gt; num1 = int(input())
+
+    &gt;&gt;&gt; num2 - int(input())
+
+    &gt;&gt;&gt; sum = num1 + num2
+
+    &gt;&gt;&gt; print(sum)
+    &gt;&gt;&gt; print(type(sum))
+    <hr>
+    Run: Please enter two numbers, in two separate lines:
+         &gt;? 7
+         &gt;? 5
+         12
+         &lt;class 'int'&gt;
+                </code>
+                <p>print both problem and solution:</p>
+                <code>
+    &gt;&gt;&gt; output_sentence = num1 + ' + ' + num2 + ' = ' + sum
+    &gt;&gt;&gt; print(output_sentence)
+    <hr>
+    Run: <span class="error">output_sentence = num1 + ' + ' + num2 + ' = ' + sum
+         TypeError: unsupported operand type(s) for +: 'int' and 'str'</span>
+                </code>
+                <p>adding then converting from 'int' to 'str' for concatenating:</p>
+                <code>
+    &gt;&gt;&gt; output_sentence = str(num1) + ' + ' + str(num2) + ' = ' + str(sum)
+    &gt;&gt;&gt; print(output_sentence)
+    <hr>
+    Run: Please enter two numbers, in two separate lines:
+         &gt;? 7
+         &gt;? 5
+         7 + 5 = 12
+                </code>
+                <p>using extended version of print; comma for separating any Python data types with a space:</p>
+                <code>
+    &gt;&gt;&gt; print('abc', 'def', 'ghi')
+    abc def ghi
+
+    &gt;&gt;&gt; print('abc', 4, 'def', 5.7)
+    abc 4 def 5.7
+                </code>
+                <p>using extended version of print; comma without converting:</p>
+                <code>
+    &gt;&gt;&gt; print('Please enter two numbers, in two separate lines:')
+
+    &gt;&gt;&gt; num1 = int(input())
+    &gt;&gt;&gt; num2 - int(input())
+                
+    &gt;&gt;&gt; sum = num1 + num2
+
+    &gt;&gt;&gt; print(num1, '+', num2 '=', sum)
+    <hr>
+    Run: Please enter two numbers, in two separate lines:
+         &gt;? 7
+         &gt;? 5
+         7 + 5 = 12
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Numerical_Data_Type_and_Arithmetic_Expressions">
+            <header>Numerical Data Type and Arithmetic Expressions</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Branching_Statement">
+            <header>Branching Statement</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Iterative_Statement">
+            <header>Iterative Statement</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Strings">
+            <header>Strings</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Lists">
+            <header>Lists</header>
+            <article>
+                <p>
+                    test
+                </p>
+            </article>
+        </section>
+
+        <footer class="footer">
+            Nattawoot Denduangchai - MicroBachelors Program in Computer Science Fundamentals, New York University Tandon
+            School of Engineering
+        </footer>
+    </main>
+
+</body>
+
+</html>
