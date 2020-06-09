@@ -634,7 +634,7 @@
                         <td>1111</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td><br></td>
                     </tr>
                     <tr>
                         <td colspan="4">(3b9)<sub>16</sub> = (0011 1011 1001)<sub>2</sub></td>
@@ -646,13 +646,21 @@
                         <td colspan="4">(0110 1101 0011)<sub>2</sub></td>
                     </tr>
                     <tr>
-                        <td colspan="4">(1 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup>) + (1 * 2<sup>4</sup> + 0 * 2<sup>5</sup> + 1 * 2<sup>6</sup> + 1 * 2<sup>7</sup>) + (0 * 2<sup>8</sup> + 1 * 2<sup>9</sup> + 1 * 2<sup>10</sup> + 0 * 2<sup>11</sup>)</td>
+                        <td colspan="4">(1 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup>)
+                            + (1 * 2<sup>4</sup> + 0 * 2<sup>5</sup> + 1 * 2<sup>6</sup> + 1 * 2<sup>7</sup>) + (0 *
+                            2<sup>8</sup> + 1 * 2<sup>9</sup> + 1 * 2<sup>10</sup> + 0 * 2<sup>11</sup>)</td>
                     </tr>
                     <tr>
-                        <td colspan="4">(1 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup>) * 2<sup>0</sup> + (1 * 2<sup>0</sup> + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup> + 1 * 2<sup>3</sup>) * 2<sup>4</sup> + (0 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 1 * 2<sup>2</sup> + 0 * 2<sup>3</sup>) * 2 <sup>8</sup></td>
+                        <td colspan="4">(1 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup>)
+                            * 2<sup>0</sup> + (1 * 2<sup>0</sup> + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup> + 1 *
+                            2<sup>3</sup>) * 2<sup>4</sup> + (0 * 2<sup>0</sup> + 1 * 2<sup>1</sup> + 1 * 2<sup>2</sup>
+                            + 0 * 2<sup>3</sup>) * 2 <sup>8</sup></td>
                     </tr>
                     <tr>
                         <td colspan="4">(3) * 2<sup>0</sup> + (13) * 2<sup>4</sup> + (6) * 2<sup>8</sup></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">(6d3)<sub>16</sub></td>
                     </tr>
                 </table>
             </article>
@@ -938,21 +946,719 @@
          7 + 5 = 12
                 </code>
             </article>
+            <hr>
         </section>
         <section class="main-section" id="Numerical_Data_Type_and_Arithmetic_Expressions">
             <header>Numerical Data Type and Arithmetic Expressions</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p class="minor-topic">Introduction</p>
+                <div style="display: flex; justify-content: center;">
+                    <div>
+                        <p style="text-align: center; font-weight: bold;">Data</p>
+                        <p>Build-in types</p>
+                        <ul>
+                            <li>int</li>
+                            <li>float</li>
+                            <li>bool</li>
+                            <li>str</li>
+                            <li>list</li>
+                            <li>tuple</li>
+                            <li>dict</li>
+                            <li>...</li>
+                        </ul>
+                        <p>Programmer defined types</p>
+                    </div>
+                    <div>
+                        <p style="text-align: center; font-weight: bold;">Expressions</p>
+                        <ul>
+                            <li>I/O expressions</li>
+                            <li>Assignment</li>
+                            <li>Arithmetic expressions</li>
+                            <li>Boolean expressions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="text-align: center; font-weight: bold;">Control Flow</p>
+                        <ul>
+                            <li>Sequential</li>
+                            <li>
+                                <p>Branching</p>
+                                <ul>
+                                    <li>if</li>
+                                    <li>if-else</li>
+                                    <li>if-elif-else</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Iterative</p>
+                                <ul>
+                                    <li>while</li>
+                                    <li>for</li>
+                                </ul>
+                            </li>
+                            <li>Function calls</li>
+                            <li>Exceptions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="minor-topic">The <i>int</i> Data Type</p>
+                <p><span class="purple">Kind of data:</span> Integer numbers</p>
+                <p><span class="purple">Inner representation:</span> The numbers are represented using the 2's
+                    complement method</p>
+                <p><span class="purple">Python literals:</span> 3, 4, -6, 3954, ...</p>
+                <p><span class="purple">Arithmetic Operators:</span> +, -, *, /, **, //, %, ...</p>
+
+                <p>Signed Numbers</p>
+                <p>+(26)<sub>10</sub> = (11010)<sub>2</sub></p>
+                <p class="error">-(26)<sub>10</sub> = (-11010)<sub>2</sub> *** incorrect representation</p>
+                <p style="color: rgb(40, 167, 40);">-(26)<sub>10</sub> = (1000...011010)<sub>2</sub> ** correct
+                    representation</p>
+                <p>1000 is "Sign" and 011010 is "Magnitude"</p>
+                <p>Approaches to represent signed numbers using only 0s and 1s:</p>
+                <ul>
+                    <li>
+                        Sign and Magnitude - used in machine languages
+                        <p>exp. 1000...011010</p>
+                    </li>
+                    <li>
+                        Two's Compliment - widely used in programming languages
+                        <p>In a k-bit two's complement representation of a number: </p>
+                        <ul>
+                            <li>A positive integer is represented in its (k-1)-bit unsigned binary representation,
+                                padded with a 0 to its left</li>
+                            <li>The sum of a number and its additive inverse is 2<sup>k</sup></li>
+                            <code>
+    (26)<sub>10</sub> = (0001 1010)<sub>8 bit 2's complement</sub>
+   -(26)<sub>10</sub> = (1110 0110)<sub>8 bit 2's complement</sub>
+
+   1 1 1 1 1 1 1
+     0 0 0 1 1 0 1 0 &larr; 26
+  +  <u>1 1 1 0 0 1 1 0</u> &larr; -26
+   1 0 0 0 0 0 0 0 0 &larr; 2<sup>8</sup>    
+                        </code>
+                            <code>
+      Python          Inside memory
+                           int
+    &gt;&gt;&gt; x = 26   &larr; x = 0001 1010
+    &gt;&gt;&gt; y = -26  &larr; y = 1110 0110
+                        </code>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="minor-topic">The <i>int</i> Data Type: Integer Literals</p>
+                <p>Forms of Data</p>
+                <ul>
+                    <li>Variables: x, y, ...</li>
+                    <li>Python Literals: 6, -6, 7.3, "abc", ...</li>
+                </ul>
+                <p>Example:</p>
+                <p>x = 6 : x is a variable while 6 is a literal</p>
+                <code>
+    &gt;&gt;&gt; 12
+    12
+    &gt;&gt;&gt; type(12)
+    &lt;class 'int'&gt;
+    &gt;&gt;&gt; x = 13
+    &gt;&gt;&gt; x
+    13
+    &gt;&gt;&gt; type(x)
+    &lt;class 'int'&gt;
+                </code>
+                <p class="minor-topic">The <i>int</i> Data Type: Arithmetic Operators</p>
+                <p>Arithmetic Operators: +, -, *, /, **, //, %, ...</p>
+                <code>
+    &gt;&gt;&gt; 12 + 5
+    17
+    &gt;&gt;&gt; 13 - 6
+    7
+    &gt;&gt;&gt; 5 * 3
+    15
+    &gt;&gt;&gt; 12 / 3
+    4.0
+    &gt;&gt;&gt; 2 ** 5
+    32  
+                </code>
+                <p>Example:</p>
+                <p>13 / 5 = 2R3</p>
+                <code>
+                    Python
+    13 div 5 = 2 &larr; 13 // 5
+    13 mod 5 = 3 &larr; 13 % 5
+
+    &gt;&gt;&gt; 13 // 5
+    2
+    &gt;&gt;&gt; 13 % 5 
+    3 
+                </code>
+                <p class="minor-topic">The <i>int</i> Data Type: Example</p>
+                <p><b>Weeks and Days</b></p>
+                <p>Write a program that reads from the user the number of days they traveled. The program will then
+                    print their traveling time in the format of full weeks and additional days.</p>
+                <p>Example:</p>
+                <p>Please enter number of days you traveled:</p>
+                <i>19</i>
+                <p>19 days are 2 weeks and 5 days</p>
+                <p>Div for finding full weeks and Mod for finding remaining days</p>
+                <p>19 / 7 = 2 R 5</p>
+                <p>19 // 7 = 2 full weeks</p>
+                <p>19 % 7 = 5 remaining days</p>
+                <code>
+    print("Please enter number of days you traveled:")
+    days_traveled = int(input())
+
+    full_weeks = days_traveled // 7
+    remaining_days = days_traveled % 7
+
+    print(days_traveled, "days are", full_weeks, "weeks and", remaining _days, "days")
+    <hr>
+    Run: Please enter number of days you traveled:
+         &gt;? 19
+         19 days are 2 weeks and 5 days
+                </code>
+
+                <p class="minor-topic">The <i>float</i> Data Type</p>
+                <p><span class="purple">Kind of data:</span> Real number (could have fractional part )</p>
+                <p><span class="purple">Inner representation:</span> The numbers are represented by the floating point
+                    method (IEEE-754)</p>
+                <p><span class="purple">Python literals:</span> -3.4, 6.0, 0.008975 (decimal point), 8.975e-3
+                    (exponential form), ...</p>
+                <p><span class="purple">Arithmetic Operators:</span> +, -, *, /, **, //, %, ...</p>
+                <code>
+        Python      Inside memory
+    &gt;&gt;&gt; x = 26     &larr; x = 00011010
+    &gt;&gt;&gt; y = 7.658  &larr; y = 01000000 11110101 00001110 01010110
+
+    (26)<sub>10</sub> = (00011010)<sub>8 bit 2's complement</sub>
+    (7.658)<sub>10</sub> = (01000000 11110101 00001110 01010110)<sub>IEEE-754</sub>
+
+    &gt;&gt;&gt; -3.4
+    -3.4
+    &gt;&gt;&gt; type(-3.4)
+    &lt;class 'float'&gt;
+    &gt;&gt;&gt; 6.0
+    6.0
+    &gt;&gt;&gt; type(6.0)
+    &lt;class 'float'&gt;
+
+    &gt;&gt;&gt; 0.008975
+    8.975e-3
+    &gt;&gt;&gt; 8.975e-3
+    8.875e-3
+    &gt;&gt;&gt; x = 0.008975 &larr; decimal point
+    &gt;&gt;&gt; y = 8.975e-3 &larr; exponential form
+                </code>
+                <p class="minor-topic">The <i>float</i> Data Type</p>
+                <b>'Area of a Circle' Problem</b>
+                <p>Write a program that reads from the user a radius of a circle</p>
+                <p>The program will then print area of this circle.</p>
+                <p>Example:</p>
+                <p>Please enter the radius:</p>
+                <i>2.6</i>
+                <p>The area of a circle with radius of 2.6 is 21.237166314</p>
+
+                <p>Theorem:</p>
+                <p>Let <i>C</i> be a circle with a radius of length <i>r</i>.</p>
+                <p>We have: <i>(Area of C) = &pi; r <sup>2</sup></i></p>
+                <code>
+    print("Please enter the radius:")
+    radius = float(input())
+
+    circle_area = 3.14159265 * radius * radius
+
+    print("The area od a circle with a radius of", radius, "is", circle_area)
+    <hr>
+    Run: Please enter the radius:
+         &gt;? 2.6
+         The area of a circle with a radius of 2.6 is 21.237166314
+                </code>
+                <b>Drawing a Square</b>
+                <p>Write a program that reads from the user the length of a side of a square, and draws a square of that
+                    size.</p>
+                <p>Example:</p>
+                <p>Please enter the length od each side:</p>
+                <i>150</i>
+
+                <code>
+    import turtle
+
+    print("Please enter the length of each side:")
+    side_len = int(input())
+
+    turtle.forward(side_len)
+    turtle.left(90)
+    turtle.forward(side_len)
+    turtle.left(90)
+    turtle.forward(side_len)
+    turtle.left(90)
+    turtle.forward(side_len)
+    turtle.left(90)
+
+    turtle.hideturtle()
+    turtle.done()
+                    <hr>
+    Run: Please enter the length of each side:
+         &gt;? <i>150</i>
+
+    <img src="https://i.ibb.co/QJ0PFGw/Screen-Shot-2563-06-09-at-17-33-31.png" alt="squre_turtle">
+                </code>
+
+                <p><b>The Turtle Graphic Module</b></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><b>Function</b></td>
+                            <td><b>Description</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>forward(distance)</b></td>
+                            <td>move forward <i>distance</i> steps in the current direction</td>
+                        </tr>
+                        <tr>
+                            <td><b>backward(distance)</b></td>
+                            <td>move backward <i>distance</i> steps in the current direction</td>
+                        </tr>
+                        <tr>
+                            <td><b>right(angle)</b></td>
+                            <td>turn right by <i>angle</i> units</td>
+                        </tr>
+                        <tr>
+                            <td><b>left(angle)</b></td>
+                            <td>turn left by <i>angle</i> units</td>
+                        </tr>
+                        <tr>
+                            <td><b>penup()</b></td>
+                            <td>pull the pen up -- no drawing when moving</td>
+                        </tr>
+                        <tr>
+                            <td><b>reset()</b></td>
+                            <td>clear the screen placing turtle at its initial configuration</td>
+                        </tr>
+                        <tr>
+                            <td><b>hideturtle()</b></td>
+                            <td>hide the turtle</td>
+                        </tr>
+                        <tr>
+                            <td><b>showturtle()</b></td>
+                            <td>show the turtle</td>
+                        </tr>
+                        <tr>
+                            <td><b>done()</b></td>
+                            <td>last statement in a turtle graphics program</td>
+                        </tr>
+                        <tr>
+                            <td><b></b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <code>
+    &gt;&gt;&gt; import Turtle
+    &gt;&gt;&gt; turtle.forward(100)
+    &gt;&gt;&gt; turtle.left(60)
+    &gt;&gt;&gt; turtle.forward(150)
+    &gt;&gt;&gt; turtle.done
+    <hr>
+    <img src="https://i.ibb.co/2FRxjmt/Screen-Shot-2563-06-09-at-16-54-21.png" alt="turtle_exp">                
+                </code>
+
+                <p><b>Drawing a Right Triangle</b></p>
+                <img src="https://i.ibb.co/m9nsm8x/Screen-Shot-2563-06-09-at-17-53-34.png" alt="triangle_turtle"
+                    style="display: block; margin: 0 auto;">
+                <p>Write a program that reads from the user the length of the two legs in a right triangle, and draws
+                    such a triangle.</p>
+
+                <p>Example:</p>
+                <p>Please enter the length of the two legs in a right triangle</p>
+
+                <p>Leg #1: <i>180</i></p>
+                <p>Leg #2: <i>90</i></p>
+
+                <code>
+    import turtle
+    import math
+
+    print("Please enter the length of the two legs in a right triangle:")
+    a = float(input("Leg #1: "))
+    b = float(input("Leg #2: "))
+    c = math.sqrt(a**2 + b**2)
+
+    alpha_in_radians = math.atan(a / b)
+    alpha = math.degrees(alpha_in_radians)
+    beta = 90 - alpha
+
+    turtle.forward(a)
+    turtle.left(90)
+    turtle.forward(b)
+    turtle.left(180 - alpha)
+    turtle.forward(c)
+    turtle.left(180 - beta)
+    turtle.hideturtle()
+
+    turtle.done()
+                    <hr>
+    Run: Please enter the length of the two legs in a right triangle:
+         Leg #1: 
+         &gt;? 180
+         Leg #2: 
+         &gt;? 90
+
+    <img src="https://i.ibb.co/JzQNrMz/Screen-Shot-2563-06-09-at-18-32-04.png" alt="triangle_turtle">            
+                </code>
+                <p><b>Useful Escapes</b></p>
+                <p>The following list shows you some typical uses of escaped characters.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><b>Escape Sequence</b></td>
+                            <td><b>Description</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\'</td>
+                            <td>Single quatation mark</td>
+                        </tr>
+                        <tr>
+                            <td>\"</td>
+                            <td>Double quotation mark</td>
+                        </tr>
+                        <tr>
+                            <td>\\</td>
+                            <td>Backslash</td>
+                        </tr>
+                        <tr>
+                            <td>\b</td>
+                            <td>Backslash</td>
+                        </tr>
+                        <tr>
+                            <td>\f</td>
+                            <td>Form feed</td>
+                        </tr>
+                        <tr>
+                            <td>\n</td>
+                            <td>New line</td>
+                        </tr>
+                        <tr>
+                            <td>\r</td>
+                            <td>Carriage return</td>
+                        </tr>
+                        <tr>
+                            <td>\t</td>
+                            <td>Horizontal tab</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <code>
+    # Escaping a '
+    result = 'This is Shahneila\'s PC'
+    print(result)
+
+    # Escaping ' and new line
+    result = 'This is Jill\'s PC\nAnd this is Mike\'s'
+    print(result)
+
+    # A couple of new lines
+    result = '\n\nA couple of new lines before this text'
+    print(result)
+
+    # Some other characters
+    result = 'This character (\\) is the backslash\'s escape sequence'
+    print(result)
+    <hr>
+    Run: This is Shahneila's PC
+         This is Jill's PC
+         And this is Mike's
+
+
+         A couple of new lines before this text
+         This character (\) is the backslash's escape sequence
+                </code>
             </article>
         </section>
+        <hr>
         <section class="main-section" id="Branching_Statement">
             <header>Branching Statement</header>
             <article>
-                <p>
-                    test
+                <p class="minor-topic">Motivation</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user an integer, and prints its absolute value.</p>
+                <p>Example:</p>
+                <p>Please enter an integer:</p>
+                <p><i>-7</i></p>
+                <p>|-7| = 7</p>
+
+                <div style="display: flex; margin: 0 auto;">
+                    <div>
+                        <p style="text-align: center;"><b>Data</b></p>
+                        <ul>
+                            <li>int</li>
+                            <li>float</li>
+                            <li>bool</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="text-align: center;"><b>Expression</b></p>
+                        <ul>
+                            <li>I/O expressions</li>
+                            <li>Assignment</li>
+                            <li>Arithmetic expressions</li>
+                            <li>Boolean expressions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="text-align: center;"><b>Control Flow</b></p>
+                        <ul>
+                            <li>Sequential</li>
+                            <li>
+                                <p>Branching</p>
+                                <ul>
+                                    <li>if</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="minor-topic">The Bool Data Type</p>
+                <p><span class="purple">Kind of Data:</span> Truth value (true/false)</p>
+                <p><span class="purple">Inner Representation:</span>
+                <ul>
+                    <li>False is represented by a sequence of 0s</li>
+                    <li>True is any non-zero value</li>
+                </ul>
                 </p>
+                <p><span class="purple">Python Literals:</span> True, False</p>
+                <p><span class="purple">Boolean Operators:</span> not, and, or</p>
+                <code>
+    &gt;&gt;&gt; b = True
+    &gt;&gt;&gt; b 
+    True
+    &gt;&gt;&gt; type(b)
+    &lt;class 'bool'&gt;
+                </code>
+                <div style="display: flex; margin: 0 auto; justify-content: center;">
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="2"><b>not</b></td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>not p</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="3"><b>and</b></td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>q</td>
+                                <td>p and q</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                                <td>False</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                                <td>False</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>False</td>
+                                <td>False</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="3"><b>or</b></td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>q</td>
+                                <td>p or q</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>True</td>
+                                <td class="purple"><b>*True</b></td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>False</td>
+                                <td>False</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="3" class="error"><b>waiter (soup) or (salad)</b></td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>q</td>
+                                <td class="error">p or q</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>True</td>
+                                <td class="error">*False</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                                <td class="error">True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                                <td class="error">True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>False</td>
+                                <td class="error">False</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="error"><b>Exclusive or</b></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="3" class="green"><b>trainer (10 min walk) or (5 min run)</b></td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>q</td>
+                                <td class="green">p or q</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>True</td>
+                                <td class="green">*True</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                                <td class="green">True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                                <td class="green">True</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>False</td>
+                                <td class="green">False</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="green"><b>Inclusive or</b></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+                <code>
+    &gt;&gt;&gt; not False
+    True
+    &gt;&gt;&gt; b1 = True
+    &gt;&gt;&gt; not b1
+    False
+    <hr>
+    &gt;&gt;&gt; b1 = True
+    &gt;&gt;&gt; b2 = False
+    &gt;&gt;&gt; b1 and b2
+    False
+    &gt;&gt;&gt; b1 and (not b2)
+    True
+    <hr>
+    &gt;&gt;&gt; b1 = False
+    &gt;&gt;&gt; b2 = b1 or (not b1)
+    &gt;&gt;&gt; b2
+    true
+    &gt;&gt;&gt; b2 and (b1 not True)
+    True
+                </code>
+                <p class="minor-topic">Boolean Expressions</p>
+                <p><b>Atomic Boolean Expressions</b></p>
+                <ul>
+                    <li>The bool literals: <span class="purple">True, False</span></li>
+                    <li>Arithmetic expressions compared with relational operators: <span class="purple">(&lt;, &gt;,
+                            &lt;=, &gt;=, ==, !=)</span></li>
+                    <code>
+    &gt;&gt;&gt; x = 3
+    &gt;&gt;&gt; x &lt;= 5  
+    True   
+    &gt;&gt;&gt; (x &gt; 0) and (x &lt;= 5) 
+    True
+    &gt;&gt;&gt; 0 &lt; x &lt;= 5
+    True
+                    </code>
+                </ul>
+                <p><b>Compound Boolean Expressions</b></p>
+                <ul>
+                    <li>Simple boolean expressions combined with boolean operators: <span class="purple">(not, and,
+                            or)</span></li>
+                </ul>
+                <code>
+    &gt;&gt;&gt; True
+    True    
+    &gt;&gt;&gt; b = true
+    &gt;&gt;&gt; True and (not b)
+    False
+                </code>
+                <p class="minor-topic">Syntax and Semantics</p>
+                <p>if (<i>boolean-expression</i>):</p>
+                <p class="minor-topic">Introduction to Computing the Absolute Value</p>
+
+                <p><b>Problem</b></p>
+                <p>Write a prohgram that reads from the user an integer, and prints it's absolute value.</p>
+                <p><b>Example</b></p>
+                <p>Please enter an integer:</p>
+                <p><i>-7</i></p>
+                <p>|-7| = 7</p>
+                <code>
+    &gt;&gt;&gt; True
+                </code>
             </article>
         </section>
         <section class="main-section" id="Iterative_Statement">
