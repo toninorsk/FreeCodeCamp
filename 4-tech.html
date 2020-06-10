@@ -16,6 +16,7 @@
         <header>Computer Science Fundamentals</header>
         <ul>
             <li><a class="nav-link" href="#overview">Overview</a></li>
+            <li><a class="nav-link" href="#Instructors">Instructors</a></li>
             <!-- Introduction to Network -->
             <li><a class="nav-link topic" href="#Introduction_to_Networking">Introduction to Networking</a></li>
             <li><a class="nav-link" href="#Computer_Networking">Computer Networking</a></li>
@@ -98,11 +99,13 @@
                     <li>Strings & Functions</li>
                     <li>Array-based sequences/Lists</li>
                 </ol>
+            </article>
+        </section>
+            
+                <section class="main-section" id="Instructors">
+            <header class="topic-label" style="color: white;">Instructors</header>
 
                 <table>
-                    <tr>
-
-                        <td>
                     <tr>
                         <td><img class="prof-img"
                                 src="https://prod-discovery.edx-cdn.org/media/people/profile_images/e99ea239-08ff-4adf-909e-8588acee2c9a-4c955ea6f447.png"
@@ -112,7 +115,7 @@
                                 alt="Itay"></td>
                     </tr>
                     <tr>
-                        <td><a href="https://www.edx.org/bio/aspen-olmsted">Aspen Olmsted</a><br>Adjunct
+                        <td><a href="https://www.edx.org/bio/aspen-olmsted">Aspen Olmsted, Ph.D.</a><br>Adjunct
                             Professor<br>New York University Tandon School of Engineering</td>
                         <td><a href="https://www.edx.org/bio/itay-tal">Itay Tal</a><br>Industry Assistant
                             Professor<br>New York University Tandon School of Engineering</td>
@@ -1382,6 +1385,7 @@
         <hr>
         <section class="main-section" id="Branching_Statement">
             <header>Branching Statement</header>
+            <p>Part I</p>
             <article>
                 <p class="minor-topic">Motivation</p>
                 <p><b>Problem</b></p>
@@ -1391,7 +1395,7 @@
                 <p><i>-7</i></p>
                 <p>|-7| = 7</p>
 
-                <div style="display: flex; margin: 0 auto;">
+                <div style="display: flex; margin: 0 auto; justify-content: center;">
                     <div>
                         <p style="text-align: center;"><b>Data</b></p>
                         <ul>
@@ -1417,8 +1421,11 @@
                                 <p>Branching</p>
                                 <ul>
                                     <li>if</li>
+                                    <li>If-else</li>
+                                    <li>if-elif-else</li>
                                 </ul>
                             </li>
+                            <li>Iterative</li>
                         </ul>
                     </div>
                 </div>
@@ -1657,16 +1664,423 @@
                 <p><i>-7</i></p>
                 <p>|-7| = 7</p>
                 <code>
-    &gt;&gt;&gt; True
+    print("Please enter an integer:")
+    user_input = int(input())
+
+    abs_value = user-input
+    if(user_input &lt; 0):
+        abs_value = user_input * (-1)
+
+    print("|", user_input, "| = " , abs_value) 
+    <hr>
+    Run: Please enter an integer:
+         &gt;? -7
+         |-7| = 7
+    <hr>
+    Run: Please enter an integer:
+         &gt;? 8
+         |8| = 8
+                </code>
+                <p>Part II</p>
+                <p class="minor-topic">Determining Parity</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user a positive integer, and determines it's parity (even or
+                    odd).</p>
+                <p><b>Example</b></p>
+                <p>Please enter a positive integer:</p>
+                <p><i>7</i></p>
+                <p>7 is odd</p>
+                <p>if <i>(boolean-expression):</i></p>
+                <p>else:</p>
+                <code>
+    print("Please enter a positive integer:")
+    user_input = int(input())
+
+    if (user_input % 2 == 0):
+        print(user_input, "is even")
+        
+    else:
+        print(user_input, "is odd")
+    <hr>
+    Run: Please enter a positive integer:
+         &gt;? 9
+         9 is odd
+                </code>
+                <p class="minor-topic">Sequence of if VS if-else</p>
+                <code>
+    print("Please enter a positive integer")
+    user_input = int(input())
+
+    if(user_input % 2 == 0):
+    print(user_input, "is even")
+
+    if(user_input % 2 == 1):
+    print(user_input, "is odd")
+                </code>
+                <div style="display: flex; margin: 0 auto; justify-content: center;">
+                    <div>
+                        <p><b>Two-Way if statement:</b></p>
+                        <ul>
+                            <li><span class="purple">Guarantees</span> that one out of two blocks of code will be
+                                executed</li>
+                            <li>No way for zero or both blocks of code to be executed</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><b>Sequential if statements:</b></p>
+                        <ul>
+                            <li>Can lead to zero, one, or two blocks of code being executed (though not in this specific
+                                case).</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Part III</p>
+                <p class="minor-topic">The Letter Grade Problem</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user a grade, and prints the corresponding letter grade.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><b>Grade Range</b></td>
+                            <td><b>Letter Grade</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>90-100</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>80-89</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>70-79</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>60-69</td>
+                            <td>D</td>
+                        </tr>
+                        <tr>
+                            <td>0-59</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Solving the Letter Grade Problem by <b>if-else</b></p>
+                <code>
+    grade = int(input('Please enter a grade:'))
+
+    if(0 &lt;= grade &lt; 60):
+        print(grade, 'is F')
+    else:
+        if(60 &lt;= grade &lt; 70):
+            print(grade, 'is D')
+        else:
+            if(70 &lt;= grade &lt; 80):
+                print(grade, 'is C')
+            else:
+                if(80 &lt;= grade &lt; 90):
+                    print(grade, 'is B')
+                else:
+                    if(90 &lt;= grade &lt; 100):
+                        print(grade, 'is A')
+                    else:
+                        print(grade, 'is an invalid grade')
+                </code>
+                <p><b>if-elif-else statement:</b> syntax and semantics</p>
+                <code>
+    if(<i>boolean-expression<sub>1</sub></i>):
+        ---------
+        ---------
+    elif(<i>boolean-expression<sub>2</sub></i>):
+        ---------
+        ---------
+    elif(<i>boolean-expression<sub>n</sub></i>):
+        ---------
+        ---------
+    else:
+        ---------
+        ---------
+                </code>
+                <p>Solving the Letter Grade Problem by <b>if-elif-else</b></p>
+                <code>
+    grade = int(input('Please enter a grade: '))
+
+    if(0 &lt;= grade &lt; 60):
+        print(grade, 'is F')
+    elif(60 &lt;= grade &lt; 70):
+        print(grade, 'is D')
+    elif(70 &lt;= grade &lt; 80):
+        print(grade, 'is C')
+    elif(80 &lt;= grade &lt; 90):
+        print(grade, 'is B')
+    elif(90 &lt;= grade &lt; 100):
+        print(grade, 'is A')
+    else:
+        print(grade, 'is an invalid grade')
+                </code>
+                <p><b>Convert 24-hour to 12-hour</b></p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user a time entered in 24-hour format, and prints the equivalent
+                    time in a 12-hour format</p>
+                <p>Example:</p>
+                <p>Please enter a time in a 24-hour format:</p>
+                <p>Hour: <i>15</i></p>
+                <p>Minute: <i>37</i></p>
+                <p>15:37 is 3:37 pm</p>
+
+                <table style="border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <td class="table-border"><b>24-hour format</b></td>
+                            <td class="table-border"><b>12-hour format</b></td>
+                            <td class="table-border"><b>Period</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-border-left-right">0</td>
+                            <td class="table-border">12</td>
+                            <td rowspan="6" class="table-border">am</td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">1</td>
+                            <td>1</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">2</td>
+                            <td>2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">3</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">...</td>
+                            <td>...</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">11</td>
+                            <td>11</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">12</td>
+                            <td class="table-border">12</td>
+                            <td rowspan="6" class="table-border">pm</td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">13</td>
+                            <td>1</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">14</td>
+                            <td>2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">15</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right">...</td>
+                            <td>...</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-right" style="border-bottom: rgba(127, 31, 192, 0.986) solid 1px;">23</td>
+                            <td style="border-bottom: rgba(127, 31, 192, 0.986) solid 1px;">11</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><b>Convert 24-hour to 12-hour (Implementation)</b></p>
+                <code>
+    print("Please enter  a time in a 24-hour format:")
+    hour24 = int(input("Hour: "))
+    minutes24 = int(input("Minutes: "))
+
+    minutes12 = minutes24
+    if(0 &lt;= hour24 &lt;= 11):
+        period = "am"
+        if(hour24 == 0):
+            hour12 = 12
+        else:
+            hour12 = hour24
+    else:
+        period = "pm"
+        if(hour24 == 12):
+            hour12 = 12
+        else:
+            hour12 = hour24 - 12
+
+    print(hour24, ":", minutes24, " is ", hour12, ":", minutes12, period, sep="")
+    <hr>
+    Run: Please enter a time in a 24-hour format:
+         Hour: &gt;? 15
+         Minutes: &gt;? 37
+         15:37 is 3:37pm
+                </code>
+                <p>Example:</p>
+                <pre>
+    We pass in 2 boolean inputs, cold and rainy.
+
+    You should output a single string:
+    ('cold' or 'warm') ' and ' ('rainy' or 'dry')
+    based on these inputs.
+
+    ('cold' or 'warm') means you should use on of the two words, depending on the input boolean value.
+
+    for example False, True = 'warm and rainy'
+                </pre>
+                <code>
+    # Get our boolean values from the command line
+    import sys
+    isCold= sys.argv[1] == 'True'
+    isRainy= sys.argv[2] == 'True'
+
+    # Your code goes here
+    if isCold == True and isRainy == True:
+        print('cold and rainy')
+    elif isCold == True and isRainy == False:
+        print('cold and dry')
+    elif isCold == False and isRainy == True:
+        print('warm and rainy')
+    else:
+        print('warm and dry')   
+    <hr>
+    Input: False False
+    Output: warm and dry
                 </code>
             </article>
         </section>
         <section class="main-section" id="Iterative_Statement">
             <header>Iterative Statement</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p class="minor-topic">Let's Count</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads a positive integer <i>n</i>, and prints the numbers from 1 up to <i>n</i>.</p>
+
+                <p>Example</p>
+                <p>Please enter a positive integer:</p>
+                <p><i>4</i></p>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p> 
+
+                <div style="display: flex; margin: 0 auto; justify-content: center;">
+                    <div>
+                        <p style="text-align: center;"><b>Data</b></p>
+                        <ul>
+                            <li>int</li>
+                            <li>float</li>
+                            <li>bool</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="text-align: center;"><b>Expression</b></p>
+                        <ul>
+                            <li>I/O expressions</li>
+                            <li>Assignment</li>
+                            <li>Arithmetic expressions</li>
+                            <li>Boolean expressions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="text-align: center;"><b>Control Flow</b></p>
+                        <ul>
+                            <li>Sequential</li>
+                            <li>
+                                <p>Branching</p>
+                                <ul>
+                                    <li>if</li>
+                                    <li>If-else</li>
+                                    <li>if-elif-else</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Iterative</p>
+                                <ul>
+                                    <li>while</li>
+                                    <li>for</li>
+                                </ul>
+                            </li>
+                            <li>Function calls</li>
+                            <li>Exceptions</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><b>While Statements: Syntax</b></p>
+                <code>
+    --------
+    --------
+    while (<i>boolean-expression</i>):
+        ---------
+        ---------
+    --------
+    --------
+                </code>
+                <p><b>while Statements: Let's Count Solution Using While</b></p>
+                <code>
+    print("Please enter a positive integer")
+    input_num = int(input())
+    counter = 1
+    while(counter &lt;= input_num):
+        print(counter)
+        counter = counter + 1 
+    <hr>
+    Run: Please enter a positive integer:
+         <i>3</i>
+         1
+         2
+         3
+                </code>
+                <p><b>for Statement: Syntax</b></p>
+                <code>
+    --------
+    --------
+    for <i>variable</i> in <i>iterable-collection</i>:
+        --------
+        --------
+    --------
+    --------
+                </code>
+                <p><b>for Statements: Let's Count Solution Using for</b></p>
+                <code>
+    print("Please enter a positive integer:")
+    input_num = int(input())
+
+    for  in range(1, input_num + 1): 
+        print(counter)
+    <hr>
+    Run: Please enter a positive integer:
+         <i>3</i>
+         1
+         2
+         3
+                </code>
+                <p><b>for Statements: Comparing while and for Solutions</b></p>
+                <code>
+    Using <b>while</b>                                 Using <b>for</b> <span class="green">(recommended)</span>
+
+    print("Please enter a positive integer:")   print("Please enter a positive integer:")
+    input_num = int(input())                    input_num = int(input())
+                                                              
+    counter = 1                                 <b>for</b> counter range(1, input_num + 1):
+    <b>while</b>(counter) &lt;= input_num):                 print(counter)
+        print(counter)
+        counter = counter + 1
+                </code>
+                <p><b>for Statements: Iterable </b></p>
             </article>
         </section>
         <section class="main-section" id="Strings">

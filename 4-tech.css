@@ -209,6 +209,17 @@ ol {
     color: rgba(127, 31, 192, 0.986); 
 }
 
+.table-border {
+    border: rgba(127, 31, 192, 0.986) solid 1px;
+    border-collapse: collapse;
+}
+
+.table-border-left-right {
+    border-left:  rgba(127, 31, 192, 0.986) solid 1px;
+    border-right:  rgba(127, 31, 192, 0.986) solid 1px;
+    border-collapse: collapse;
+}
+
 
 
 
