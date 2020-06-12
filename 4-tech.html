@@ -747,6 +747,7 @@
                 <!-- https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/ -->
 
                 <p class="minor-topic">Basic Interaction with the Python Interpreter</p>
+                <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1280px-Python_logo_and_wordmark.svg.png" alt="python_logo" width="40%" style="display: block; margin: 0 auto; justify-content: center;"></div>
                 <p>class int - integer and float</p>
                 <code>
     &gt;&gt;&gt; 12
@@ -2094,17 +2095,17 @@
                 <ol>
                     <li>
                         <p style="font-weight: bold;">range(start, end)</p>
-                        <p>A sequence of the integers in <i>[start, end)</i></p>
+                        <p>A sequence of the integers in <i>(start, end)</i></p>
                         <p>E.g. range(1,6) &rarr; &lt;1, 2, 3, 4, 5&gt;</p>
                     </li>
                     <li>
                         <p style="font-weight: bold;">range(end)</p>
-                        <p>A sequence of the integers in <i>[0, and)</i></p>
+                        <p>A sequence of the integers in <i>(0, end)</i></p>
                         <p>E.g. range(6) &rarr; &lt;0, 1, 2, 3, 4, 5&gt;</p>
                     </li>
                     <li>
                         <p style="font-weight: bold;">range(start, end, step)</p>
-                        <p>A sequence of the integers in [start, end) by step</p>
+                        <p>A sequence of the integers in (start, end) by step</p>
                         <p>E.g. range(1, 6, 2) &rarr; &lt;1, 3, 5&gt;</p>
                     </li>
                 </ol>
@@ -2254,15 +2255,399 @@
             <code>
     print("Print enter a positive integer:")
     n = int(input())
+
+    for i in range(1, n+1):
+        line = (n-1)*" " + i*"*"
+        print(line)
+    <hr>
+    Run: Please enter a positive integer:
+         &gt;? 4
+               *
+              **
+             ***
+            ****
+            </code>
+            <p><b>Multiplication Table Example: Intro</b></p>
+            <p><b>Problem</b></p>
+            <p>Write a program that reads a positive integer <i>n</i>, and prints a <i>n &#183; n</i> multiplication
+                table.</p>
+            <p><b>Example</b></p>
+            <p>Please eneter a positive integer:</p>
+            <p><i>5</i></p>
+            <p>1 2 3 4 5</p>
+            <p>2 4 6 8 10</p>
+            <p>3 6 9 12 15</p>
+            <p>4 8 12 16 20</p>
+            <p>5 10 15 20 25</p>
+
+            <p><b>Multiplication Table Example: Implementation</b></p>
+            <code>
+    print("Please enter a positive integer:")
+    n = int(input())
+
+    for row in range(1, n+1):
+
+    for i in range(1, n + 1):
+        print(row * i, end='\t')
+    print('')
+    <hr>
+    Run: Please enter a positive integer:
+         <i>5</i>
+         1	2	3	4	5	
+         2	4	6	8	10	
+         3	6	9	12	15	
+         4	8	12	16	20	
+         5	10	15	20	25	
+            </code>
+            <p class="minor-topic">Computing the Average: Know Length of Numbers</p>
+            <p><b>Problem</b></p>
+            <p>Write a program that reads grades of students in a class, and prints the average.</p>
+            <p><b>Example</b></p>
+            <p>Please enter the number of students in the class</p>
+            <p><i>4</i></p>
+            <p>Enter the students' grades (in separate lines):</p>
+            <p><i>71</i></p>
+            <p><i>86</i></p>
+            <p><i>68</i></p>
+            <p><i>94</i></p>
+            <p>The class average is 79.75</p>
+            <code>
+    Please enter the number of students in the class:
+    <i>3</i>
+    Enter the students' grades (in separate lines):
+    <i>90</i>
+    <i>86</i>
+    <i>100</i>
+    <p>The class average is 92.0</p>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Variable</b></td>
+                <td><b>Value It References</b></td>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <td>number_of_students</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>curr_grade</td>
+                <td><span style="text-decoration: line-through;">90</span> <span style="text-decoration: line-through;">86</span> <span>100</span></td>
+            </tr>
+            <tr>
+                <td>grades_sum</td>
+                <td><span style="text-decoration: line-through;">0</span> <span style="text-decoration: line-through;">90</span> <span style="text-decoration: line-through;">176</span> <span>276</span></td>
+            </tr>
+            <tr>
+                <td>average</td>
+                <td>92.0</td>
+            </tr>
+        </tbody>
+    </table>
+            </code>
+            <p class="minor-topic">Known Length of Numbers: Implementation</p>
+            <code>
+    print("Please enter the number of students in the class:")
+    number_of_students = int(input())
+
+    print("Please enter the students' grades (in separate lines):")
+    grades_sum = 0
+
+    for i in range(number_of_students):
+        curr_grade = int(input())
+        grades_sum += curr_grade
+
+    average = grades_sum / number_of_students
+    print("The class average is", average)
+    <hr>
+    Run: Please enter the number of students in the class:
+         &gt;? 4
+         Please enter the students' grades (in separate lines):
+         &gt;? 71
+         &gt;? 86
+         &gt;? 68
+         &gt;? 94
+         The class average is 79.75
+            </code>
+            <p class="minor-topic">Computing the Average: Unknown Length of Numbers</p>
+            <p><b>Problem</b></p>
+            <p>Write a program that reads a sequence of grades (till 'done' is entered), and prints the average.</p>
+            <p><b>Example</b></p>
+            <p>Please enter grades in separate lines. To end the input type 'done':</p>
+            <p><i>71</i></p>
+            <p><i>86</i></p>
+            <p><i>68</i></p>
+            <p><i>94</i></p>
+            <p><i>done</i></p>
+            <p>The class average is 79.75</p>
+            <code>
+    enter grade in separate lines. To end the input type 'done':
+    <i>90</i>
+    <i>86</i>
+
+    <table>
+        <tr>
+            <td><b>Variable</b></td>
+            <td><b>Value It References</b></td>
+        </tr>
+        <tr>
+            <td>seen_done</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>grades_sum</td>
+            <td><span style="text-decoration-line: line-through;">0</span> <span style="text-decoration-line: line-through;">90</span> <span style="text-decoration-line: line-through;">176</span> <span>276</span></td>
+        </tr>
+        <tr>
+            <td>students_count</td>
+            <td><span style="text-decoration-line: line-through;">0</span> <span style="text-decoration-line: line-through;">1</span> <span style="text-decoration-line: line-through;">2</span> <span>3</span></td>
+        </tr>
+        <tr>
+            <td>current</td>
+            <td><span style="text-decoration-line: line-through;">90</span> <span style="text-decoration-line: line-through;">86</span> <span>100</span> done</td>
+        </tr>
+        <tr>
+            <td>average</td>
+            <td>92.0</td>
+        </tr>
+    </table>
+            </code>
+            <p><b>Unknown Length of Numbers: Implementation</b></p>
+            <code>
+    print("Enter grades in separate line. To end the input type 'done':")
+
+    grades_sum = 0
+    students_count = 0
+    seen_done = False
+
+    while(seen_done == False):
+        curr_input = input()
+        if(curr_input == 'done'):
+            seen_done = True
+        else:
+            curr_grade = int(curr_input)
+            grades_sum += curr_grade
+            students_count += 1
+
+    average = grades_sum / students_count
+    print("The class average is", average)
+    <hr>
+    Run: Enter grades in separate line. To end the input type 'done':
+         &gt;? 71
+         &gt;? 86
+         &gt;? 68
+         &gt;? 94
+         &gt;? done
+         The class average is 79.75
+            </code>
+            <p><b>N to 0 or -N to 0</b></p>
+            <p>We will pass in a value N. N can be positive or negative.</p>
+            <ul>
+                <li>If N is positive then output all values from N down to and excluding 0.</li>
+                <li>If N is negative, then output every value from N up to and excluding 0.</li>
+            </ul>
+            <code>
+    Input: 6 / -6
+
+    # Get N from the command line
+    import sys
+    N = int(sys.argv[1])
+
+    # Your code goes here
+    if N > 0:
+      for x in range(N, 0, -1):
+        print(x)
+                
+    if N &lt; 0:
+      for x in range(N, 0):
+        print(x)
+    <hr>
+    Input: 6
+    Output: 6 5 4 3 2 1
+
+    Input: -6
+    Output: -6 -5 -4 -3 -2 -1 
+            </code>
+            <p><b>Equivalent code</b></p>
+            <code>
+    counter = 1                  # This is a 'counter' variable.
+    total = 0                    # This is out utility variable 'totla'
+
+    while counter &lt;= 10:         # If the condition is true, it enters the loop
+      total = total + counter    # We add the current value of 'counter' to 'total'
+      counter = counter + 1      # Here we add 1 to the counter.
+                                 # This is known as 'incrementing' the counter.
+      print(total)               # And finally, we output 'total'
+      <hr>
+    Run: 1      &larr; 0 + 1 (total + counter)
+         3      &larr; 1 + 2
+         6      &larr; 3 + 3
+         10     &larr; 6 + 4
+         15     &larr; 10 + 5
+         21     &larr; 15 + 6 
+         28     &larr; 21 + 7
+         36     &larr; 28 + 8
+         45     &larr; 36 + 9
+         55     &larr; 45 + 10
+            </code>
+            <p><b>Factorial</b></p>
+            <p>X factorial, also written as X! , is X∗(X−1)∗(X−2)∗(X−3)....∗(1).</p>
+            <p>So, 4! is 4*3*2*1 = 24.</p>
+            <p>We provide you with a value N. Calculate N! and output only the final result.</p>
+            <code>
+    # Get N from the command line
+    import sys
+    N = int(sys.argv[1])
+
+    # Your code goes here
+    result = 1
+    for i in range (N, 0, -1):
+        result = i * result
+    print(result)
+    <hr>
+    Input: 1
+    Output: 1         &larr; 1 * 1
+
+    Input: 5
+    Output: 120       &larr; 5 * 4 * 3 * 2 * 1
+
+    Input: 12
+    Output: 479001600 &larr; 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+            </code>
+            <p><b>Squared</b></p>
+            <p>We will provide you with a value N. You should calculate the sum of each value of N squared from 0 up to and including N.</p>
+            <p>In mathematical notation, this is written as <script src=
+                "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                $$\sum_{i=0}^N{i^2}$$</p>
+            <p>So if we passed in 3, you would output 0<sup>2</sup> + 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> = 14</p>
+            <code>
+    # Get N from the command line
+    import sys
+    N= int(sys.argv[1])
+
+    # Your code goes here
     
+    ...
+    N = 5
+    total = 0
+    for i in range (5+1)
+        total = total + (i * i)
+        0*0 + 1*1 + 2*2 + 3*3 + 4*4 + 5*5
+    print(total)
+    ...
+
+    total = 0
+    for i in range (N+1):
+        total = total + (i * i)
+    print(total)
+    <hr>
+    Input: 5
+    Output: 55  &larr; 0*0 + 1*1 + 2*2 + 3*3 + 4*4 + 5*5 
+
+    Input: 7
+    Output: 140 &larr; 0*0 + 1*1 + 2*2 + 3*3 + 4*4 + 5*5 + 6*6 + 7*7 
+            </code>
+            <p><b>X to the Y</b></p>
+            <p>We will pass in 2 values, X and Y. You should calculate  XY  and output only the final result.</p>
+            <p>You will probably know that  XY  can be calculated as X times itself Y times.</p>
+            <code>
+    # Get X and Y from the command line
+    import sys
+    X = int(sys.argv[1])
+    Y = int(sys.argv[2])
+                
+    # Your code goes here
+    print(X ** Y)
+    <hr>
+    Input: 3 5
+    Output: 243 &larr; 3<sup>5</sup>
+            </code>
+            <p><b>Fibonacci sequence</b></p>
+            <p>The Fibonacci Sequence is the series of numbers:</p>
+            <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, …</p>
+            <p>The next number is found by adding up the two numbers before it.</p>
+            <ul>
+                <li>We start of with 0 and 1</li>
+                <li>The first 1 in the above list is found by adding the previous 2 numbers (0+1)</li>
+                <li>The 2 is found by adding the two numbers before it (1 + 1)</li>
+                <li>Similarly, the 3 is found by adding the two numbers before it (1 + 2),</li>
+                <li>And the 5 is (2 + 3)</li>
+            </ul>
+            <p>and so on!</p>
+            <p>We will pass in a value N. Write a program that outputs the complete Fibonacci sequence for N iterations.</p>
+            <p><b>Important:</b> If N is 0, then we expect to get an output of 0. If N=1 then we expect 0, 1 etc.</p>
+            <code>
+    # Get N from the command line
+    import sys
+    N= int(sys.argv[1])
+                
+    # Your code goes here
+    n1 = 0
+    n2 = 1
+
+    for i in range (N+1):
+        if i &lt; N:
+            print(n1)
+        else:
+            print(n1)
+
+        n3 = n1 + n2
+        n1 = n2
+        n2 = n3
+    <hr>
+    Input: 10
+    Output: 0 1 1 2 3 5 8 13 21 34 55 &larr; start with 0 and 1, then (0+1) (1+1) (1+2) (2+3) (3+5) (5+8) (8+13) (13+21) (21+34)
+            </code>
+            <p><b>The 'break' statement</b></p>
+            <p>The break statement is a way of escaping a loop before the loop condition is met.</p>
+            <p>The break statement should never need to be used. Any program that seems to require a break statement can be rewritten to work equally well without it.</p>
+            <p>Have a look at the code on the left. The code shows a loop counting from 0 to 9. However, the break statement in the loop is waiting to see if the loop index hits 7, and if it does, the loop is exited immediately.</p>
+            <code>
+    for i in range(0, 10):
+        print(i)
+    if i == 7:
+        break
+
+    print('Finished.')
+    <hr>
+    Run: 0
+         1
+         2
+         3
+         4
+         5
+         6
+         7
+         Finished.
+            </code>
+            <p><b>The 'continue' statement</b></p>
+            <p>The continue statement is used to jump over one iteration and continue the loop from the top.</p>
+            <p>The example on the left shows a loop that skips displaying the loop counter if it is an odd number.</p>
+            <p>Like break on the previous page, continue should not be necessary under any normal circumstances. Any code that seems to require a continue statement could be rewritten better without it.</p>
+            <code>
+    for i in range(0, 10):
+        if i % 2 == 1:
+            continue
+        print(i)
+
+    print('Finished.')
+    <hr>
+    Run: 0
+         2
+         4
+         6
+         8
+         Finished.
             </code>
         </section>
+        <hr>
         <section class="main-section" id="Strings">
             <header>Strings</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p class="minor-topic">Introduction: The str Data Type</p>
+                
             </article>
         </section>
         <section class="main-section" id="Functions">
