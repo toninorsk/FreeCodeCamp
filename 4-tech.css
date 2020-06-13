@@ -82,6 +82,11 @@ code {
     background-image: linear-gradient(to right, rgb(87, 6, 140) , rgba(86, 6, 140, 0));
 }
 
+.topic-label-2 {
+    text-decoration: underline rgb(87, 6, 140) solid;
+}
+
+
 #navbar ul {
     height: 88%;
     padding: 0;
@@ -220,6 +225,9 @@ ol {
     border-collapse: collapse;
 }
 
+.marker {
+    background-color: rgba(137, 43, 226, 0.247)
+}
 
 
 

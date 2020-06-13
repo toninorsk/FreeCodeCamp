@@ -154,7 +154,7 @@
             <br>
         </section>
         <section class="main-section" id="Computer_Networking">
-            <header>Computer Networking</header>
+            <header class="topic-label-2">Computer Networking</header>
             <article>
                 <p>
                     test
@@ -162,7 +162,7 @@
             </article>
         </section>
         <section class="main-section" id="Application_Layer">
-            <header>Application Layer</header>
+            <header class="topic-label-2">Application Layer</header>
             <article>
                 <p>
                     test
@@ -170,7 +170,7 @@
             </article>
         </section>
         <section class="main-section" id="Transport_Layer">
-            <header>Transport Layer</header>
+            <header class="topic-label-2">Transport Layer</header>
             <article>
                 <p>
                     test
@@ -178,7 +178,7 @@
             </article>
         </section>
         <section class="main-section" id="Network_Layer">
-            <header>Network Layer</header>
+            <header class="topic-label-2">Network Layer</header>
             <article>
                 <p>
                     test
@@ -186,7 +186,7 @@
             </article>
         </section>
         <section class="main-section" id="Link_Layer">
-            <header>Link Layer</header>
+            <header class="topic-label-2">Link Layer</header>
             <article>
                 <p>
                     test
@@ -194,7 +194,7 @@
             </article>
         </section>
         <section class="main-section" id="Overview_of_Network_Security">
-            <header>Overview of Network Security</header>
+            <header class="topic-label-2">Overview of Network Security</header>
             <article>
                 <p>
                     test
@@ -207,7 +207,7 @@
         </section>
         <br>
         <section class="main-section" id="Fundamentals_of_System_Hardware">
-            <header>Fundamentals of System Hardware</header>
+            <header class="topic-label-2">Fundamentals of System Hardware</header>
             <article>
                 <p>
                     test
@@ -215,7 +215,7 @@
             </article>
         </section>
         <section class="main-section" id="Introduction_to_Operating_Systems">
-            <header>Introduction to Operating Systems</header>
+            <header class="topic-label-2">Introduction to Operating Systems</header>
             <article>
                 <p>
                     test
@@ -223,7 +223,7 @@
             </article>
         </section>
         <section class="main-section" id="Processes_and_Threads">
-            <header>Processes and Threads</header>
+            <header class="topic-label-2">Processes and Threads</header>
             <article>
                 <p>
                     test
@@ -231,7 +231,7 @@
             </article>
         </section>
         <section class="main-section" id="Thread_Concurrency_and_Deadlocks">
-            <header>Thread Concurrency and Deadlocks</header>
+            <header class="topic-label-2">Thread Concurrency and Deadlocks</header>
             <article>
                 <p>
                     test
@@ -239,7 +239,7 @@
             </article>
         </section>
         <section class="main-section" id="Memory_Management">
-            <header>Memory Management</header>
+            <header class="topic-label-2">Memory Management</header>
             <article>
                 <p>
                     test
@@ -252,7 +252,7 @@
         </section>
         <br>
         <section class="main-section" id="Positional_Number_Systems">
-            <header>Positional Number Systems</header>
+            <header class="topic-label-2">Positional Number Systems</header>
             <article>
                 <p class="minor-topic">Digital Data</p>
                 <p>Data in the computer memory is represented using units that can each be in one of two states (0 and
@@ -670,7 +670,7 @@
             <hr>
         </section>
         <section class="main-section" id="Hello_World">
-            <header>Hello World</header>
+            <header class="topic-label-2">Hello World</header>
             <article>
                 <p>
                     In computer science we design algorithms to solve computational problems. We then implement them in
@@ -953,7 +953,7 @@
             <hr>
         </section>
         <section class="main-section" id="Numerical_Data_Type_and_Arithmetic_Expressions">
-            <header>Numerical Data Type and Arithmetic Expressions</header>
+            <header class="topic-label-2">Numerical Data Type and Arithmetic Expressions</header>
             <article>
                 <p class="minor-topic">Introduction</p>
                 <div style="display: flex; justify-content: center;">
@@ -1385,7 +1385,7 @@
         </section>
         <hr>
         <section class="main-section" id="Branching_Statement">
-            <header>Branching Statement</header>
+            <header class="topic-label-2">Branching Statement</header>
             <p>Part I</p>
             <article>
                 <p class="minor-topic">Motivation</p>
@@ -1965,7 +1965,7 @@
             </article>
         </section>
         <section class="main-section" id="Iterative_Statement">
-            <header>Iterative Statement</header>
+            <header class="topic-label-2">Iterative Statement</header>
             <article>
                 <p class="minor-topic">Let's Count</p>
                 <p><b>Problem</b></p>
@@ -2644,22 +2644,435 @@
         </section>
         <hr>
         <section class="main-section" id="Strings">
-            <header>Strings</header>
+            <header class="topic-label-2">Strings</header>
             <article>
                 <p class="minor-topic">Introduction: The str Data Type</p>
+                <p class="purple">Kind of data: <span style="color: black;">Sequence of characters (Textual Data)</span></p>
+                <p class="purple">Inner representation: <span style="color: black;">Sequence of <i>Unicode</i> values</span></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/ASCII-Table.svg/738px-ASCII-Table.svg.png" alt="ascii" width="90%" style="margin: 0 auto; justify-content: center; display: block;">
+                <code>
+    abc = 01100001 01100010 01100011 &larr; memory Representation of Strings
+                </code>
+                <p class="purple">Literals: <span style="color: black;">'abc', "abc", "yes<span style="color: blue;">\t</span>no", "yes<span style="color: blue;">\n</span>no", "yes<span style="color: blue;">\\</span>no"</span></p>
+                <code>
+    &gt;&gt;&gt; 'abc'
+    'abc'
+    &gt;&gt;&gt; "abc"
+    'abc'
+    &gt;&gt;&gt; "abc\ndef"
+    'abc\ndef'
+    &gt;&gt;&gt; print("abc\ndef")
+    abc
+    def     
+    
+    &gt;&gt;&gt; print("abc")
+    abc
+
+    &gt;&gt;&gt; print("abc\tdef")
+    abc def
+
+    &gt;&gt;&gt; print("abc\t\tdef")
+    abc     def
+
+    &gt;&gt;&gt; print("yes\no")
+    yes
+    o
+
+    &gt;&gt;&gt; print("yes\\no")
+    yes\no
+                </code>
+
+                <p class="purple">Operators: <span style="color: black;">+ , *</span></p>
+                <code>
+    &gt;&gt;&gt; X = "abc" + "def"
+    &gt;&gt;&gt; print(X)
+    abcdef
+
+    &gt;&gt;&gt; Y = "abc" * 2
+    &gt;&gt;&gt; print(Y)
+    abcabc
+                </code>
+                <p class="purple">Relational operators: <span style="color: black;">==, !=, &lt;, &gt;, &lt;=, &gt;= (compare by number of ASCII)</span></p>
+                <code>
+    &gt;&gt;&gt; s1 = "abc"
+    &gt;&gt;&gt; s2 = "de"
+
+    &gt;&gt;&gt; s2 == s2
+    False
+    &gt;&gt;&gt; s2 != "de"
+    True
+
+    &gt;&gt;&gt; if(s1 &lt; s2):
+                    print(s1, "is smaller than", s2)
+                 else:
+                    print(s1, "is not smaller than", s2)
+    abc is smaller than de &larr; <span class="marker">Python doesn't compare str by length</span> 
+                </code>
+                <ul>
+                    <li class="purple">Indexing: <span style="color: black;">str[i]</span></li>
+                    <code>
+    &gt;&gt;&gt; s = "abcdefg"
+    &gt;&gt;&gt; s
+    'abcdrfg'
+    &gt;&gt;&gt; len(s)
+    7
+
+    s   =  'a''b''c''d''e''f''g'
+    <span class="marker">index   0  1  2  3  4  5  6 &larr; 0 base mechanism</span>
+    <span class="marker">index  -7 -6 -5 -4 -3 -2 -1 &larr; negative base mechanism</span>
+
+    &gt;&gt;&gt; s[1]
+    'b' 
+    &gt;&gt;&gt; s[0]
+    'a'
+    &gt;&gt;&gt; s[10]
+    <span class="error">Traceback (most recent call last): File "&lt;input&gt;", line1 in &lt;module&gt; IndexError: string index out of range</span>
+
+    &gt;&gt;&gt; s[2]
+    'c'
+    &gt;&gt;&gt; s[-1]
+    'g'
+    &gt;&gt;&gt; s[-3]
+    'e'
+                    </code>
+
+                    <li class="purple">Slicing: <span style="color: black;">str[start:end]</span></li>
+
+                    <code>
+    <span>s   =  'a'<span class="marker">'b''c''d'</span>'e''f''g'</span>
+    <span>index   0 <span class="marker"> 1  2  3 </span> 4  5  6 </span>
+    <span>index  -7 -6 -5 -4 -3 -2 -1 </span>
+
+    &gt;&gt;&gt; s = "abcdefg"
+    &gt;&gt;&gt; s[1:4]
+    'bcd' &larr; *include the start index, but <u>exclude</u> the end index (half-open range/interval)
+
+    <span>s   =  <span class="marker">'a''b''c''d'</span>'e''f''g'</span>
+    <span>index  <span class="marker"> 0  1  2  3 </span> 4  5  6 </span>
+
+    &gt;&gt;&gt; s[0:4]
+    'abcd' &larr; from the start index to index 4
+    &gt;&gt;&gt; s[:4]
+    'abcd' &larr; from the start index to index 4 (omitted)
+    
+    <span>s   =  'a''b''c''d'<span class="marker">'e''f''g'</span></span>
+    <span>index   0  1  2  3 <span class="marker"> 4  5  6 </span></span>
+
+    &gt;&gt;&gt; s[4:len(s)]
+    'efg' &larr; from index 4 to the end index
+    &gt;&gt;&gt; s[4:]
+    'efg' &larr; from index 4 to the end index (omitted)
+
+    <span>s   =  <span class="marker">'a''b''c''d''e''f''g'</span></span>
+    <span>index  <span class="marker"> 0  1  2  3  4  5  6 </span></span>
+
+    &gt;&gt;&gt; s[:]
+    'abcdefg' &larr; from the start index to the end index
+                    </code>
+
+                </ul>
+                <p class="purple">Methods: <span style="color: black;">upper(), lower(), isupper(), islower, isdigit(), find(...)</span></p>
+                <code>
+    &gt;&gt;&gt; s1 = "abc"    &larr; 'a''b''c'
+    &gt;&gt;&gt; s1.upper()    &larr; 'A''B''C'
+    'ABC'
+
+    &gt;&gt;&gt; s2 = s1.upper()
+    &gt;&gt;&gt; s1
+    'abc'
+    &gt;&gt;&gt; s2
+    'ABC'
+                </code>
+                <code>
+    &gt;&gt;&gt; s1 = 'abc'
+    &gt;&gt;&gt; s1.upper()
+    'ABC'
+
+    &gt;&gt;&gt; s2 = "abcDEF123xYz"
+
+    &gt;&gt;&gt; s2.upper()
+    'ABCDEF123XYZ'
+
+    &gt;&gt;&gt; s2.lower()
+    'abcdef123xyz'
+
+    &gt;&gt;&gt; s3 = "ABC"
+
+    &gt;&gt;&gt; s3.isupper()
+    True
+
+    &gt;&gt;&gt; s1.isupper()
+    False
+
+    &gt;&gt;&gt; s4 = "aBcD"
+    &gt;&gt;&gt; s4.isupper()
+    False &larr; require all uppercase s4 to be True
+
+    &gt;&gt;&gt; s5 = "aBc123$dE"
+    &gt;&gt;&gt; s5.isupper()
+    False &larr; require all uppercase s5 to be True
+
+    &gt;&gt;&gt; s6 = "1234"
+    &gt;&gt;&gt; s1.isdigit()
+    True
+
+    &gt;&gt;&gt; s5.isdigit()
+    False &larr; require all digit s5 to be True
+                </code>
+                <p>find(...)</p>
+                <code>
+    <span>s   =  'a''b''c'<span class="marker">'1''2''3'</span>'b''c''d'</span>
+    <span>index   0  1  2 <span class="marker"> 3  4  5 </span> 6  7  8 </span>
+
+    &gt;&gt;&gt; s = "abc123bcd" 
+    &gt;&gt;&gt; s.find("123")
+    3 &larr; shows the first index of "123"
+
+    &gt;&gt;&gt; s.find("xyz")
+    -1 &larr; means "xyz" doesn't exist
+
+    <span>s   =  'a'<span class="marker">'b''c'</span>'1''2''3'<span class="marker">'b''c'</span>'d'</span>
+    <span>index   0 <span class="marker"> 1  2 </span> 3  4  5 <span class="marker"> 6  7 </span> 8 </span>
+
+    &gt;&gt;&gt; s.find("bc") 
+    1 &larr; show only the first index of the first "bc"
+
+    &gt;&gt;&gt; s.find("bc", 2) &larr; find "bc" <u>start from index 2</u>
+    6
+                </code>
+
+                <p class="purple">Functions: <span style="color: black;">len(...), print(...)</span></p>
+                <p>len stands for length</p>
+                <code>
+    &gt;&gt;&gt; s1 = "abc123"
+    &gt;&gt;&gt; len(s1)
+    6
+
+    &gt;&gt;&gt; s2 = "abc\n123" &larr; <span class="marker">\n is counted as 1 character</span>
+    &gt;&gt;&gt; len(s2)
+    7
+                </code>
+                <p class="purple">Sequential Property:</p>
+
+                <p><b>Example: First Word</b></p>
+                <p><b>Problem</b></p>
+                <p>Write a problem that reads from the user 3 words and prints the one that comes first in an alphabetical order.</p>
+
+                <p><b>Example</b></p>
+                <p>Please enter 3 words:</p>
+                <p>#1: <i>dolphin</i></p>
+                <p>#2: <i>cat</i></p>
+                <p>#3: <i>tiger</i></p>
+                <p>cat</p>
+
+                <code>
+    print("Please enter 3 words:")
+    word1 = input("#1: ")
+    word2 = input("#2: ")
+    word3 = input("#3: ")
+
+    if(word1 &lt;= word2 and word 1 &lt;= word3):
+        print(word1)
+    elif(word2 &lt;= word1 and word2 &lt;= word3):
+        print(word2)
+    else:
+        print(word3)
+    <hr>
+    Run: Please enter 3 words:
+         #1: &gt;? dolphin
+         #2: &gt;? cat
+         #3: &gt;? tiger
+         cat
+                </code>
+
+                <p><b>Example: First and Last Name</b></p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user their full name and prints their first name, last name, and initials in separate lines.</p>
+
+                <p><b>Example</b></p>
+                <p>Please enter your name</p>
+                <p>Separate first and last name by a space:</p>
+                <p><i>Donald Duck</i></p>
+                <p>First name: Donald</p>
+                <p>last name: Duck</p>
+                <p>Initials: DD</p>
+                <code>
+    <span>s   =  'D''o'n''a''l''d'<span class="marker">' '</span>'D''u''c''k'</span>
+    <span>index   0  1 2  3  4  5 <span class="marker"> 6 </span> 7  8  9  10</span>
+
+    print("Please enter your name. Separate first and last name by a space:")
+    full_name = input()
+
+    space_ind = full_name.find(" ")
+    first_name = full_name[ : space_ind]
+    last_name = full_name[space_ind + 1 : ]
+    initials = first_name[0] + last_name[0]
+
+    print("First name:", first_name)
+    print("Last name:", last_name)
+    print("Initials:", initials)
+    <hr>
+    Run: Please enter your name. Separate first and last name by a space:
+         &gt;? Donald Duck
+
+         First name: Donald
+         Last name: Duck
+         Initials: DD
+                </code>
+
+                <p><b>Iterating over Strings:</b> while, for</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads a line of text from the user and prints the number of words in that text.</p>
+                <p><b>Example</b></p>
+                <p>Please enter a line of text</p>
+                <p><i>Let it be</i></p>
+                <p>You typed 3 words</p>
+
+                <p>- Implement by while</p>
+                <code>
+    <span>line = 'L''e't'<span class="marker">' '</span>'i''t'<span class="marker">' '</span>'b''e'</span>
+    <span>index   0  1 2 <span class="marker"> 3 </span> 4  5 <span class="marker"> 6 </span> 7  8 </span>
+   
+    <i>(number of words) = (number of spaces) + 1</i>
+
+    print("Please enter a line of text:")
+    line = input()
+
+    <span style="background-color: rgba(128, 255, 0, 0.562);">ind = 0</span>
+    <span style="background-color: rgba(128, 255, 0, 0.562);">while(ind &lt; len(line)):</span>
+        <span style="background-color: rgba(128, 255, 0, 0.562);">curr_char = line[ind]</span>
+        <span class="marker">(curr_char ==''):</span>
+            <span class="marker">spaces_count += 1</span> &larr; count the number of space by adding 1 when passing a space
+        <span style="background-color: rgba(128, 255, 0, 0.562);">ind += 1</span> &larr; iterate index 1 by 1 til the end index
+    number_of_words = spaces_count + 1
+
+    print("You typed", number_of_words, "words")
+                </code>
+                <p>- Implement by for</p>
+                <code>
+    <span>line = 'L''e't'<span class="marker">' '</span>'i''t'<span class="marker">' '</span>'b''e'</span>
+    <span>index   0  1 2 <span class="marker"> 3 </span> 4  5 <span class="marker"> 6 </span> 7  8 </span>
+
+    print("please enter a line of text:")
+    line = input()
+
+    <span class="marker">spaces_count = 0</span>
+
+    <span style="background-color: rgba(128, 255, 0, 0.562);">for ind in range(len(line)):</span>
+        <span style="background-color: rgba(128, 255, 0, 0.562);">curr_char = line[ind]</span> &larr; iterate index 1 by 1 til the end index 
+        <span class="marker">if(curr_char == ''):</span>
+            <span class="marker">spaces_count += 1</span> &larr; count the number of space by adding 1 by1 when passing a space
+    number_of_words = spaces_count + 1
+
+    print("You typed", number_of_words, "words")
+                </code>
+                <p>Iterating over the indices of the string</p>
+                <code>
+    s  =  'a''b''c''d'
+    index  1  2  3  4
+
+    for ind in range(len(s)):
+        print(ind)
+        print(s[ind])
+                </code>
+                <p>Iterating over the characters of the string</p>
+                <code>
+    s  =  'a''b''c''d'
+    index  1  2  3  4
+    
+    for curr_char in s:
+        print(curr_char)
+                </code>
+                <p class="minor-topic">Iterable Collections:</p>
+                <code>
+    --------
+    for <i>element</i> in <i>iterable-collection:</i>
+        ---------
+        ---------
+    --------
+                </code>
+                <ul>
+                    <li>call to range(...) - sequence of integers</li>
+                    <li>string - sequence of the characters in the string</li>
+                </ul>
+                <p><b>Iterable over string</b></p>
+                <code>
+    line = 'L''e't'' ''i''t'' ''b''e'   
+    index   0  1 2  3  4  5  6  7  8    
+
+    print("Please enter a line of text:")
+    line = input()
+
+    for curr_char in line:
+        if(curr_char ==''):
+            spaces_count += 1
+    words_count = spaces_count + 1
+    print("You typed", words_count, "words")
+                </code>
+                <p class="minor-topic">Recp</p>
+                <p class="purple">Kind of Data:<span style="color: black;">Sequence of characters (textual data)</span></p>
+                <p class="purple">Inner Representation:<span style="color: black;">Sequence of <i>Unicode</i> values</p>
+                <p class="purple">Literals:<span style="color: black;">'abc', "abc", "yes<span style="color: blue;">\t</span>no", "yes<span style="color: blue;">\n</span>no", "yes<span style="color: blue;">\\</span>no"</span></p>
+                <p class="purple">Operators:<span style="color: black;">+, *</span></p>
+                <p class="purple">Functions:<span style="color: black;">len(...), print(...)</span></p>
+                <p class="purple">Sequential Properties:<span style="color: black;"></span></p>
+                <p class="purple"><span style="color: black;"></span></p>
+                <ul>
+                    <li>Indexing: <span style="color: black;">str[]</span></li>
+                    <li>Slicing: <span style="color: black;">str[start:end]</span></li>
+                </ul>
+                <p class="purple">Methods:<span style="color: black;">upper(), lower(), isupper(), islower(), isdigit(), find(...)</span></p>
+
+                <p><b>Example</b></p>
+                <p>write an invocation that counts the number of a’s in 'banana'.</p>
+                <code>
+    print("Please enter a line of text:")
+    line = input()
+
+    a_count = 0
+
+    for curr_char in line:
+        if(curr_char =='a'):
+            a_count += 1
+    words_count = a_count
+    print("You typed", words_count, "a's")
+    <hr>
+    Run: Please enter a line of text:
+         &gt;? banana
+         You typed 3 a's
+                </code>
+                <p>A string slice can take a third index that specifies the “step size”; that is, the number of spaces between successive characters. A step size of 2 means every other character; 3 means every third, etc.</p>
+                <code>
+    >>> fruit = 'banana'
+    >>> fruit[0:5:2]
+    'bnn'
+                </code>
+                <p>A step size of -1 goes through the word backwards, so the slice [::-1] generates a reversed string.
+                    Use this idiom to write a one-line version of is_palindrome from</p>
+                <code>
+    def is_palindrome(word):
+        return word == word[::-1]
                 
+    print(is_palindrome('madam'))
+    print(is_palindrome('random'))
+    print(is_palindrome(''))
+    print(is_palindrome('a'))
+    <hr>
+    Run: True
+         False
+         True
+         True
+                </code>
             </article>
         </section>
         <section class="main-section" id="Functions">
-            <header>Functions</header>
+            <header class="topic-label-2">Functions</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p></p>
             </article>
         </section>
         <section class="main-section" id="Lists">
-            <header>Lists</header>
+            <header class="topic-label-2">Lists</header>
             <article>
                 <p>
                     test
