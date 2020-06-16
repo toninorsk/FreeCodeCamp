@@ -115,9 +115,9 @@
                             alt="Itay"></td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.edx.org/bio/aspen-olmsted">Aspen Olmsted, Ph.D.</a><br>Adjunct
+                    <td><a href="https://engineering.nyu.edu/faculty/aspen-olmsted">Aspen Olmsted, Ph.D.</a><br>Adjunct
                         Professor<br>New York University Tandon School of Engineering</td>
-                    <td><a href="https://www.edx.org/bio/itay-tal">Itay Tal</a><br>Industry Assistant
+                    <td><a href="https://engineering.nyu.edu/faculty/itay-tal">Itay Tal</a><br>Industry Assistant
                         Professor<br>New York University Tandon School of Engineering</td>
                 </tr>
                 </td>
@@ -136,9 +136,9 @@
                 </td>
                 <td>
                     <tr>
-                        <td><a href="https://www.edx.org/bio/rafail-portnoy">Rafail Portnoy</a><br>Professor<br>New
+                        <td><a href="https://engineering.nyu.edu/faculty/rafail-portnoy">Rafail Portnoy</a><br>Professor<br>New
                             York University Tandon School of Engineering</td>
-                        <td><a href="https://www.edx.org/bio/daniel-katz-braunschweig">Daniel
+                        <td><a href="https://engineering.nyu.edu/faculty/daniel-katz-braunschweig">Daniel
                                 Katz-Braunschweig</a><br>Senior Lecturer<br>New York University Tandon School of
                             Engineering</td>
                     </tr>
@@ -747,7 +747,10 @@
                 <!-- https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/ -->
 
                 <p class="minor-topic">Basic Interaction with the Python Interpreter</p>
-                <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1280px-Python_logo_and_wordmark.svg.png" alt="python_logo" width="40%" style="display: block; margin: 0 auto; justify-content: center;"></div>
+                <div><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1280px-Python_logo_and_wordmark.svg.png"
+                        alt="python_logo" width="40%" style="display: block; margin: 0 auto; justify-content: center;">
+                </div>
                 <p>class int - integer and float</p>
                 <code>
     &gt;&gt;&gt; 12
@@ -2516,12 +2519,14 @@
     Output: 479001600 &larr; 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
             </code>
             <p><b>Squared</b></p>
-            <p>We will provide you with a value N. You should calculate the sum of each value of N squared from 0 up to and including N.</p>
-            <p>In mathematical notation, this is written as <script src=
-                "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            <p>We will provide you with a value N. You should calculate the sum of each value of N squared from 0 up to
+                and including N.</p>
+            <p>In mathematical notation, this is written as
+                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
                 </script>
                 $$\sum_{i=0}^N{i^2}$$</p>
-            <p>So if we passed in 3, you would output 0<sup>2</sup> + 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> = 14</p>
+            <p>So if we passed in 3, you would output 0<sup>2</sup> + 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> = 14
+            </p>
             <code>
     # Get N from the command line
     import sys
@@ -2550,8 +2555,8 @@
     Output: 140 &larr; 0*0 + 1*1 + 2*2 + 3*3 + 4*4 + 5*5 + 6*6 + 7*7 
             </code>
             <p><b>X to the Y</b></p>
-            <p>We will pass in 2 values, X and Y. You should calculate  XY  and output only the final result.</p>
-            <p>You will probably know that  XY  can be calculated as X times itself Y times.</p>
+            <p>We will pass in 2 values, X and Y. You should calculate XY and output only the final result.</p>
+            <p>You will probably know that XY can be calculated as X times itself Y times.</p>
             <code>
     # Get X and Y from the command line
     import sys
@@ -2576,7 +2581,8 @@
                 <li>And the 5 is (2 + 3)</li>
             </ul>
             <p>and so on!</p>
-            <p>We will pass in a value N. Write a program that outputs the complete Fibonacci sequence for N iterations.</p>
+            <p>We will pass in a value N. Write a program that outputs the complete Fibonacci sequence for N iterations.
+            </p>
             <p><b>Important:</b> If N is 0, then we expect to get an output of 0. If N=1 then we expect 0, 1 etc.</p>
             <code>
     # Get N from the command line
@@ -2602,8 +2608,11 @@
             </code>
             <p><b>The 'break' statement</b></p>
             <p>The break statement is a way of escaping a loop before the loop condition is met.</p>
-            <p>The break statement should never need to be used. Any program that seems to require a break statement can be rewritten to work equally well without it.</p>
-            <p>Have a look at the code on the left. The code shows a loop counting from 0 to 9. However, the break statement in the loop is waiting to see if the loop index hits 7, and if it does, the loop is exited immediately.</p>
+            <p>The break statement should never need to be used. Any program that seems to require a break statement can
+                be rewritten to work equally well without it.</p>
+            <p>Have a look at the code on the left. The code shows a loop counting from 0 to 9. However, the break
+                statement in the loop is waiting to see if the loop index hits 7, and if it does, the loop is exited
+                immediately.</p>
             <code>
     for i in range(0, 10):
         print(i)
@@ -2625,7 +2634,8 @@
             <p><b>The 'continue' statement</b></p>
             <p>The continue statement is used to jump over one iteration and continue the loop from the top.</p>
             <p>The example on the left shows a loop that skips displaying the loop counter if it is an odd number.</p>
-            <p>Like break on the previous page, continue should not be necessary under any normal circumstances. Any code that seems to require a continue statement could be rewritten better without it.</p>
+            <p>Like break on the previous page, continue should not be necessary under any normal circumstances. Any
+                code that seems to require a continue statement could be rewritten better without it.</p>
             <code>
     for i in range(0, 10):
         if i % 2 == 1:
@@ -2647,13 +2657,18 @@
             <header class="topic-label-2">Strings</header>
             <article>
                 <p class="minor-topic">Introduction: The str Data Type</p>
-                <p class="purple">Kind of data: <span style="color: black;">Sequence of characters (Textual Data)</span></p>
-                <p class="purple">Inner representation: <span style="color: black;">Sequence of <i>Unicode</i> values</span></p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/ASCII-Table.svg/738px-ASCII-Table.svg.png" alt="ascii" width="90%" style="margin: 0 auto; justify-content: center; display: block;">
+                <p class="purple">Kind of data: <span style="color: black;">Sequence of characters (Textual Data)</span>
+                </p>
+                <p class="purple">Inner representation: <span style="color: black;">Sequence of <i>Unicode</i>
+                        values</span></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/ASCII-Table.svg/738px-ASCII-Table.svg.png"
+                    alt="ascii" width="90%" style="margin: 0 auto; justify-content: center; display: block;">
                 <code>
     abc = 01100001 01100010 01100011 &larr; memory Representation of Strings
                 </code>
-                <p class="purple">Literals: <span style="color: black;">'abc', "abc", "yes<span style="color: blue;">\t</span>no", "yes<span style="color: blue;">\n</span>no", "yes<span style="color: blue;">\\</span>no"</span></p>
+                <p class="purple">Literals: <span style="color: black;">'abc', "abc", "yes<span
+                            style="color: blue;">\t</span>no", "yes<span style="color: blue;">\n</span>no", "yes<span
+                            style="color: blue;">\\</span>no"</span></p>
                 <code>
     &gt;&gt;&gt; 'abc'
     'abc'
@@ -2692,7 +2707,8 @@
     &gt;&gt;&gt; print(Y)
     abcabc
                 </code>
-                <p class="purple">Relational operators: <span style="color: black;">==, !=, &lt;, &gt;, &lt;=, &gt;= (compare by number of ASCII)</span></p>
+                <p class="purple">Relational operators: <span style="color: black;">==, !=, &lt;, &gt;, &lt;=, &gt;=
+                        (compare by number of ASCII)</span></p>
                 <code>
     &gt;&gt;&gt; s1 = "abc"
     &gt;&gt;&gt; s2 = "de"
@@ -2771,7 +2787,8 @@
                     </code>
 
                 </ul>
-                <p class="purple">Methods: <span style="color: black;">upper(), lower(), isupper(), islower, isdigit(), find(...)</span></p>
+                <p class="purple">Methods: <span style="color: black;">upper(), lower(), isupper(), islower, isdigit(),
+                        find(...)</span></p>
                 <code>
     &gt;&gt;&gt; s1 = "abc"    &larr; 'a''b''c'
     &gt;&gt;&gt; s1.upper()    &larr; 'A''B''C'
@@ -2856,7 +2873,8 @@
 
                 <p><b>Example: First Word</b></p>
                 <p><b>Problem</b></p>
-                <p>Write a problem that reads from the user 3 words and prints the one that comes first in an alphabetical order.</p>
+                <p>Write a problem that reads from the user 3 words and prints the one that comes first in an
+                    alphabetical order.</p>
 
                 <p><b>Example</b></p>
                 <p>Please enter 3 words:</p>
@@ -2887,7 +2905,8 @@
 
                 <p><b>Example: First and Last Name</b></p>
                 <p><b>Problem</b></p>
-                <p>Write a program that reads from the user their full name and prints their first name, last name, and initials in separate lines.</p>
+                <p>Write a program that reads from the user their full name and prints their first name, last name, and
+                    initials in separate lines.</p>
 
                 <p><b>Example</b></p>
                 <p>Please enter your name</p>
@@ -2922,7 +2941,8 @@
 
                 <p><b>Iterating over Strings:</b> while, for</p>
                 <p><b>Problem</b></p>
-                <p>Write a program that reads a line of text from the user and prints the number of words in that text.</p>
+                <p>Write a program that reads a line of text from the user and prints the number of words in that text.
+                </p>
                 <p><b>Example</b></p>
                 <p>Please enter a line of text</p>
                 <p><i>Let it be</i></p>
@@ -3010,9 +3030,12 @@
     print("You typed", words_count, "words")
                 </code>
                 <p class="minor-topic">Recp</p>
-                <p class="purple">Kind of Data:<span style="color: black;">Sequence of characters (textual data)</span></p>
+                <p class="purple">Kind of Data:<span style="color: black;">Sequence of characters (textual data)</span>
+                </p>
                 <p class="purple">Inner Representation:<span style="color: black;">Sequence of <i>Unicode</i> values</p>
-                <p class="purple">Literals:<span style="color: black;">'abc', "abc", "yes<span style="color: blue;">\t</span>no", "yes<span style="color: blue;">\n</span>no", "yes<span style="color: blue;">\\</span>no"</span></p>
+                <p class="purple">Literals:<span style="color: black;">'abc', "abc", "yes<span
+                            style="color: blue;">\t</span>no", "yes<span style="color: blue;">\n</span>no", "yes<span
+                            style="color: blue;">\\</span>no"</span></p>
                 <p class="purple">Operators:<span style="color: black;">+, *</span></p>
                 <p class="purple">Functions:<span style="color: black;">len(...), print(...)</span></p>
                 <p class="purple">Sequential Properties:<span style="color: black;"></span></p>
@@ -3021,7 +3044,8 @@
                     <li>Indexing: <span style="color: black;">str[]</span></li>
                     <li>Slicing: <span style="color: black;">str[start:end]</span></li>
                 </ul>
-                <p class="purple">Methods:<span style="color: black;">upper(), lower(), isupper(), islower(), isdigit(), find(...)</span></p>
+                <p class="purple">Methods:<span style="color: black;">upper(), lower(), isupper(), islower(), isdigit(),
+                        find(...)</span></p>
 
                 <p><b>Example</b></p>
                 <p>write an invocation that counts the number of a’s in 'banana'.</p>
@@ -3041,7 +3065,9 @@
          &gt;? banana
          You typed 3 a's
                 </code>
-                <p>A string slice can take a third index that specifies the “step size”; that is, the number of spaces between successive characters. A step size of 2 means every other character; 3 means every third, etc.</p>
+                <p>A string slice can take a third index that specifies the “step size”; that is, the number of spaces
+                    between successive characters. A step size of 2 means every other character; 3 means every third,
+                    etc.</p>
                 <code>
     >>> fruit = 'banana'
     >>> fruit[0:5:2]
@@ -3065,18 +3091,616 @@
                 </code>
             </article>
         </section>
+        <hr>
         <section class="main-section" id="Functions">
             <header class="topic-label-2">Functions</header>
             <article>
-                <p></p>
+                <p class="minor-topic">Fan of Squares</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user a positive integer <i>n</i>, and draws a fan of <i>n</i>
+                    squares.</p>
+                <p><b>Example</b></p>
+                <p>Please enter number of squares:</p>
+                <p><i>6</i></p>
+                <img src="https://i.ibb.co/Z8xhrwc/Screen-Shot-2020-06-13-at-09-13-03.png"
+                    alt="Screen-Shot-2020-06-13-at-09-13-03">
+                <p>&alpha; = 360 / n</p>
+                <p><b>Fan of Squares (Simple Implementation)</b></p>
+                <code>
+    import turtle
+    print("Please enter number of squares:")
+    n = int(input())
+    <i># draw a fan of a squares (100x100)</i>
+
+    for count in range(n):
+        <i># draw a square</i>
+        <i># turn left 360/n</i>
+        for i in range(4):
+            turtle.forward(100)
+            turtle.left(90)
+        turtle.left(360/n)
+    turtle.hidetutle()
+    turtle.done()
+                </code>
+                <p>turtle_square Function</p>
+                <code>
+    def &lt;function_name&gt;(&lt;param1&gt;,&lt;param2&gt;,...):
+        ---------
+        ---------
+                </code>
+                <p>Function Call as a Control Flow</p>
+                <code>
+    import turtle                             &larr; import library
+    def turtle_square(side_len):              &larr; define a definition of a new function *no code executed at this point 
+        <span class="purple">for i in range(4):</span>                    &larr; for loops start iterating drawing line of 100 units 4 times
+            turtle.forward(side_len)          &larr; move turtle forward 100 units
+            turtle.left(90)                   &larr; turn left for 90 degrees
+    print("Please enter number of squares:")  &larr; print("...")
+    n = int(input())                          &larr; receive and read input from users
+    <i># draw a fan of n squares (100x100)</i>
+    for count in range(n):                    &larr; for loops start iterating
+        <span class="purple">turtle_square(100)</span>                    &larr; *start (drawing) from 0 to 100 units, *then go back up to for i in range(4): 
+        turtle.left(360/n)                    &larr; turn 360 degrees by end
+    turtle.hideturtle()                       &larr; hind library   
+    turtle.done()                             &larr; end
+                </code>
+                <p>Adding <i>main</i> and <i>fan_of_squares</i> Functions</p>
+                <code>
+    import turtle
+    def turtle_square(side_len): &larr; definition of turtle_square
+        for i in range(4):
+            turtle.forward(side_len)
+            turtle.left(90)
+    def main():                  &larr; definition of main
+        print("Please enter number of squares:")
+        n = int(input())
+        <i># draw a fan of m squares (100x100)</i>
+        for count in range(n):
+            turtle_square(100)
+            turtle.left(360/n)
+        turtle.hindturtle()
+        turtle.done()
+
+    main()                      &larr; call of main
+                </code>
+                <p><b>Improved version:</b> include every <i>def</i> inside <i>def main()</i></p>
+                <p>An advantage of function is we can duplicate actions without having to write the whole function over
+                    and over</p>
+                <code>
+    import turtle
+    def main():
+        print("Please enter number of squares:")
+        n = int(input())
+        <i># draw a fan of a squares (100x100)</i>
+        for count in range(n):
+            turtle_square(100)
+            turtle.left(360/n)
+        turtle.hideturtle()
+        turtle.done()
+    
+        def turtle_squares(side_len):
+            for i in range(4):
+                turtle.forward(side_len)
+                turtle.lft(90)
+
+    main()
+                </code>
+                <code>
+    import turtle
+    def main():
+        print("Please enter number of squares:")
+        n = int(input())
+        turtle_fan_of_squares(n,100)
+        turtle.hideturtle()
+        turtle.done()
+    def turtle_squares(side_len):
+        for i in range(4):
+            turtle.forward(side_len)
+            turtle.lft(90)
+    def turtle_fan_of_squares(num_of_sqrs , side_len):
+        for count in range(num_of_sqrs):
+            turtle_square(side_len)
+            turtle.left(360/num_of_sqrs)
+    main()
+                </code>
+                <p class="minor-topic">Converting Fahrenheit to Celsius</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user a temperature in Fahrenheit degrees and converts it to its
+                    Celsius equivalent.</p>
+
+                <p><b>Reminder:</b> &#8451; = (&#8457; - 32) &#183; <sup>5</sup> &#8260; <sub>9</sub>
+                </p>
+                <p><b>Example</b></p>
+                <p>enter a temperature in Fahrenheit:</p>
+                <i>64</i>
+                <p>64 Fahrenheit is 17.778 Celsius</p>
+                <p><b>Converting Fahrenheit to Celsius (Implementation)</b></p>
+                <code>
+    def main():
+        print("Please enter a temperature in Fahrenheit:")
+        fahr = float(input())
+        cel = fahrenheit_to_celsius(fahr)
+        print(fahr, "Fahrenheit is", cel, "Celsius")
+
+    def fahrenheit_to_celsius(F):
+        C = (F - 32) * (5/9)
+        <span style="text-decoration: line-through rgb(177, 6, 6);">print(F, "Fahrenheit is", C, "Celsius")</span> &larr; use <u>return</u> instead 
+        return C        &larr; store the result
+
+    main()
+                </code>
+                <p><b>Tracing Flow and Data Passing</b></p>
+                <code>
+    def main():
+        print("Please enter a temperature in Fahrenheit:")
+        fahr = float(input())
+        cel = fahrenheit_to_celsius(fahr)
+        print(fahr, "Fahrenheit is", cel, "Celsius")
+            
+    def fahrenheit_to_celsius(F):
+        C = (F - 32) * (5/9)
+        return C        
+            
+    main()  
+                </code>
+                <p><b>Runtime Stack:</b> place in memory</p>
+                <img src="https://i.ibb.co/wrZk4K4/Screen-Shot-2020-06-13-at-13-51-32.png"
+                    alt="Screen-Shot-2020-06-13-at-13-51-32" style="display: block; margin: 0 auto; opacity: 0.8;">
+                <code>
+    1   def main()                      
+    2       m = 0       
+    3       n = 0
+    4       print("Before: m =", m,", n=",n)
+    5       m = m + func(n)
+    6       print("Between: m =", m,", n=",n)
+    7       m = m + func(n)
+    8       print("After: m =", m,", n=",n)
+    9   
+    10  def func(n):
+    11      n = n + 1
+    12      print("Inside: n =", n)
+    13      return n
+    14
+    15  main()
+                </code>
+                <p><b>Palindrome Checker</b></p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads from the user a sentence, and determines if it is a palindrome or not.</p>
+
+                <p><b>Example</b></p>
+                <p>Please enter a sentence</p>
+                <p><i>Was it a car or a cat I saw?</i></p>
+                <p>You sentence is a palindrome</p>
+                <p><span class="purple">Step 1</span> - Read string</p>
+                <p><span class="purple">Step 2</span> - Prepare string for palindrome checking</p>
+                <ol>
+                    <li>Keep only letters</li>
+                    <li>Take all letters to lowercase</li>
+                </ol>
+                <p><span class="purple">Step 3</span> - Check if palindrome</p>
+                <ol>
+                    <li>Find revered string</li>
+                    <li>Compare original string to reversed string</li>
+                </ol>
+                <p><span class="purple">Step 4</span> - Announce result</p>
+
+                <p><b>Palindrome Checker (Implementation)</b></p>
+                <code>
+    def main():
+        print("please enter a string:")
+        user_string = input()
+        str_for_checking = prepare_str_for_palindrome_checking(user_string)
+        res = is_palindrome(str_for_checking)
+        if(res == True):
+            print("Your sentence is a palindrome")
+        else:
+            print("Your sentence is not a palindrome")
+
+    def prepare_str_for_palindrome_checking(s):
+        only_letters_str = keep_only_letters(s)
+        return only_letters_str.lower()
+
+    def keep_only_letters(s):
+        res_str = ''
+        for char in s:
+            if(char.isalpha() == True):
+                res_str = res_str + char
+        return res_str
+
+    def is_palindrome(s):
+        rev_s = reverse_str(s)
+        if(s == rev_s):
+            return True
+        else:
+            return False
+
+    def reverse_str(s):
+        res_str = ''
+        for char in s:
+            res_str = char + res_str
+        return res_str
+
+    main()
+    <hr>
+    Run: Please enter a string:
+         &gt;? Was it a car or a cat I saw?
+         Your sentence is a palindrome
+
+         please enter a string:
+         &gt;? Was it a cow or a cat I saw?
+         Your sentence is not a palindrome
+                </code>
+                <p><b>The program calculates the volume of a cylinder, using the formula:</b></p>
+                <p>V = π ∗ radius<sup>2</sup> ∗ height</p>
+                <code>
+    import math
+
+    def volCylinder(radheight):
+        return math.pi * radius * radius * height
+                        
+    print('r=10, h=20 => V=' + str(volCylinder(10, 20)))
+    print('r=1, h=10 => V=' + str(volCylinder(1, 10)))
+    print('r=125, h=2520 => V=' + str(volCylinder(125, 2520)))
+    <hr>
+    Run: r=10, h=20 => V=6283.185307179587
+         r=1, h=10 => V=31.41592653589793
+         r=125, h=2520 => V=123700210.7350981            
+                    </code>
+                <p><b>Duplication</b></p>
+                <p>The reason using functions better is that there are no duplicated bits of code.
+                    In the example the function is only called a couple of times, but imagine you needed to use this
+                    code in one-hundred different places and you coded it in the way it was done on the previous page.
+                    Now, you would have the same bit of code repeated over and over in one-hundred different places.
+                    What would happen if later you found out that that bit of code has a bug in it? You would have to go
+                    and fix the code over and over in one-hundred places.
+                </p>
+                <code>
+    <u>Non-Function</u>
+                    
+    import math
+
+    # FIRST ONE
+
+    radius = 10
+    height = 20
+    volume = math.pi * radius * radius * height
+    print('r=' + str(radius) + 'h=' + str(height) + ' => V=' + str(volume))
+
+    # SECOND ONE
+ 
+    radius = 1
+    height = 10
+    volume = math.pi * radius * radius * height
+    print('r=' + str(radius) + 'h=' + str(height) + ' => V=' + str(volume))
+
+    # THIRD ONE
+
+    radius = 125
+    height = 2520
+    volume = math.pi * radius * radius * height
+    print('r=' + str(radius) + 'h=' + str(height) + ' => V=' + str(volume))
+
+    <u>Function</u>
+
+    import math
+
+    def volCylinder(radius, height):
+        return math.pi * radius * radius * height
+
+    print('r=10, h=20 => V=' + str(volCylinder(10, 20)))
+    print('r=1, h=10 => V=' + str(volCylinder(1, 10)))
+    print('r=125, h=2520 => V=' + str(volCylinder(125, 2520)))
+    <hr>
+    Run: r=10, h=20 => V=6283.185307179587
+         r=1, h=10 => V=31.41592653589793
+         r=125, h=2520 => V=123700210.7350981
+
+                    </code>
             </article>
         </section>
         <section class="main-section" id="Lists">
             <header class="topic-label-2">Lists</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p class="minor-topic">Computing the Average (Revisited)</p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads a sequence of grades (til 'done' is entered), and prints the average.</p>
+                <p><b>Example</b></p>
+                <p>Enter grades in separate lines. To end the input type 'done':</p>
+                <p><i>71</i></p>
+                <p><i>86</i></p>
+                <p><i>68</i></p>
+                <p><i>94</i></p>
+                <p><i>done</i></p>
+                <p>The class average is 79.75</p>
+
+                <code>
+    print("Enter grades in separate lines. To end the input type 'done':")
+    grades_sum = 0
+    students_count = 0
+    seen_done = False
+    while(seen_done == False):
+        curr_input = input()
+        if(curr_input == 'done'):
+            seen_done = True
+        else:
+            curr_grade = int(curr_input)
+            grades_sum += curr_grade
+            students_count += 1
+    average = grades_sum / students_count
+    print("The class average is", average)
+                </code>
+                <p>The grades above the average are: 86, 94</p>
+                <p class="minor-topic">Introduction</p>
+                <p><span class="purple">List:</span> A mutable, iterable, sequential collection</p>
+                <code>
+    lst  =  1  2  3
+    index   0  1  2
+
+    &gt;&gt;&gt; lst = [1,2,3]
+    &gt;&gt;&gt; lst 
+    [1,2,3]
+    &gt;&gt;&gt; lst(lst)
+    &lt;class 'list'&gt;
+    &gt;&gt;&gt; lst[1]
+    2
+    &gt;&gt;&gt; lst[1] = 20 &larr; this action mutates/changes value of index 1 from 2 to 20
+                </code>
+                <p><span class="purple">Python Literals:</span> [1,2,3], ["abc", 2.5, [1,2]], [] &larr; *empty list, ...</p>
+                <code>
+    &gt;&gt;&gt; lst = [1,2,3]
+
+    &gt;&gt;&gt; lst2 = [3, 4.5, "abc", True] &larr; list can contain mix types of data
+
+    &gt;&gt;&gt; lst3 = [1,2, [3, 4]]         &larr; nested list
+                </code>
+                <p><span class="purple">Operators:</span> +, *</p>
+                <code>
+    &gt;&gt;&gt; [1,2,3] + [4,5]
+    [1,2,3,4,5]
+
+    &gt;&gt;&gt; [1,2] * 3 &larr; can only multiply by integer
+    [1,2,1,2,1,2]
+                </code>
+                <p><span class="purple">Boolean Operators:</span> ==, !=, &lt;, &gt;, &lt;=, &gt;=, in, not in</p>
+                <code>
+    &gt;&gt;&gt; [1,2,3] == [1,2,3]
+    True
+
+    &gt;&gt;&gt; lst = [1,2,3,4] &lt; [1,2,5]
+    True &larr; compiler compares each value respectively: 1 = 1, 2 = 2, <span class="marker">3 &lt; 5</span>
+
+    &gt;&gt;&gt; [1,2,3] == [1,2,3]
+
+    &gt;&gt;&gt; 2 in [1,2,3]
+    True
+    
+    &gt;&gt;&gt; 2 in [1,[2,3], 4]
+    False
+                </code>
+                <p><span class="purple">Sequential Properties:</span></p>
+                <ul>
+                    <li><span class="purple">Indexing:</span> lst[i]</li>
+                    <li><span class="purple">Slicing:</span> lst[start:end]</li>
+                </ul>
+                <code>
+    lst  =  10 20 <span class="marker">30</span> 40 50 60
+    index    0  1 <span class="marker"> 2</span>  3  4  5
+      ''    -6 -5 <span class="marker">-4</span> -3 -2 -1 
+
+    &gt;&gt;&gt; lst  =  [10,20,30,40,50,60]
+    &gt;&gt;&gt; lst[2]
+    30
+    &gt;&gt;&gt; lst[-4]
+    30
+
+    lst  =  10 <span class="marker">20 30 40</span> 50 60
+    index    0 <span class="marker"> 1  2  3</span>  4  5
+      ''    -6 <span class="marker">-5 -4 -3</span> -2 -1 
+
+    &gt;&gt;&gt; lst[1:4]
+    [20,30,40] &larr; Python open concept (include start index, exclude end index)
+                </code>
+                <p><span class="purple">Function:</span> len(<i>lst</i>), min(<i>lst</i>), max(<i>lst</i>)</p>
+                <code>
+    &gt;&gt;&gt; lst = [10,2,30,4]
+
+    &gt;&gt;&gt; len(lst)
+    4
+
+    &gt;&gt;&gt; min(lst)
+    2
+
+    &gt;&gt;&gt; max(lst)
+    30
+
+    &gt;&gt;&gt; sum(lst)
+    46
+                </code>
+                <p>cannot compare numerical and textual data</p>
+                <code>
+    &gt;&gt;&gt; min([10,2,30,4])
+    2
+    &gt;&gt;&gt; min(["python", "is", "fun"])
+    'fun' &larr; minimum lexicographically (find 'fun' first in lexicon)
+
+    &gt;&gt;&gt; max(["python", "is", "fun"])
+    'python' &larr; maximum lexicographically (find 'python' last in lexicon)
+
+    &gt;&gt;&gt; min([3,"abc",2])
+    <span class="error">Traceback (most recent call last):
+        File "&lt;input&gt;", line 1, in <module>
+          print(min([3,"abc",2]))
+      TypeError: '&lt;' not supported between instances of 'str' and 'int'</span>
+                </code>
+                <p>cannot compound textual lists of strings</p>
+                <code>
+    &gt;&gt;&gt; sum([10,2,30,4])
+    46
+    &gt;&gt;&gt; sum(["python", "is", "fun"])
+    <span class="error">Traceback (most recent call last):
+        File "&lt;input&gt;", line 1, in <module>
+          print(sum(["python", "is", "fun"]))
+      TypeError: unsupported operand type(s) for +: 'int' and 'str'</span>
+                </code>
+                <p><span class="purple">Iterable Collections:</span></p>
+                <ul>
+                    <li>A call to range(...) - sequence of integers</li>
+                    <li>A string - sequence of the characters in the string</li>
+                    <li>A list - sequence of elements in the list</li>
+                </ul>
+                <p>List as Iterable Collections</p>
+                <code>
+    --------
+    for <i>variable</i> in <i>iterable-collection</i>:
+        --------
+        --------
+    --------
+                </code>
+                <code>
+    &gt;&gt;&gt; lst = [3,4.5,"abc",[1,2], True]
+    &gt;&gt;&gt; for item in lst: &larr; &lt;3,4.5,'abc',[1,2], True&gt;
+            print(item, type(item), sep='\t')  &larr; print item, type of item, and separate by a tap
+
+    3	&lt;class 'int'&gt;
+    4.5	&lt;class 'float'&gt;
+    abc	&lt;class 'str'&gt;
+    [1, 2]	&lt;class 'list'&gt;
+    True	&lt;class 'bool'&gt;    
+                </code>
+                <p><span class="purple">Methods:</span> append(<i>obj</i>), insert(<i>ind, obj</i>), extend(<i>iterable</i>), pop(), pop(<i>ind</i>), index(<i>obj</i>), count(<i>obj</i>), reverse(), sort()</p>
+                <code>
+    lst = 1 2 3
+
+    &gt;&gt;&gt; lst = [1,2,3]
+    &gt;&gt;&gt; lst 
+    [1,2,3]           
+    &gt;&gt;&gt; lst.append(<span class="marker">4</span>)
+    &gt;&gt;&gt; lst
+    [1,2,3,<span class="marker">4</span>] 
+                </code>
+                <p>append(<i>obj</i>) - add a single element at the end</p>
+                <code>
+    lst  =  2 4 2
+
+    &gt;&gt;&gt; lst = [2,4,2]
+    &gt;&gt;&gt; lst.append(1) &larr; append 1 at the end
+
+    lst  =  2 4 2 <span class="marker">1</span>
+    index   0 1 2 3
+
+    &gt;&gt;&gt; lst.append([5,6]) &larr; append list of [5, 6] at the end
+
+    lst  =  2 4 2 1 <span class="marker">[5,6]</span>
+    index   0 1 2 3   4
+                    </code>
+                    <p>insert(<i>ind, obj</i>) - add a single element to a specific position</p>
+                    <code>
+    lst  =  2 4 2 1
+    index   0 1 2 3
+
+    &gt;&gt;&gt; lst.insert(2,9) &larr; insert 9 at index 2
+
+    lst  =  2 4 <span class="marker">9</span> 2 1
+    index   0 1 <span class="marker">2</span> 3 4
+                </code>
+                <p>extend(<i>iterable</i>) - add multiple elements at the end</p>
+                    <code>
+    lst  =  2 4 2 1
+    index   0 1 2 3                    
+
+    &gt;&gt;&gt; lst.extend([5,6]) &larr; extend 5 and 6 at the end
+
+    lst  =  2 4 2 1 <span class="marker">5 6</span>
+    index   0 1 2 3 <span class="marker">4 5</span>                   
+                    </code>
+                    <p>pop() - remove an element from the end</p>
+                    <code>
+    lst  =  2 4 9 2 1 [5,6] 5 6
+    index   0 1 2 3 4   5   6 7   
+
+    &gt;&gt;&gt; lst = [2,4,9,2,1,[5,6],5,6]
+    &gt;&gt;&gt; lst.pop()
+    6 
+    [2,4,9,2,1,[5,6],5]<span class="marker" style="text-decoration: line-through;">6</span>
+                    </code>
+                    <p>pop(<i>ind</i>) - remove a single element by declaring an index</p>
+                    <code>
+    lst  =  2 4 9 2 1 [5,6] 5 6
+    index   0 1 2 3 4   5   6 7   
+                  
+    &gt;&gt;&gt; lst = [2,4,9,2,1,[5,6],5,6]
+    &gt;&gt;&gt; lst.pop(2)
+    9
+
+    &gt;&gt;&gt; lst = [2,4,2,1,[5,6],5,6]
+
+    lst  =  2 4 <span class="marker" style="text-decoration: line-through;">9</span> 2 1 [5,6] 5 6
+    index   0 1 <span class="marker" style="text-decoration: line-through;">2</span> 3 4   5   6 7   
+
+    lst  =  2 4 2 1 [5,6] 5 6
+    index   0 1 2 3   4   5 6
+                    </code>
+                    <p>index(<i>obj</i>) - search for the <u>first</u> index of an element in the list</p>
+                    <code>
+    lst  =  <span class="marker">2</span> 4 9 2 1 [5,6] 5 6
+    index   <span class="marker">0</span> 1 2 3 4   5   6 7   
+
+    &gt;&gt;&gt; lst = [2,4,9,2,1,[5,6],6]
+    &gt;&gt;&gt; lst.index(2)
+    0 &larr; return only the first index where 2 is, even there are multiple
+                    </code>
+                    <p>count(<i>obj</i>) - count how many times where finding an element (not in nested element)</p>
+                    <code>
+    lst  =  2 4 9 2 1 [5,6] <span class="marker">5</span> 6
+    index   0 1 2 3 4   5   6 7   
+
+    &gt;&gt;&gt; lst = [2,4,9,2,1,[5,6],5,6]
+    &gt;&gt;&gt; lst.count(5)
+    1 &larr; return 1 because count only 5 in the list, not in the nested list 
+                    </code>
+                    <p>reverse() &#8644; reorder to a reversed list</p>
+                    <code>
+    lst  =  2 4 9 2 1 [5,6] 5 6
+    index   0 1 2 3 4   5   6 7  
+    
+    &gt;&gt;&gt; lst = [2,4,9,2,1,[5,6],5,6]
+    &gt;&gt;&gt; lst.reverse()
+
+    [6, 5, [5, 6], 1, 2, 9, 4, 2]
+
+    lst  =  &#8644; <span class="marker">6 5 [5, 6] 1 2 9 4 2</span> &#8644;
+    index      0 1   2    3 4 5 6 7
+                    </code>
+                    <p>sort() - sort the list to an ascending order list (min &rarr; max)</p>
+                    <code>
+    lst  =  93 57 7 66 2 1 0 14 23
+    index    0  1 2  3 4 5 6  7  8
+
+    &gt;&gt;&gt; lst = [93, 57, 7, 66, 2, 1, 0, 14, 23]
+    &gt;&gt;&gt; lst.sort()
+
+    [0, 1, 2, 7, 14, 23, 57, 66, 93]
+
+    lst  =  min <span class="marker">0 1 2 7 14 23 57 66 93</span> max
+    index       0 1 2 3  4  5  6  7  8
+                    </code>
+                    <p><b>Roll the Dice</b></p>
+                    <p><b>Problem</b></p>
+                    <p>Implement the following function:</p>
+
+                    <p>def list_of_dice_rolls(n)</p>
+
+                    <p>The function is given a positive integer when called, it creates and returns a list with n dice rolls results (each is a random number 1-6).</p>
+
+                    <p><b>Example</b></p>
+                    <p>The call list_of_dice_rolls(5), could return:</p>
+                    <p>[1,4,3,1,2]</p>
+
+                    <code>
+    def list_of_dice_rolls(n):
+        ...
+        ...
+                    </code>
             </article>
         </section>
 
