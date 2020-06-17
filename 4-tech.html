@@ -3696,10 +3696,49 @@
                     <p>The call list_of_dice_rolls(5), could return:</p>
                     <p>[1,4,3,1,2]</p>
 
+                    <p><b>Roll the Dice: Implementation</b></p>
                     <code>
+    import random 
+
     def list_of_dice_rolls(n):
-        ...
-        ...
+        res_lst = []
+        for count in range(n):
+            curr_roll = random.randint(1, 6)
+            res_lst.append(curr_roll)
+
+        return res_lst
+
+    def main():
+        print("Please enter a positive integer:")
+        input_num = int(input())
+
+        dice_roll_results = list_of_dice_rolls(input_num)
+
+        print(dice_roll_results)
+
+    main()
+        <hr>
+    Run: Please enter a positive integer:
+    &gt;? 5
+    [5, 6, 1, 4, 1]
+                    </code>
+                    <p><b>Above the Average</b></p>
+                    <p><b>Problem</b></p>
+                    <p>Write a program that reads a sequence of grades (till 'done' is entered), it then prints the average and the grades that are above the average.</p>
+                    <p><b>Example</b></p>
+                    <p>Enter grades in separate lines.</p>
+                    <p>To end the input type 'done':</p>
+                    <p><i>71</i></p>
+                    <p><i>86</i></p>
+                    <p><i>68</i></p>
+                    <p><i>94</i></p>
+                    <p><i>done</i></p>
+                    <p>The class average is 79.75</p>
+                    <p>The grades above the average are: 86, 94</p>
+                    <p><b>Above the Average (Implementation)</b></p>
+                    <code>
+    def main():
+        
                     </code>
             </article>
         </section>
