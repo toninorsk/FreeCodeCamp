@@ -136,7 +136,8 @@
                 </td>
                 <td>
                     <tr>
-                        <td><a href="https://engineering.nyu.edu/faculty/rafail-portnoy">Rafail Portnoy</a><br>Professor<br>New
+                        <td><a href="https://engineering.nyu.edu/faculty/rafail-portnoy">Rafail
+                                Portnoy</a><br>Professor<br>New
                             York University Tandon School of Engineering</td>
                         <td><a href="https://engineering.nyu.edu/faculty/daniel-katz-braunschweig">Daniel
                                 Katz-Braunschweig</a><br>Senior Lecturer<br>New York University Tandon School of
@@ -156,9 +157,361 @@
         <section class="main-section" id="Computer_Networking">
             <header class="topic-label-2">Computer Networking</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p><b>Our goal:</b></p>
+                <ul>
+                    <Li>Get "feel" and terminology</Li>
+                    <Li>More depth, detail later in course</Li>
+                    <Li>Approach: use <b>Internet</b> as example</Li>
+                </ul>
+                <p><b>Overview:</b></p>
+                <ul>
+                    <li>What's the Internet?</li>
+                    <li>What's a protocol?</li>
+                    <li>Network edge; hosts, access net, physical media</li>
+                    <li>Network core: packet/circuit switching, Internet structure</li>
+                    <li>Performance: loss, delay, throughput</li>
+                    <li>Security</li>
+                </ul>
+
+                <p class="minor-topic">What is the Internet?</p>
+                <img src="https://i.ibb.co/CWQ3thJ/Screen-Shot-2020-06-17-at-22-31-37.png"
+                    alt="Screen-Shot-2020-06-17-at-22-31-37" alt="internet" style="display: block; margin: auto;">
+                <p>Millions of connected computing devices:</p>
+                <ul>
+                    <li><b>Hosts</b> = end systems</li>
+                    <li>Running network <b>Apps</b></li>
+                </ul>
+                <p>Communication links:</p>
+                <ul>
+                    <li>Fiber, Copper, Radio, Satellite</li>
+                    <li>Transmission rate: <b>bandwidth</b></li>
+                </ul>
+                <p>Packet switches:</p>
+                <ul>
+                    <li>forward packets (chunks of data)</li>
+                    <li><b>router and switches</b></li>
+                </ul>
+
+                <p class="minor-topic"><b>What's the Internet: A Service View</b></p>
+                <p>Infrastructure that</p>
+                <ul>
+                    <li> <i>Provides services to applications:</i>
+                        <ul>
+                            <li>Web, VoIP, email, games, e-commerce, social networks, ...</li>
+                        </ul>
+                    </li>
+                    <li> <i>Provides programming interface to apps</i>
+                        <ul>
+                            <li>Hooks that allow sending and receiving app programs to "connect" to internet</li>
+                            <li>Provides service options, analogous to postal service</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="minor-topic">What is a Protocol?</p>
+                <p><b><i>Human protocols:</i></b></p>
+                <img src="https://i.ibb.co/wrGQvKT/Screen-Shot-2020-06-17-at-23-08-49.png"
+                    alt="Screen-Shot-2020-06-17-at-23-08-49">
+                <p>- "What's the time?"</p>
+                <p>- "I have a question"</p>
+                <p>- Introductions</p>
+
+                <p>Specific msgs sent</p>
+                <p>... specific actions takes when msgs received, or other events</p>
+
+                <p><b><i>Network protocols:</i></b></p>
+                <img src="https://i.ibb.co/tm3FfrD/Screen-Shot-2020-06-17-at-23-10-04.png"
+                    alt="Screen-Shot-2020-06-17-at-23-10-04">
+                <ul>
+                    <li>Machines rather than humans</li>
+                    <li>All communication actively in Internet governed by protocols</li>
+                </ul>
+                <p>Protocols define Format,</p>
+                <ul>
+                    <li>Order of msgs sent and received among Network entities, and</li>
+                    <li>Actions takes on msg transmission, receipt</li>
+                </ul>
+
+                <p class="minor-topic">Network Structure</p>
+                <p>Roadmap</p>
+                <ul>
+                    <li>What is the Internet?</li>
+                    <li class="green">Network edge
+                        <ul>
+                            <li>End system, access network, links</li>
+                        </ul>
+                    </li>
+                    <li>Network core
+                        <ul>
+                            <li>Packet switching</li>
+                            <li>Circuit switching</li>
+                            <li>Network structure</li>
+                        </ul>
+                    </li>
+                    <li>Delay, loss, throughput in networks</li>
+                    <li>Protocol layers, service models</li>
+                    <li>Networks under attack: security</li>
+                </ul>
+                <img src="https://i.ibb.co/QmvdKQK/Screen-Shot-2020-06-17-at-23-20-18.png"
+                    alt="Screen-Shot-2020-06-17-at-23-20-18" style="display: block; margin: auto;">
+                <p><b>Access Networks and Physical Media</b></p>
+                <p>Q: How to connect end systems to edge router?</p>
+                <ul>
+                    <li>Residential access nets</li>
+                    <li>Institutional (schools, company)</li>
+                    <li>Mobile access networks</li>
+                </ul>
+                <p>Keep in mind:</p>
+                <ul>
+                    <li>Bandwidth (bits per second) of access network?</li>
+                    <li>Shared or dedicated?</li>
+                </ul>
+                <img src="https://i.ibb.co/6H5Pc0z/Screen-Shot-2020-06-17-at-23-31-54.png"
+                    alt="Screen-Shot-2020-06-17-at-23-31-54" style="display: block; margin: auto;">
+                <p>Frequency division multiplexing: different channels transmitted in different frequency bands</p>
+                <img src="https://i.ibb.co/cwFmr2B/Screen-Shot-2020-06-17-at-23-37-35.png"
+                    alt="Screen-Shot-2020-06-17-at-23-37-35" style="display: block; margin: auto;">
+                <p>HFC: hybrid fiber coax</p>
+                <p style="text-indent: 50px;">Asymmetric: up to 30Mbps downstream transmission rate, 2Mbps upstream
+                    transmission rate</p>
+                <p style="text-indent: 50px;">Network of cable, fiber attaches homes to ISP router homes share access
+                    network to cable headend unlike DSL, which has dedicated access to central office</p>
+
+                <p class="minor-topic">Access Net: Home Network</p>
+                <img src="https://i.ibb.co/FY3BGK3/Screen-Shot-2020-06-17-at-23-56-49.png"
+                    alt="Screen-Shot-2020-06-17-at-23-56-49" style="display: block; margin: auto;">
+
+                <p class="minor-topic">Enterprise Access Networks (Ethernet)</p>
+                <img src="https://i.ibb.co/yySDQ9q/Screen-Shot-2020-06-18-at-12-14-36.png"
+                    alt="Screen-Shot-2020-06-18-at-12-14-36" style="display: block; margin: auto;">
+                <ul>
+                    <li>Institutional network</li>
+                    <li>10Mbps, 100Mbps, 1Gbps, 10Gbps trasmission rates</li>
+                    <li>Today, end systems typically connect into Ethernet switch</li>
+                </ul>
+
+                <p class="minor-topic">Wireless Access Networks</p>
+                <img src="https://i.ibb.co/YcKMbbD/Screen-Shot-2020-06-18-at-12-23-56.png"
+                    alt="Screen-Shot-2020-06-18-at-12-23-56" style="display: block; margin: auto;">
+
+                <p class="minor-topic">Physical Media</p>
+                <ul>
+                    <li><b>Guided media</b> - signals propagate in solid media: copper, fiber, coax</li>
+                    <li><b>Unguided media</b> - signals propagate freely, e.g., radio</li>
+                    <li><b>Physical link</b> - what lies between transmitter & receiver</li>
+                    <li><b>Bit</b> - propagates between transmitter/receiver pairs</li>
+                    <li><b>Twisted pair (TP)</b> - two insulated copper wires
+                        <ul>
+                            <li><b>Category 5:</b> 100Mbps, 1Gpbs Ethernet</li>
+                            <li><b>Category 6:</b> 10Gbps</li>
+                            <img src="https://previews.123rf.com/images/aleksandrbs/aleksandrbs1806/aleksandrbs180600117/107687349-twisted-cable-twisted-pair-ethernet-utp-cat-5.jpg"
+                                alt="twisted pair" width="250px">
+                        </ul>
+                    <li><b>Coaxial cable</b>
+                        <ul>
+                            <li>Two concentric copper conductors</li>
+                            <li>Bidirectional</li>
+                            <li>Broadband:
+                                <ul>
+                                    <Li>Multiple channels on cable</Li>
+                                    <Li>HFC</Li>
+                                </ul>
+                            </li>
+                            <img src="https://cdn.everythingrf.com/live/Edited_coax-cable-construction-erf-com_636899895794949894.png"
+                                alt="Coaxial" width="250px">
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+
+                <p class="minor-topic">Physical Media: Coax & Fiber</p>
+                <p><b>Fiber optic cable</b></p>
+                <p>Glass fiber carrying light pulses, each pulse a bit</p>
+                <img src="https://www.multicominc.com/wp-content/uploads/Draka_ezPrepGelFree.png" alt="fiber optic"
+                    style="margin: auto; display: block;">
+                <ul>
+                    <li>High-speed operation: <br>High speed point-to-point transmission (e.g., 10's-100's Gpbs
+                        transmission rate)</li>
+                    <li>Low error rate: <br>Repeaters spaced far apart immune to electromagnetic noise</li>
+                </ul>
+
+                <p class="minor-topic">Physical Media: Radio</p>
+                <ul>
+                    <li>Signal carried in electromagnetic spectrum</li>
+                    <li>No physical "wire"</li>
+                    <li>Bidirectional</li>
+
+                    <li>Propagate environment effects:
+                        <ul>
+                            <li>Reflection</li>
+                            <li>Obstruction by objects</li>
+                            <li>Interference</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="minor-topic">Network core</p>
+                <p>Packet switching, circuit switching, network structure</p>
+
+                <ul>
+                    <li>Mesh of interconnected routers</li>
+                    <li class="purple">Packet-switching: hosts break application-layer messages into packets</li>
+                    <li>Forward packets from one to router to the nest, across links on path from source to destination
+                    </li>
+                    <li>Each packet transmitted at full link capacity</li>
+                </ul>
+
+                <p class="minor-topic">Packet-Switching: Store-and-Forward</p>
+                <img src="https://i.ibb.co/bN8Z9fd/Screen-Shot-2020-06-18-at-15-17-31.png"
+                    alt="Screen-Shot-2020-06-18-at-15-17-31">
+                <ul>
+                    <li>Takes <i>L/R</i> seconds to transmit (push out) <i>L-bit</i> packet into link at <i>R</i> bps
+                    </li>
+                    <li><span class="purple">Store and forward:</span> entire packet must arrive at router before it can
+                        be transmitted on next link</li>
+                    <li>One-hop numerical example: <br> <i>L</i> = 7.5Mbits <br> <i>R</i> = 1.5Mbps <br> one-hop
+                        transmission delay = 5 sec</li>
+                    <li><i>End-end delay = 2L/R (assuming zero propagation delay)</i></li>
+                </ul>
+
+                <p class="minor-topic">Packet Switching: Queuing Delay, Loss</p>
+                <img src="https://i.ibb.co/4YfyWmZ/Screen-Shot-2020-06-18-at-15-21-42.png"
+                    alt="Screen-Shot-2020-06-18-at-15-21-42">
+                <p class="purple">Queuing and loss:</p>
+                <p>If arrival rate (in bits) to link exceeds transmission rate of link for a period of time:</p>
+                <ul>
+                    <li>Packets will queue, wait to be transmitted on link</li>
+                    <li>Packets can be dropped (lost) if memory (buffer) fills up</li>
+                </ul>
+
+                <p class="minor-topic">Two Key Network-Core Functions</p>
+                <img src="https://i.ibb.co/YcbYN6T/Screen-Shot-2020-06-18-at-15-25-32.png"
+                    alt="Screen-Shot-2020-06-18-at-15-25-32">
+                <ul>
+                    <li><b>Routing:</b> determines source-destination route taken by packets</li>
+                    <li><b>Forwarding:</b> move packets from router's input to appropriate router output</li>
+                </ul>
+
+                <p class="minor-topic">Internet Structure: Network of Networks</p>
+                <img src="https://i.ibb.co/7XFvb79/Screen-Shot-2020-06-18-at-15-55-04.png"
+                    alt="Screen-Shot-2020-06-18-at-15-55-04">
+                <ul>
+                    <li>End systems connect to internet via access <span class="purple">access ISPs</span> (Internet
+                        Service Providers): Residential, company and university ISPs</li>
+                    <li>Access ISPs in turn must be interconnected, so that any two hosts can send packets to each other
+                    </li>
+                    <li>Resulting network of networks is very complex. Evolution was driven by <span
+                            class="purple">economic and national policies</span></li>
+                </ul>
+
+                <p>Given millions of access ISPs, how to connect them together?</p>
+                <p><u>Option:</u> connect each access ISP to every other access ISP? <span class="error">No - connecting
+                        each access ISP to each other directly doesn't scale: O(N2) connections.</span></p>
+
+                <p><u>Option:</u> connect each access ISP to a global transit ISP? Customer and provider ISPs have
+                    economic agreement. <span class="error">No - if one global ISP is viable business, there will be
+                        competitors</span></p>
+
+                <p><u>Content provider networks</u> (e.g., Google, Microsoft, Akamai) may run their own network, to
+                    bring services, content close to end users</p>
+
+                <img src="https://i.ibb.co/R4QjpXB/Screen-Shot-2020-06-18-at-16-08-38.png"
+                    alt="Screen-Shot-2020-06-18-at-16-08-38">
+                <ul>
+                    <li>"Tier-1" commercial ISPs (e.g., Level 3, Sprint, AT&T, NTT), national & international coverage
+                    </li>
+                    <li>Content provider network (e.g., Google): private network that connects it data centers to
+                        internet, often bypassing tier-1, regional ISPs</li>
+                </ul>
+
+                <p class="minor-topic">Tier-1 ISP: e.g., Sprint</p>
+                <img src="https://i.ibb.co/RhfknNG/Screen-Shot-2020-06-18-at-16-15-32.png"
+                    alt="Screen-Shot-2020-06-18-at-16-15-32">
+
+                <p class="minor-topic">Delay, loss, throughput in networks</p>
+
+                <p>How do Loss and Delay Occur?</p>
+                <img src="https://i.ibb.co/pWZfW7J/Screen-Shot-2020-06-18-at-16-20-25.png"
+                    alt="Screen-Shot-2020-06-18-at-16-20-25">
+                <p><b>Four Sources of Packet Delay</b></p>
+                <ul>
+                    <li>Packet arrival rate to link (temporarily) exceeds output link capacity</li>
+                    <li>Packets queue, wait for turn</li>
+                </ul>
+
+                <ul>
+                    <li>Drop: nodal processing
+                        <ul>
+                            <li>Check bit errors</li>
+                            <li>Determine output link</li>
+                            <li>Typically &lt; msec</li>
+                        </ul>
+                    </li>
+                    <li>d<sub>queue</sub>: queueing delay</li>
+                    <ul>
+                        <li>Time waiting at output link for transmission</li>
+                        <li>Depends on congestion level of router</li>
+                    </ul>
+                    <li>d<sub>trans</sub>: transmission delay:
+                        <ul>
+                            <li><i>L:</i> packet length (bits)</li>
+                            <li><i>R:</i> link <i>Bandwidth (bps)</i></li>
+                            <li><i>d<sub>trans</sub> = L/R</i></li>
+                        </ul>
+                    </li>
+                    <li>d<sub>prop</sub>: propagation delay:
+                    <ul>
+                        <li><i>d:</i> length of physical link</li>
+                        <li><i>s:</i> propagation speed in medium (~2 x 108m/sec)</li>
+                        <li><i>d<sub>prop</sub> = d/s</i></li>
+                    </ul></li>
+                </ul>
+
+                <p class="minor-topic">Caravan Analogy</p>
+                <img src="https://i.ibb.co/VL7kfyn/Screen-Shot-2020-06-18-at-16-50-15.png" alt="Screen-Shot-2020-06-18-at-16-50-15">
+                <ul>
+                    <li class="purple">Q: How long until caravan is lined up before 2nd toll booth?</li>
+                    <li>Time for last car to propagate from 1st to 2nd toll both: 100km/(100km/hr) = 1 hr</li>
+                    <li class="purple">Ans: 62 minutes</li>
+                </ul>
+
+                <img src="https://i.ibb.co/qjDD0Lf/Screen-Shot-2020-06-18-at-16-54-25.png" alt="Screen-Shot-2020-06-18-at-16-54-25">
+                <ul>
+                    <li class="purple">Q: Will cars arrive to 2nd booth before all cars serviced at first booth?</li>
+                    <li><span class="purple">Ans: Yes!</span> After 7 min, 1st car arrives at second booth; three cars still at 1st booth.</li>
+                </ul>
+
+                <p class="minor-topic">Queuing Delay (Revisited)</p>
+                <img src="https://i.ibb.co/gtyLy8w/Screen-Shot-2020-06-18-at-16-59-15.png" alt="Screen-Shot-2020-06-18-at-16-59-15">
+
+                <p class="minor-topic">Packet Loss</p>
+                <ul>
+                    <li>Queue (aka buffer) preceding link in buffer has finite capacity</li>
+                    <li>Packet arriving to full queue dropped (aka lost)</li>
+                </ul>
+
+                <p class="minor-topic">Throughput</p>
+                <ul>
+                    <li><span class="purple">Throughput:</span> rate (bits/time unit) at which bit transferred between sender/receiver
+                    <ul>
+                        <li><span class="purple">Instantaneous:</span> rate (bits/time unit) at which bits transferred between sender/receiver</li>
+                        <li><span class="purple">Average:</span> rate over longer period of time</li>
+                    </ul>
+                    </li>
+                </ul>
+
+                <p class="minor-topic">Throughput: Internet Scenario</p>
+                <img src="https://i.ibb.co/S5YYyh5/Screen-Shot-2020-06-18-at-17-18-54.png" alt="Screen-Shot-2020-06-18-at-17-18-54">
+
+                <p class="minor-topic">Protocol layers, service models</p>
+                <p><b>Protocol "Layers"</b></p>
+                <p>Complex Networks: hosts, routers, Applications, links to various media, protocols, Hardware, Software</p>
+                <p>Is there any hope of <i>organizing</i> structure of network?</p>
+
+                <p><b>Organization of Air Travel</b></p>
+                <img src="https://i.ibb.co/LvYn3vB/Screen-Shot-2020-06-18-at-17-23-57.png" alt="Screen-Shot-2020-06-18-at-17-23-57">
+                <p>Layering of Airline Functionality</p>
+                <p><span class="purple"></span></p>
             </article>
         </section>
         <section class="main-section" id="Application_Layer">
@@ -3445,7 +3798,8 @@
     2
     &gt;&gt;&gt; lst[1] = 20 &larr; this action mutates/changes value of index 1 from 2 to 20
                 </code>
-                <p><span class="purple">Python Literals:</span> [1,2,3], ["abc", 2.5, [1,2]], [] &larr; *empty list, ...</p>
+                <p><span class="purple">Python Literals:</span> [1,2,3], ["abc", 2.5, [1,2]], [] &larr; *empty list, ...
+                </p>
                 <code>
     &gt;&gt;&gt; lst = [1,2,3]
 
@@ -3567,7 +3921,9 @@
     [1, 2]	&lt;class 'list'&gt;
     True	&lt;class 'bool'&gt;    
                 </code>
-                <p><span class="purple">Methods:</span> append(<i>obj</i>), insert(<i>ind, obj</i>), extend(<i>iterable</i>), pop(), pop(<i>ind</i>), index(<i>obj</i>), count(<i>obj</i>), reverse(), sort()</p>
+                <p><span class="purple">Methods:</span> append(<i>obj</i>), insert(<i>ind, obj</i>),
+                    extend(<i>iterable</i>), pop(), pop(<i>ind</i>), index(<i>obj</i>), count(<i>obj</i>), reverse(),
+                    sort()</p>
                 <code>
     lst = 1 2 3
 
@@ -3593,8 +3949,8 @@
     lst  =  2 4 2 1 <span class="marker">[5,6]</span>
     index   0 1 2 3   4
                     </code>
-                    <p>insert(<i>ind, obj</i>) - add a single element to a specific position</p>
-                    <code>
+                <p>insert(<i>ind, obj</i>) - add a single element to a specific position</p>
+                <code>
     lst  =  2 4 2 1
     index   0 1 2 3
 
@@ -3604,7 +3960,7 @@
     index   0 1 <span class="marker">2</span> 3 4
                 </code>
                 <p>extend(<i>iterable</i>) - add multiple elements at the end</p>
-                    <code>
+                <code>
     lst  =  2 4 2 1
     index   0 1 2 3                    
 
@@ -3613,8 +3969,8 @@
     lst  =  2 4 2 1 <span class="marker">5 6</span>
     index   0 1 2 3 <span class="marker">4 5</span>                   
                     </code>
-                    <p>pop() - remove an element from the end</p>
-                    <code>
+                <p>pop() - remove an element from the end</p>
+                <code>
     lst  =  2 4 9 2 1 [5,6] 5 6
     index   0 1 2 3 4   5   6 7   
 
@@ -3623,8 +3979,8 @@
     6 
     [2,4,9,2,1,[5,6],5]<span class="marker" style="text-decoration: line-through;">6</span>
                     </code>
-                    <p>pop(<i>ind</i>) - remove a single element by declaring an index</p>
-                    <code>
+                <p>pop(<i>ind</i>) - remove a single element by declaring an index</p>
+                <code>
     lst  =  2 4 9 2 1 [5,6] 5 6
     index   0 1 2 3 4   5   6 7   
                   
@@ -3640,8 +3996,8 @@
     lst  =  2 4 2 1 [5,6] 5 6
     index   0 1 2 3   4   5 6
                     </code>
-                    <p>index(<i>obj</i>) - search for the <u>first</u> index of an element in the list</p>
-                    <code>
+                <p>index(<i>obj</i>) - search for the <u>first</u> index of an element in the list</p>
+                <code>
     lst  =  <span class="marker">2</span> 4 9 2 1 [5,6] 5 6
     index   <span class="marker">0</span> 1 2 3 4   5   6 7   
 
@@ -3649,8 +4005,8 @@
     &gt;&gt;&gt; lst.index(2)
     0 &larr; return only the first index where 2 is, even there are multiple
                     </code>
-                    <p>count(<i>obj</i>) - count how many times where finding an element (not in nested element)</p>
-                    <code>
+                <p>count(<i>obj</i>) - count how many times where finding an element (not in nested element)</p>
+                <code>
     lst  =  2 4 9 2 1 [5,6] <span class="marker">5</span> 6
     index   0 1 2 3 4   5   6 7   
 
@@ -3658,8 +4014,8 @@
     &gt;&gt;&gt; lst.count(5)
     1 &larr; return 1 because count only 5 in the list, not in the nested list 
                     </code>
-                    <p>reverse() &#8644; reorder to a reversed list</p>
-                    <code>
+                <p>reverse() &#8644; reorder to a reversed list</p>
+                <code>
     lst  =  2 4 9 2 1 [5,6] 5 6
     index   0 1 2 3 4   5   6 7  
     
@@ -3671,8 +4027,8 @@
     lst  =  &#8644; <span class="marker">6 5 [5, 6] 1 2 9 4 2</span> &#8644;
     index      0 1   2    3 4 5 6 7
                     </code>
-                    <p>sort() - sort the list to an ascending order list (min &rarr; max)</p>
-                    <code>
+                <p>sort() - sort the list to an ascending order list (min &rarr; max)</p>
+                <code>
     lst  =  93 57 7 66 2 1 0 14 23
     index    0  1 2  3 4 5 6  7  8
 
@@ -3684,20 +4040,21 @@
     lst  =  min <span class="marker">0 1 2 7 14 23 57 66 93</span> max
     index       0 1 2 3  4  5  6  7  8
                     </code>
-                    <p><b>Roll the Dice</b></p>
-                    <p><b>Problem</b></p>
-                    <p>Implement the following function:</p>
+                <p><b>Roll the Dice</b></p>
+                <p><b>Problem</b></p>
+                <p>Implement the following function:</p>
 
-                    <p>def list_of_dice_rolls(n)</p>
+                <p>def list_of_dice_rolls(n)</p>
 
-                    <p>The function is given a positive integer when called, it creates and returns a list with n dice rolls results (each is a random number 1-6).</p>
+                <p>The function is given a positive integer when called, it creates and returns a list with n dice rolls
+                    results (each is a random number 1-6).</p>
 
-                    <p><b>Example</b></p>
-                    <p>The call list_of_dice_rolls(5), could return:</p>
-                    <p>[1,4,3,1,2]</p>
+                <p><b>Example</b></p>
+                <p>The call list_of_dice_rolls(5), could return:</p>
+                <p>[1,4,3,1,2]</p>
 
-                    <p><b>Roll the Dice: Implementation</b></p>
-                    <code>
+                <p><b>Roll the Dice: Implementation</b></p>
+                <code>
     import random 
 
     def list_of_dice_rolls(n):
@@ -3722,24 +4079,253 @@
     &gt;? 5
     [5, 6, 1, 4, 1]
                     </code>
-                    <p><b>Above the Average</b></p>
-                    <p><b>Problem</b></p>
-                    <p>Write a program that reads a sequence of grades (till 'done' is entered), it then prints the average and the grades that are above the average.</p>
-                    <p><b>Example</b></p>
-                    <p>Enter grades in separate lines.</p>
-                    <p>To end the input type 'done':</p>
-                    <p><i>71</i></p>
-                    <p><i>86</i></p>
-                    <p><i>68</i></p>
-                    <p><i>94</i></p>
-                    <p><i>done</i></p>
-                    <p>The class average is 79.75</p>
-                    <p>The grades above the average are: 86, 94</p>
-                    <p><b>Above the Average (Implementation)</b></p>
-                    <code>
+                <p><b>Above the Average</b></p>
+                <p><b>Problem</b></p>
+                <p>Write a program that reads a sequence of grades (till 'done' is entered), it then prints the average
+                    and the grades that are above the average.</p>
+                <p><b>Example</b></p>
+                <p>Enter grades in separate lines.</p>
+                <p>To end the input type 'done':</p>
+                <p><i>71</i></p>
+                <p><i>86</i></p>
+                <p><i>68</i></p>
+                <p><i>94</i></p>
+                <p><i>done</i></p>
+                <p>The class average is 79.75</p>
+                <p>The grades above the average are: 86, 94</p>
+                <p><b>Above the Average (Implementation)</b></p>
+                <code>
+    def read_list():
+        seen_done = False
+        res_list = []
+        while(seen_done == False):
+            curr_input = input()
+            if(curr_input == 'done'):
+                seen_done = true
+            else:
+                curr = int(curr_input)
+                res_list.append(curr)
+        return res_list
+
+    def calc_average(lst):
+        elems_sum = 0
+        for elem in lst:
+            elems_sum += elem
+        average = elems_sum / len(lst)
+        return average
+    
+    def filter_above_value(lst, val):
+        res_list = []
+        for alem in lst:
+            if (elem &gt; val):
+                res_list.append(elem)
+        return res_list
+
     def main():
-        
+        print("Enter grades in separate lines. To end the input type 'done':")
+        grades_list = read_list()
+        average = calc_average(grades_list)
+        print("The class average is", average)
+        above_avg_list = filter_above_value(grades_list, average)
+        print(above_avg_list)
+
+    main()
+    <hr>
+    Run: Enter grades in separate lines. To end the input type 'done': 
+    &gt;? 71
+    &gt;? 86
+    &gt;? 68
+    &gt;? 94
+    &gt;? done
+
+    The class average is 79.75
+    [86, 94]
                     </code>
+                <p><b>Comparing Lists and Strings</b></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td><b>List</b></td>
+                            <td><b>String</b></td>
+                        </tr>
+                    <tbody>
+                        <tr>
+                            <td><b>Sequential</b></td>
+                            <td>&#10003;</td>
+                            <td>&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td><b>Iterable</b></td>
+                            <td>&#10003;</td>
+                            <td>&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td><b>Type of Elements</b></td>
+                            <td>Any type</td>
+                            <td>Only characters</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mutable</b></td>
+                            <td>&#10003;</td>
+                            <td>&#10007;</td>
+                        </tr>
+                    </tbody>
+                    </thead>
+                </table>
+                <code>
+    lst  =  1 2 3         s  =  a b c
+    index   0 1 2         index 0 1 2
+
+    <u>Mutable</u>               <u>Immutable</u>
+
+    &gt;&gt;&gt; lst = [1,2,3]  |  &gt;&gt;&gt; s = "abc"
+    &gt;&gt;&gt; lst.append(4)  |  &gt;&gt;&gt; s.upper()
+    &gt;&gt;&gt; lst            |  &gt;&gt;&gt; s
+    [1,2,3,4]          |  "abc"
+                       |
+                       |  &gt;&gt;&gt; s2 = s.upper()
+                       |  &gt;&gt;&gt; s 
+                       |  "abc"
+                       |  &gt;&gt;&gt; s2
+                       |  "ABC"
+                </code>
+                <p><b>List Mutability</b></p>
+                <code>
+    &gt;&gt;&gt; lst1 = [1,2,3] 
+    &gt;&gt;&gt; lst2 = lst1 
+    &gt;&gt;&gt; lst3 = [1,2,3] 
+    &gt;&gt;&gt; lst1[1] = 20 
+    &gt;&gt;&gt; lst3[2] = 30
+
+    &gt;&gt;&gt; lst1 
+    [1,20,3]
+
+    &gt;&gt;&gt; lst2 
+    [1,20,3]
+
+    &gt;&gt;&gt; lst3 
+    [1,2,30]
+                </code>
+                <code>
+        <b>main</b>           
+    lst =  1  2  3
+    index 00 01 02
+     n  = 10
+
+        <b>func</b>
+    lst = lst
+    n   = n + 1 = 11
+
+    def main():
+        lst = [1,2,3]
+        n = 10
+        print("Before func: lst =", lst, "and n =", n)
+        func(lst, n)
+        print("After func: lst =", lst, "and n =", n)
+    def func(lst, n):
+        lst.append(4)
+        n = n + 1
+        print("Inside func: lst =", lst, "and n =", n)
+
+    &gt;&gt;&gt; main()
+    Before func: lst = [1,2,3] and n = 10
+    Inside func: lst = [1,2,3,4] and n = 11
+    After func: lst = [1,2,3,4] and n = 10
+                </code>
+                <p><b>Mutation vs. Construction</b></p>
+                <table style="border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <td style="border: 1px solid ;"><b>Mutating the List</b> (Change inside the list)</td>
+                            <td style="border: 1px solid ;"><b>Constructing New Lists</b> (Create a new list from the
+                                list)</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">Indexed Assignment (lst[i] = ...)</td>
+                            <td style="border: 1px solid ;">List Literals ([1,2,3][])</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">append Method</td>
+                            <td style="border: 1px solid ;">list Constructor (list(...))</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">insert Method <br>Pop Method</td>
+                            <td style="border: 1px solid ;">+ operator (outside the list)<br>* operator (outside the
+                                list)</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">reverse Method</td>
+                            <td style="border: 1px solid ;">Slicing (lst[_:_])</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">sort Method</td>
+                            <td style="border: 1px solid ;">copy Method</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">extend Method</td>
+                            <td style="border: 1px solid ;"></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid ;">+= operator (add inside the list)</td>
+                            <td style="border: 1px solid ;"></td>
+                        </tr>
+                    </thead>
+                </table>
+                <p><b>Square the List</b></p>
+                <p><b>Problem</b></p>
+                <p>Implement the following function:</p>
+                <p style="text-indent: 50px;">def square_list(lst)</p>
+                <p>The function is given a list of numbers lst, and squares its elements.</p>
+
+                <p><b>a. def</b> create_sqr_list(lst)</p>
+                <p style="text-indent: 50px;"> will<b> create and return </b>a new list containing the square of the
+                    corresponding elements in lst.</p>
+                <p><b>b. def</b> sqr_list_in_place(lst)</p>
+                <p style="text-indent: 50px;"> will square<b>, in-place,</b> each element in lst.</p>
+                <code>
+    &gt;&gt;&gt; lst = [1,2,3]          |  &gt;&gt;&gt; lst = [1,2,3]
+    &gt;&gt;&gt; sqr_lst_in_place(lst)  |  &gt;&gt;&gt; sqr_lst = create_sqr_lst(lst) 
+    &gt;&gt;&gt; lst                    |  &gt;&gt;&gt; sqr_lst
+    [1,4,9]                    |  [1,4,9]
+                               |  &gt;&gt;&gt; lst
+                               |  [1,2,3]
+                </code>
+                <p><b>Square the list (COnstructing a New List)</b></p>
+                <code>
+    def create_sqr_list(lst):              | lst     =    1 2 3
+        res_lst = []                       |
+        for elem in lst:                   | lst     =    &#8593;
+            res_lst.append(elem * elem)    | elem    =    &#8595;
+                                           | res_lst = || &rarr; 1 4 9
+        return res_lst                     |
+                </code>
+
+                <p><b>Square the List (Mutating the List)</b></p>
+                <p class="error">Not Applicable</p>
+                <code>
+    def sqr_list_in_place(lst):           |  lst  =  1 2 3 
+        for elem in lst                   |  lst  =    &#10007;
+        elem = elem * elem                |  elem =    &#10007;
+                </code>
+                <p class="green">Applicable</p>
+                <code>
+    def sqr_list_in_place(lst):           |  lst  =  0 1 2
+        for i in range(len(lst)):         |  lst  =  1 4 9
+            lst[i] = lst[i] * lst[i]      |  i    =  **
+                </code>
+                <p><b>Python Collections (Arrays)</b></p>
+                <!-- https://www.w3schools.com/python/python_lists.asp -->
+                <p>There are four collection data types in the Python programming language:</p>
+                <ul>
+                    <li><b>List [...]</b> is a collection which is ordered and changeable. Allows duplicate members.
+                    </li>
+                    <li><b>Tuple (...)</b> is a collection which is ordered and unchangeable. Allows duplicate members.
+                    </li>
+                    <li><b>Set</b> is a collection which is unordered and unindexed. No duplicate members.</li>
+                    <li><b>Dictionary {...}</b> is a collection which is unordered, changeable and indexed. No duplicate
+                        members.</li>
+                </ul>
             </article>
         </section>
 
