@@ -460,29 +460,34 @@
                         </ul>
                     </li>
                     <li>d<sub>prop</sub>: propagation delay:
-                    <ul>
-                        <li><i>d:</i> length of physical link</li>
-                        <li><i>s:</i> propagation speed in medium (~2 x 108m/sec)</li>
-                        <li><i>d<sub>prop</sub> = d/s</i></li>
-                    </ul></li>
+                        <ul>
+                            <li><i>d:</i> length of physical link</li>
+                            <li><i>s:</i> propagation speed in medium (~2 x 108m/sec)</li>
+                            <li><i>d<sub>prop</sub> = d/s</i></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <p class="minor-topic">Caravan Analogy</p>
-                <img src="https://i.ibb.co/VL7kfyn/Screen-Shot-2020-06-18-at-16-50-15.png" alt="Screen-Shot-2020-06-18-at-16-50-15">
+                <img src="https://i.ibb.co/VL7kfyn/Screen-Shot-2020-06-18-at-16-50-15.png"
+                    alt="Screen-Shot-2020-06-18-at-16-50-15">
                 <ul>
                     <li class="purple">Q: How long until caravan is lined up before 2nd toll booth?</li>
                     <li>Time for last car to propagate from 1st to 2nd toll both: 100km/(100km/hr) = 1 hr</li>
                     <li class="purple">Ans: 62 minutes</li>
                 </ul>
 
-                <img src="https://i.ibb.co/qjDD0Lf/Screen-Shot-2020-06-18-at-16-54-25.png" alt="Screen-Shot-2020-06-18-at-16-54-25">
+                <img src="https://i.ibb.co/qjDD0Lf/Screen-Shot-2020-06-18-at-16-54-25.png"
+                    alt="Screen-Shot-2020-06-18-at-16-54-25">
                 <ul>
                     <li class="purple">Q: Will cars arrive to 2nd booth before all cars serviced at first booth?</li>
-                    <li><span class="purple">Ans: Yes!</span> After 7 min, 1st car arrives at second booth; three cars still at 1st booth.</li>
+                    <li><span class="purple">Ans: Yes!</span> After 7 min, 1st car arrives at second booth; three cars
+                        still at 1st booth.</li>
                 </ul>
 
                 <p class="minor-topic">Queuing Delay (Revisited)</p>
-                <img src="https://i.ibb.co/gtyLy8w/Screen-Shot-2020-06-18-at-16-59-15.png" alt="Screen-Shot-2020-06-18-at-16-59-15">
+                <img src="https://i.ibb.co/gtyLy8w/Screen-Shot-2020-06-18-at-16-59-15.png"
+                    alt="Screen-Shot-2020-06-18-at-16-59-15">
 
                 <p class="minor-topic">Packet Loss</p>
                 <ul>
@@ -492,34 +497,420 @@
 
                 <p class="minor-topic">Throughput</p>
                 <ul>
-                    <li><span class="purple">Throughput:</span> rate (bits/time unit) at which bit transferred between sender/receiver
-                    <ul>
-                        <li><span class="purple">Instantaneous:</span> rate (bits/time unit) at which bits transferred between sender/receiver</li>
-                        <li><span class="purple">Average:</span> rate over longer period of time</li>
-                    </ul>
+                    <li><span class="purple">Throughput:</span> rate (bits/time unit) at which bit transferred between
+                        sender/receiver
+                        <ul>
+                            <li><span class="purple">Instantaneous:</span> rate (bits/time unit) at which bits
+                                transferred between sender/receiver</li>
+                            <li><span class="purple">Average:</span> rate over longer period of time</li>
+                        </ul>
                     </li>
                 </ul>
 
                 <p class="minor-topic">Throughput: Internet Scenario</p>
-                <img src="https://i.ibb.co/S5YYyh5/Screen-Shot-2020-06-18-at-17-18-54.png" alt="Screen-Shot-2020-06-18-at-17-18-54">
+                <img src="https://i.ibb.co/S5YYyh5/Screen-Shot-2020-06-18-at-17-18-54.png"
+                    alt="Screen-Shot-2020-06-18-at-17-18-54">
 
                 <p class="minor-topic">Protocol layers, service models</p>
                 <p><b>Protocol "Layers"</b></p>
-                <p>Complex Networks: hosts, routers, Applications, links to various media, protocols, Hardware, Software</p>
+                <p>Complex Networks: hosts, routers, Applications, links to various media, protocols, Hardware, Software
+                </p>
                 <p>Is there any hope of <i>organizing</i> structure of network?</p>
 
                 <p><b>Organization of Air Travel</b></p>
-                <img src="https://i.ibb.co/LvYn3vB/Screen-Shot-2020-06-18-at-17-23-57.png" alt="Screen-Shot-2020-06-18-at-17-23-57">
+                <img src="https://i.ibb.co/LvYn3vB/Screen-Shot-2020-06-18-at-17-23-57.png"
+                    alt="Screen-Shot-2020-06-18-at-17-23-57">
                 <p>Layering of Airline Functionality</p>
-                <p><span class="purple"></span></p>
+                <p><span class="purple">Layers:</span> Each layer implements a service</p>
+                <ul>
+                    <li>Via its own internal-layer actions</li>
+                    <li>Relying on services provided by layer below</li>
+                </ul>
+
+                <p class="minor-topic">Why Layering?</p>
+                <p>Dealing with complex systems:</p>
+                <ul>
+                    <li>Explicit structure allows identification, relationship of complex system's pieces</li>
+                    <ul>
+                        <li>layered <span class="purple">reference</span> model for discussion</li>
+                    </ul>
+                    <li>Modularization eases maintenance, updating of system</li>
+                    <ul>
+                        <li>Change of implementation of layer's service transparent to rest of system</li>
+                        <li>E.g., change in gate procedure doesn't affect rest of system</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">Internet Protocol Stack</p>
+                <img src="https://i.ibb.co/GxWWG8g/Screen-Shot-2020-06-18-at-18-08-28.png"
+                    alt="Screen-Shot-2020-06-18-at-18-08-28">
+
+                <p class="minor-topic">ISO/OSI Reference Model</p>
+                <img src="https://i.ibb.co/fxGK85M/Screen-Shot-2020-06-18-at-18-12-21.png"
+                    alt="Screen-Shot-2020-06-18-at-18-12-21">
+
+                <p class="minor-topic">Encapsulation</p>
+                <img src="https://i.ibb.co/jTPLg76/Screen-Shot-2020-06-18-at-18-14-12.png"
+                    alt="Screen-Shot-2020-06-18-at-18-14-12">
+
+                <p class="minor-topic">Network Security</p>
+                <p class="green">Field of network security</p>
+                <ul>
+                    <li>How computer networks can be attacked</li>
+                    <li>Defend networks against attacks</li>
+                    <li>Architecture that are immune to attack</li>
+                </ul>
+                <p class="green">Internet not originally designed with (much) security in mind</p>
+                <ul>
+                    <li>A group of mutually trusting users attached to a transparent network</li>
+                    <li>Internet protocol designers playing "catch-up"</li>
+                    <li>Security consideration in all layers!</li>
+                </ul>
+
+                <p class="minor-topic">Bad Guys</p>
+                <p><b>Malware can get in host from:</b></p>
+                <ul>
+                    <li>Virus: self-replicating infection by receiving/executing object (e.g., e-mail attachment)</li>
+                    <li>Worm: self-replicating infection by passively receiving object that gets itself executed</li>
+                </ul>
+                <p><b>Spyware malware</b> can record keystrokes, web sites visited, upload into to collection site</p>
+                <p><b>Infected host</b> can be enrolled in botnet, used for spam. DDoS (Denial of Service) attacks</p>
+
+                <p><b>Denial of Service (DoS):</b></p>
+                <p>Attackers make resources (server, bandwidth) unavailable to legitimate traffic by overwhelming
+                    resource with bogus traffic</p>
+
+                <p><b>Packets Sniffing & IP Spoofing</b></p>
+                <p class="error">Packet "sniffing"</p>
+                <ul>
+                    <li>Broadcast media (shared ethernet, wireless)</li>
+                    <li>Promiscuous network interface reads/records all packets (e.g., including passwords) passing by
+                    </li>
+                </ul>
+
+                <p class="error">IP Spoofing</p>
+                <ul>
+                    <li>Send packet with false source address</li>
+                </ul>
             </article>
         </section>
         <section class="main-section" id="Application_Layer">
             <header class="topic-label-2">Application Layer</header>
             <article>
-                <p>
-                    test
-                </p>
+                <ul>
+                    <li>Web and HTTP</li>
+                    <li>FTP</li>
+                    <li>Electronic mail: SMTP, POP3, IMAR</li>
+                    <li>DNS</li>
+                    <li>Principles of network applications</li>
+                    <li>P2P applications</li>
+                </ul>
+
+                <p><b>Overview of Application Layer</b></p>
+                <p>Our goals:</p>
+                <ul>
+                    <li>Conceptual, implementation aspect of network application protocols</li>
+                    <ul>
+                        <li>Transport-layer service models</li>
+                        <li>Client-server paradigm</li>
+                        <li>Peer-to-peer paradigm</li>
+                    </ul>
+                    <li>Learn about protocols by examining popular application-level protocols</li>
+                    <u>
+                        <li>HTTP</li>
+                        <li>FTP</li>
+                        <li>SMTP / POP3 / IMAP</li>
+                        <li>DNS</li>
+                    </u>
+                    <li>Creating network applications</li>
+                    <ul>
+                        <li>Socket API</li>
+                    </ul>
+                </ul>
+
+                <p><b>Network Applications: Examples</b></p>
+                <ul>
+                    <li>E-mail</li>
+                    <li>Web</li>
+                    <li>Text messaging</li>
+                    <li>Remote login</li>
+                    <li>P2P file sharing</li>
+                    <li>Multi-user network games</li>
+                    <li>Streaming stored video (YouTube, Hulu, Netflix)</li>
+                    <li>Voice over IP (e.g., Skype)</li>
+                    <li>Real-time video conferencing</li>
+                    <li>Social Networking</li>
+                    <li>Search</li>
+                    <li>...</li>
+                </ul>
+
+                <p class="minor-topic">Creating a Network App</p>
+                <img src="https://i.ibb.co/xDgDFPB/Screen-Shot-2020-06-18-at-22-39-21.png"
+                    alt="Screen-Shot-2020-06-18-at-22-39-21">
+                <ul>
+                    <li>No need to write software for network-core devices</li>
+                    <li>Network-core devices do not run user application</li>
+                    <li>Applications on end systems allows for rapid app development, propagation</li>
+                </ul>
+
+                <p class="minor-topic">Application Architectures</p>
+                <p class="purple">Client &harr; Server <span style="color: black;">and</span> Peer &harr; Peer</p>
+                <img src="https://i.ibb.co/tQV9hc2/Screen-Shot-2020-06-18-at-22-44-17.png"
+                    alt="Screen-Shot-2020-06-18-at-22-44-17">
+
+                <p class="minor-topic">Client-Server Architecture</p>
+                <img src="https://i.ibb.co/6RBpr7k/Screen-Shot-2020-06-18-at-22-47-56.png"
+                    alt="Screen-Shot-2020-06-18-at-22-47-56">
+
+                <p class="minor-topic">Peer-to-Peer (P2P) Architecture</p>
+                <img src="https://i.ibb.co/SwZtqJc/Screen-Shot-2020-06-18-at-22-51-57.png"
+                    alt="Screen-Shot-2020-06-18-at-22-51-57">
+
+                <p class="minor-topic">Process Communicating</p>
+                <ul>
+                    <li>Client process <br> process that initiates communication</li>
+                    <li>Server process <br> process that waits to be contacted</li>
+                </ul>
+
+                <p><u>Process</u></p>
+                <ul>
+                    <li>Running within a host</li>
+                    <li>Within same host, two processes communicate using inter-process communication (defined by OS)
+                    </li>
+                    <li>Processes in different hosts communicate by exchanging messages</li>
+                    <li>Applications with P2P architectures have client processes & server processes</li>
+                </ul>
+
+                <p class="minor-topic">Sockets</p>
+                <img src="https://i.ibb.co/zGvYV5q/Screen-Shot-2020-06-18-at-23-01-38.png"
+                    alt="Screen-Shot-2020-06-18-at-23-01-38">
+
+                <p class="minor-topic">Addressing Processes</p>
+                <ul>
+                    <li>To receive messages, process must have identifier</li>
+                    <li>Host devices has unique 32-bit IP address</li>
+                    <li><i>Identifier</i> includes both IP address and port numbers associated with process on host.
+                    </li>
+                    <li>Example port numbers:</li>
+                    <ul>
+                        <li>HTTP server: 80</li>
+                        <li>Mail server: 25</li>
+                    </ul>
+                    <li>To send HTTP message to gaia.cs.umass.edu web server:</li>
+                    <ul>
+                        <li>IP address: 128.119.245.12</li>
+                        <li>Port number: 80</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">App-Layer Protocol</p>
+                <p>Defines</p>
+                <ul>
+                    <li>Types of messages exchanged:</li>
+                    <ul>
+                        <li>E.g., request, response</li>
+                    </ul>
+                    <li>Message syntax:</li>
+                    <ul>
+                        <li>What fields in messages & how fields are delineated</li>
+                    </ul>
+                    <li>Message semantics</li>
+                    <ul>
+                        <li>Meaning of information in fields</li>
+                    </ul>
+                    <li>Rules for when and how processes send & respond to messages</li>
+                </ul>
+
+                <p>Open protocols:</p>
+                <ul>
+                    <li>Defined in RFCs</li>
+                    <li>Allows for interoperability</li>
+                    <li>E.g., HTTP, SMTP</li>
+                </ul>
+                <p>Proprietary protocols</p>
+                <ul>
+                    <li>E.g., Skype</li>
+                </ul>
+
+                <p class="minor-topic">Transport Service for an App</p>
+                <ul>
+                    <li>Some apps (e.g., file transfer, web transactions) require 100% reliable data transfer</li>
+                    <li>Other apps (e.g., audio) can tolerate some loss</li>
+                    <li>Some apps (e.g., Internet telephony, interactive games) require low delay to be "effective"</li>
+                    <li>Some apps (e.g., multimedia) require minimum amount of throughput to be "effective"</li>
+                    <li>Other apps ("elastic apps") make use of whatever throughput they get</li>
+                    <li>Encryption, data integrity, ...</li>
+                </ul>
+
+                <p class="minor-topic">Transport Service: Common Apps</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Application</td>
+                            <td>Data Loss</td>
+                            <td>Throughput</td>
+                            <td>Time Sensitive</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>File transfer</td>
+                            <td>N</td>
+                            <td>elastic</td>
+                            <td>N</td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>N</td>
+                            <td>elastic</td>
+                            <td>N</td>
+                        </tr>
+                        <tr>
+                            <td>Web documents</td>
+                            <td>N</td>
+                            <td>elastic</td>
+                            <td>N</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time audio/video</td>
+                            <td>Y</td>
+                            <td>audio: 5kbps - 1Mbps <br> video: 10kbps - 5Mbps</td>
+                            <td>Y; 100's msec</td>
+                        </tr>
+                        <tr>
+                            <td>Stored audio/video</td>
+                            <td>Y</td>
+                            <td>same as above</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Interactive games</td>
+                            <td>Y</td>
+                            <td>few kbps up</td>
+                            <td>Y, few secs</td>
+                        </tr>
+                        <tr>
+                            <td>Text messaging</td>
+                            <td>N</td>
+                            <td>elastic</td>
+                            <td>Y, 100's msec</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="minor-topic">Internet Transport Protocols Services</p>
+                <p><i><b>TCP service:</b></i></p>
+                <ul>
+                    <li>Reliable transport between sending and receiving process</li>
+                    <li><i>Flow control:</i> sender won't overwhelm receiver</li>
+                    <li><i>Congestion control:</i> throttle sender when network overloaded</li>
+                    <li><i>Does not provide:</i> timing, minimum throughput guarantee, security</li>
+                    <li><i>Connection-oriented: setup required between client and server processes</i></li>
+                </ul>
+
+                <p><i><b>UDP service:</b></i></p>
+                <ul>
+                    <li>unreliable data transfer between sending and receiving process</li>
+                    <li><i>Does not provide: reliability, flow control, congestion control, timing, throughput
+                            guarantee, security, or connection setup.</i></li>
+                    <li>UDP requires 40% less bandwidth requirement than TCP</li>
+                </ul>
+
+                <p class="minor-topic">Application, Transport Protocols</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Application</td>
+                            <td>Application Layout Protocol</td>
+                            <td>Underlying Transport Protocol</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>SMTP [RFC 2821]</td>
+                            <td>TCP</td>
+                        </tr>
+                        <tr>
+                            <td>Remote Terminal Access</td>
+                            <td>Telnet [RFC 854]</td>
+                            <td>TCP</td>
+                        </tr>
+                        <tr>
+                            <td>Web</td>
+                            <td>HTTP [RFC 2616]</td>
+                            <td>TCP</td>
+                        </tr>
+                        <tr>
+                            <td>File Transfer</td>
+                            <td>FTP [RFC 959]</td>
+                            <td>TCP</td>
+                        </tr>
+                        <tr>
+                            <td>Steaming Multimedia</td>
+                            <td>HTTP (e.g., YouTube), RTP [RFC 1889]</td>
+                            <td>TCP or UDP</td>
+                        </tr>
+                        <tr>
+                            <td>Internet Telephony</td>
+                            <td>SIP, RTP, proprietary (e.g., Skype)</td>
+                            <td>TCP pr UDP</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="minor-topic">Web and HTTP</p>
+                <ul>
+                    <li>Objects: HTML file, JPEG images, Java applet, audio file, ...</li>
+                    <li>Base HTML-file which includes several referenced objects</li>
+                    <li>Each object is addressable by a URL</li>
+                    <li><u>www.someschool.edu/</u>dept/pic.gif</li>
+                    <li>&uarr; hostname</li>
+                </ul>
+
+                <p class="minor-topic">HTTP: hypertext transfer protocol</p>
+                <ul>
+                    <li>Web's application layer protocol</li>
+                    <img src="https://i.ibb.co/59yDRbP/Screen-Shot-2020-06-20-at-16-53-54.png" alt="Screen-Shot-2020-06-20-at-16-53-54">
+                </ul>
+
+                <p><i>HTTP is "stateless"</i></p>
+                <ul>
+                    <li>Sever maintains no information about past client requests</li>
+                </ul>
+                <p><i>uses TCP:</i></p>
+                <ul>
+                    <li>Client initiates TCP connection (creates socket) to server, port 80</li>
+                    <li>Server accept TCP connection from client</li>
+                    <li>HTTP messages (application-layer protocol messages) exchanged between browser (HTT client) and Web sever (HTTP server)</li>
+                    <li>TCP connection closed</li>
+                </ul>
+
+                <p><b>HTTP Connections</b></p>
+                <p><i>Non-persistent HTTP</i></p>
+                <ul>
+                    <li>At most one object sent over TCP connection</li>
+                    <ul>
+                        <li>Connection then cloesd</li>
+                    </ul>
+                    <li>Downloading multiple objects required multiple connections</li>
+                </ul>
+
+                <p><i>Persistent HTTP</i></p>
+                <ul>
+                    <li>Multiple objects can be sent over single TCP connection between client, server</li>
+                </ul>
+
+                <p><b>Non-Persistent HTTP</b></p>
+                <img src="https://i.ibb.co/ch7PSG5/Screen-Shot-2020-06-20-at-17-08-51.png" alt="Screen-Shot-2020-06-20-at-17-08-51">
+                <ul>
+                    <li>1a. Initiates TCP connection at www.someschool.edu on port 80</li>
+                    <li>1b. Waiting at port 80 to accepts connection, notifying client</li>
+                    <li>2. Client sends HTTP request message into TCP connection socket. Message indicate thw object dept/home.index</li>
+                    <li>3. Receives request message, from response, send message into it's socket</li>
+                    <li>Closes TCP connection</li>
+                    
+                </ul>
             </article>
         </section>
         <section class="main-section" id="Transport_Layer">
