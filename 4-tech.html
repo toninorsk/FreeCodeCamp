@@ -908,9 +908,431 @@
                     <li>1b. Waiting at port 80 to accepts connection, notifying client</li>
                     <li>2. Client sends HTTP request message into TCP connection socket. Message indicate thw object dept/home.index</li>
                     <li>3. Receives request message, from response, send message into it's socket</li>
-                    <li>Closes TCP connection</li>
-                    
+                    <li>4. Closes TCP connection</li>
+                    <li>5. Receives response containing html file, displays html. Parsing html file, finds the referenced JPEG object</li>
+                    <li>6. Step 1-5 repeated for each 10 JPEG objects</li>
                 </ul>
+
+                <p class="minor-topic">Non-Persistent HTTP: Response Time</p>
+                <img src="https://i.ibb.co/GCPWSSs/Screen-Shot-2020-06-20-at-18-32-41.png" alt="Screen-Shot-2020-06-20-at-18-32-41">                <p>RTT</p>
+                <ul>
+                    <li>Time for small packet to travel from client to sever and back</li>
+                </ul>
+
+                <p><b>Persistent HTTP</b></p>
+                <p><i>Persistent HTTP:</i></p>
+                <ul>
+                    <li>Server leaves connection open after sending response</li>
+                    <li>Subsequent HTTP messages between same client/server sent over open connection</li>
+                    <li>Client sends requests as soon as it encounter a referenced object</li>
+                    <li>As little as one RTT for all the referenced objects</li>
+                </ul>
+
+                <p><i>Non-persistent HTTP issues:</i></p>
+                <ul>
+                    <li>Required 2 RTTs per object</li>
+                    <li>OS overhead for each TCP connection</li>
+                    <li>Browsers often open parallel TCP connections to fetch referenced objects</li>
+                </ul>
+
+                <p><b>HTTP Response Status Codes</b></p>
+                <p>Appear in 1st line in server-to-client response message.</p>
+                <p>Some sample codes:</p>
+                <p><b>200 OK</b></p>
+                <ul>
+                    <li>Request succeeded, requested objected object later in this msg</li>
+                </ul>
+
+                <p><b>404 Not Found</b></p>
+                <ul>
+                    <li>Requested document not found on this server</li>
+                </ul>
+
+                <p><b>505 HTTP Version Not Supported</b></p>
+                <p><b>301 Moved Permanently</b></p>
+                <ul>
+                    <li>Requested object moved, new location specified in this msg</li>
+                </ul>
+
+                <p><b>400 Bad Request</b></p>
+                <ul>
+                    <li>Request msg not understood by server</li>
+                </ul>
+
+                <p class="minor-topic">User-Server State: Cookies</p>
+                <p>Example:</p>
+                <ul>
+                    <li>Susan always accesses internet from PC</li>
+                    <li>Visits specific e-commerce site for first time</li>
+                    <li>When initial HTTP requests arrives at site, site creates:</li>
+                    <ul>
+                        <li>Unique ID</li>
+                        <li>Entry in backend database for ID</li>
+                    </ul>
+                </ul>
+                <p><i>Four components:</i></p>
+                <ol>
+                    <li>Cookie header line of HTTP response message</li>
+                    <li>Cookie header line in next HTTP request message</li>
+                    <li>Cookie file kept on user' host, managed by user's browser</li>
+                    <li>Back-end database at Web site</li>
+                </ol>
+
+                <p class="minor-topic">Cookies: Keeping "state"</p>
+                <img src="https://i.ibb.co/MhXmr4j/Screen-Shot-2020-06-20-at-18-57-09.png" alt="Screen-Shot-2020-06-20-at-18-57-09">
+
+                <p><b>Cookies</b></p>
+                <p>What cookies can be used for:</p>
+                <ul>
+                    <li>Authorization</li>
+                    <li>Shopping carts</li>
+                    <li>Recommendations</li>
+                    <li>User session state (Web e-mail)</li>
+                </ul>
+
+                <p><b>Cookies and privacy:</b></p>
+                <ul>
+                    <li>Cookies permit sits to learn a lot about you</li>
+                    <li>Uou may supply name and e-mail to sites</li>
+                    <li>Learn more by <a href="https://www.youtube.com/watch?v=QWw7Wd2gUJk">How Advertisers Use HTTP Cookies can track you</a></li>
+                </ul>
+
+                <p><b>Web Cashes (Proxy Server)</b></p>
+                <img src="https://i.ibb.co/6ZWBJn3/Screen-Shot-2020-06-20-at-19-15-54.png" alt="Screen-Shot-2020-06-20-at-19-15-54">
+                <p><b>Goal</b></p>
+                <p>Satisfy client request without involving origin server</p>
+                <ul>
+                    <li>Object in cache: cache returns object</li>
+                    <li>Else cache requests object from origin server, then returns object to client</li>
+                </ul>
+
+                <p><b>Web Caches (Proxy Server)</b></p>
+                <ul>
+                    <li>Cache acts as both client and server</li>
+                    <ul>
+                        <li>Server for original requesting client</li>
+                        <li>Client to origin server</li>
+                    </ul>
+                    <li>Typically cache is installed by ISP (university, company, residential ISP)</li>
+                    <li>Reduce response time for client request</li>
+                    <li>Reduce traffic on an institution's access link</li>
+                </ul>
+
+                <p class="minor-topic">Caching Example: Fatter Access Link</p>
+                <img src="https://i.ibb.co/bPFxxN2/Screen-Shot-2020-06-20-at-19-26-41.png" alt="Screen-Shot-2020-06-20-at-19-26-41"> 
+                <p>Assumptions:</p>
+                <ul>
+                    <li>Avg object size: 100K bits</li>
+                    <li>Avg request rate from browsers to origin servers: 15/sec</li>
+                    <li>Avg data rate to browsers: 1.50 Mbps</li>
+                    <li>RTT from institutional router to any origin server: 2 sec</li>
+                </ul>
+
+                <p>Consequences:</p>
+                <ul>
+                    <li>LAN utilization: 15%</li>
+                    <li>Access link utilization = 99%</li>
+                    <li>Total delay = Internet delay + access delay + LAN delay = 2 sec + minutes + usecs</li>
+                    <li></li>
+                </ul>
+
+                <p class="minor-topic">Conditional GET</p>
+                <ul>
+                    <li><i>Goal: don't send object if cache has up-to-date cached version</i></li>
+                    <ul>
+                        <li>no object transmission delay</li>
+                        <li>lower link utilization</li>
+                    </ul>
+                    <li>Cache: specify date of cached copy in HTTP request</li>
+                    <ul>
+                        <li>If-modified-since: &lt;date&gt;</li>
+                    </ul>
+                    <li>Server: response contains no object if cached copy is up-to-date:</li>
+                    <ul>
+                        <li>HTTP/1.0 304 Not Modified</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">FTP: The File Transfer Protocol</p>
+                <img src="https://i.ibb.co/C9DgHd1/Screen-Shot-2020-06-20-at-19-45-47.png" alt="Screen-Shot-2020-06-20-at-19-45-47">
+                <ul>
+                    <li>Transfer file to/from remote host</li>
+                    <li>Client/server model</li>
+                    <ul>
+                        <li>Client: side that initiates transfer (either to/from remote)</li>
+                        <li>Server: remote host</li>
+                    </ul>
+                    <li>FTP: RFC 959</li>
+                    <li>FTP: server: port 21</li>
+                </ul>
+
+                <p class="minor-topic">Electronic mail: SMTP, POP3, IMAP</p>
+                <img src="https://i.ibb.co/JyqG0r7/Screen-Shot-2020-06-20-at-19-49-50.png" alt="Screen-Shot-2020-06-20-at-19-49-50">
+                <ul>
+                    <li>Mailbox contains incoming messages for user</li>
+                    <li>Message queue of outgoing (to be sent) mail messages</li>
+                </ul>
+
+                <p class="minor-topic">Electronic Mail: SMTP [RFC 2821]</p>
+                <ul>
+                    <li>Uses TCP to reliably transfer email message from client to server, port 25</li>
+                    <li>Direct transfer: sending server to receiving server</li>
+                    <li>Three phases of transfer</li>
+                    <ul>
+                        <li>Handshaking (greeting)</li>
+                        <li>Transfer of messages</li>
+                        <li>Closure</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">Scenario: Alice Emails Bob</p>
+                <img src="https://i.ibb.co/TkkLNCg/Screen-Shot-2020-06-20-at-19-57-09.png" alt="Screen-Shot-2020-06-20-at-19-57-09">
+
+                <p class="minor-topic">Mail Access Protocols</p>
+                <img src="https://i.ibb.co/hV536Sg/Screen-Shot-2020-06-20-at-20-56-21.png" alt="Screen-Shot-2020-06-20-at-20-56-21">
+
+                <p class="minor-topic">POP3 and IMAP</p>
+                <p>More about POP3</p>
+                <ul>
+                    <li>Previous example uses POP3 "download and delete" mode</li>
+                    <li>Bob cannot re-read e-mail if he changes client</li>
+                    <li>POP3 "download-and-keep": copies of messages on different clients</li>
+                    <li>POP3 is stateless across sessions</li>
+                </ul>
+
+                <p>IMAP</p>
+                <ul>
+                    <li>Keeps all messages in one place: at server</li>
+                    <li>Allows user to organize messages in folders</li>
+                    <li>Keeps user state across sessions:</li>
+                    <ul>
+                        <li>Names of folders and mappings between message IDs and folder name</li>
+                    </ul>
+                </ul>
+
+                <p>DNS: Domain Name System</p>
+                <p>People: many identifiers:</p>
+                <ul>
+                    <li>SSN, name, passport #</li>
+                </ul>
+                <p>Internet hosts, routers:</p>
+                <ul>
+                    <li>IP address(32bits) - used for addressing datagrams</li>
+                    <li>"Name", e.g., www.yahoo.com - used by humans</li>
+                </ul>
+
+                <p>Domain Name System:</p>
+                <ul>
+                    <li>Distributed database implemented in hierarchy of many name servers</li>
+                    <li>Application-layer protocol: hosts, name servers communicate to resolve names (address/name translation)</li>
+                    <ul>
+                        <li>Note: core Internet function, implemented as application-layer protocol</li>
+                        <li>Complexity at network's "edge"</li>
+                    </ul>
+                </ul>
+
+                <p>DNS: Services, Structure</p>
+                <p>DNS services</p>
+                <ul>
+                    <li>Hostname to IP address translation</li>
+                    <li>Host aliasing</li>
+                    <ul>
+                        <li>Canonical, alias names</li>
+                    </ul>
+                    <li>Mail server aliasing</li>
+                    <li>Load distribution</li>
+                    <ul>
+                        <li>Replicated Web servers: many IP address correspond to one name</li>
+                    </ul>
+                </ul>
+                
+                <p>Why not centralize DND?</p>
+                <ul>
+                    <li>Single point of failure</li>
+                    <li>Traffic volume</li>
+                    <li>Distant centralized database</li>
+                    <li>Maintenance</li>
+                    <li>It doesn't scale</li>
+                </ul>
+
+                <p><b>DNS: A Distributed, Hierarchical Database</b></p>
+                <img src="https://i.ibb.co/HnTX5P9/Screen-Shot-2020-06-21-at-21-23-06.png" alt="Screen-Shot-2020-06-21-at-21-23-06">
+                <p>Client wants IP for www.amazon.com; 1st approx:</p>
+                <ul>
+                    <li>Client queries root server to find com DNS server</li>
+                    <li>Client queries .com DNS server to get amazon.com DNS server</li>
+                    <li>Client queries amazon.com DNS server to get IP address for www.amazon.com</li>
+                </ul>
+
+                <p><b>DNS: Root Name Servers</b></p>
+                <img src="https://i.ibb.co/N2NZg93/Screen-Shot-2020-06-21-at-21-37-05.png" alt="Screen-Shot-2020-06-21-at-21-37-05">
+
+                <ul>
+                    <li>Contacted by local name server that can not resolve name</li>
+                    <li>Root name server:</li>
+                    <ul>
+                        <li>Contacts authoritative name server if name mapping not known</li>
+                        <li>Gets mapping</li>
+                        <li>Returns mapping to local name server</li>
+                    </ul>
+                </ul>
+
+                <p><b>TLD, Authoritative Servers</b></p>
+                <p>Top-level domain (TLD) servers:</p>
+                <ul>
+                    <li>Responsible for com, org, net, edu, aero, jobs, museums, and all top-level country domains, e.g.: uk, fr, ca, jp</li>
+                    <li>Network Solutions maintains server for .com TLD</li>
+                    <li>Educause for .edu TLD</li>
+                </ul>
+
+                <p>Authoritative DNS servers:</p>
+                <ul>
+                    <li>Organization's own DNS server(s), providing authoritative hostname to IP mappings for organization's named hosts</li>
+                    <li>Can be maintained by organization or service provider</li>
+                </ul>
+
+                <p><b>Local DNS Name Server</b></p>
+                <ul>
+                    <li>Does not strictly belong to hierarchy</li>
+                    <li>Each ISP (residential ISP, company, university) has one</li>
+                    <ul>
+                        <li>Also called "default name server"</li>
+                    </ul>
+                    <li>When host makes DNS query, query is sent to its local DNS server</li>
+                    <ul>
+                        <li>Has local cache of recent name-to-address translation pairs (but may be out of dare!)</li>
+                        <li>Acts as proxy, forwards query into hierarchy</li>
+                    </ul>
+                </ul>
+
+                <p><b>DNS Name Resolution Example</b></p>
+                <img src="https://i.ibb.co/xzW9346/Screen-Shot-2020-06-21-at-21-58-12.png" alt="Screen-Shot-2020-06-21-at-21-58-12">
+                <ul>
+                    <li>Once (any) name server learns mapping, it caches mapping</li>
+                    <ul>
+                        <li>Cache entries timeout (disappear) after some time (TTL)</li>
+                        <li>TLD servers typically cached in local name servers</li>
+                        <ul>
+                            <li>Thus root name servers not often visited</li>
+                        </ul>
+                    </ul>
+                    <li>Cached entries may be out-of-date (best effort-name-to-address translation)</li>
+                    <ul>
+                        <li>If name host changes IP address, may not be known internet-wide until all TTLs expire</li>
+                    </ul>
+                    <li>Update/notify mechanisms proposed IETF standard</li>
+                    <ul>
+                        <li>RFC 2136</li>
+                    </ul>
+                </ul>
+
+                <p><b>DNS Records</b></p>
+                <p>DNS: distributed db storing resource records (RR)</p>
+                <p class="purple">RR format: (name, value, type, ttl)</p>
+
+                <p>type = A</p>
+                <ul>
+                    <li><b>name</b> is hostname</li>
+                    <li><b>value</b> is IP address</li>
+                </ul>
+
+                <p>type = NS</p>
+                <ul>
+                    <li><b>name</b> is domain (e.g., foo.com)</li>
+                    <li><b>value</b> is hostname of authoritative name server for this domain</li>
+                </ul>
+
+                <p>type = CNAME</p>
+                <ul>
+                    <li><b>name</b> is alias name for some "canonical" (the real) name</li>
+                    <li><b>www.ibm.com</b> is really</li>
+                    <li><b>servereast.backup2.ibm.com</b></li>
+                    <li><b>value</b> is canonical name</li>
+                </ul>
+
+                <p>type = MX</p>
+                <ul>
+                    <li><b>value</b> is name of mail server associated with <b>name</b></li>
+                </ul>
+
+                <p class="minor-topic">Inserting Records into DNS</p>
+                <ul>
+                    <li>Example: new startup "Network Uthopia"</li>
+                    <li>Register name networkutopia.com at DNS registrar (e.g., Network Solutions)</li>
+                    <ul>
+                        <li>Provide names, IP addresses of authoritative name server (primary and secondary)</li>
+                        <li>Registrar inserts two RRs into .com TLD server: <br> <b>(networkuthopia.com, dns1.networkuthopia.com, NS) <br> (dns1.networkutopia.com, 212.212.212.1, A)</b></li>
+                    </ul>
+                    <li>Create authoritative server type A record for www.networkuptopia.com; type MX record for networkutopia.com</li>
+                </ul>
+
+                <p class="minor-topic">Attacking DNS</p>
+                <p>DDoS attacks</p>
+                <ul>
+                    <li>Bombard root servers with traffic</li>
+                    <li>Traffic Filtering</li>
+                    <li>Local DNS servers caches IPs of TLD servers, allowing root server bypass</li>
+                </ul>
+
+                <ul>
+                    <li>Bombard TLD servers</li>
+                    <ul>
+                        <li>Potentially more dangerous</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">Attacking DNS</p>
+                <p>Redirect attacks</p>
+                <ul>
+                    <li>Man-in-middle</li>
+                    <ul>
+                        <li>Intercept queries</li>
+                    </ul>
+                    <li>DNS poisoning</li>
+                    <ul>
+                        <li>Send bogus relies to DNS server, which caches</li>
+                    </ul>
+                </ul>
+
+                <p>Exploit DNS for DDoS</p>
+                <ul>
+                    <li>Send queries with spoofed source address: target IP</li>
+                    <li>Requires amplification</li>
+                </ul>
+
+                <p><b>P2P applications</b></p>
+                <p>Pure P2P Architecture</p>
+
+                <ul>
+                    <li>No always-on server</li>
+                    <li>Arbitrary end systems directly communicate</li>
+                    <li>Peers are intermittently connected and change IP addresses</li>
+                </ul>
+
+                <p>Examples:</p>
+                <ul>
+                    <li>File distribution (BitTorrent)</li>
+                    <li>Streaming (KanKan)</li>
+                    <li>VoIP (Skype)</li>
+                </ul>
+
+                <p class="minor-topic">File Distribution: Client-Server</p>
+                <img src="https://i.ibb.co/hcmG5Rn/Screen-Shot-2020-06-21-at-23-11-43.png" alt="Screen-Shot-2020-06-21-at-23-11-43"> 
+                <p>Server transmission</p>
+                <ul>
+                    <li>Time to send one copy: F/u</li>
+                    <li>Time to send N copies: NF/u,</li>
+                </ul>
+                <p>Client must download file copy</p>
+                <ul>
+                    <li>d<sub>min</sub> = min client download rate</li>
+                    <li>min client download time: F/d<sub>min</sub></li>
+                </ul>
+
+                <p>Distribution time</p>
+                <p>D<sub>c - s</sub> &gt; max {NF/u<sub>s</sub>, F/D<sub>min</sub>}</p>
+
+                <p class="minor-topic">File</p>
             </article>
         </section>
         <section class="main-section" id="Transport_Layer">
