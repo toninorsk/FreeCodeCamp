@@ -18,6 +18,7 @@
             <li><a class="nav-link" href="#overview">Overview</a></li>
             <li><a class="nav-link" href="#Instructors">Instructors</a></li>
             <!-- Introduction to Network -->
+            <!-- https://eclass.teicrete.gr/modules/document/file.php/TP326/%CE%98%CE%B5%CF%89%CF%81%CE%AF%CE%B1%20(Lectures)/Computer_Networking_A_Top-Down_Approach.pdf -->
             <li><a class="nav-link topic" href="#Introduction_to_Networking">Introduction to Networking</a></li>
             <li><a class="nav-link" href="#Computer_Networking">Computer Networking</a></li>
             <li><a class="nav-link" href="#Application_Layer">Application Layer</a></li>
@@ -871,7 +872,8 @@
                 <p class="minor-topic">HTTP: hypertext transfer protocol</p>
                 <ul>
                     <li>Web's application layer protocol</li>
-                    <img src="https://i.ibb.co/59yDRbP/Screen-Shot-2020-06-20-at-16-53-54.png" alt="Screen-Shot-2020-06-20-at-16-53-54">
+                    <img src="https://i.ibb.co/59yDRbP/Screen-Shot-2020-06-20-at-16-53-54.png"
+                        alt="Screen-Shot-2020-06-20-at-16-53-54">
                 </ul>
 
                 <p><i>HTTP is "stateless"</i></p>
@@ -882,7 +884,8 @@
                 <ul>
                     <li>Client initiates TCP connection (creates socket) to server, port 80</li>
                     <li>Server accept TCP connection from client</li>
-                    <li>HTTP messages (application-layer protocol messages) exchanged between browser (HTT client) and Web sever (HTTP server)</li>
+                    <li>HTTP messages (application-layer protocol messages) exchanged between browser (HTT client) and
+                        Web sever (HTTP server)</li>
                     <li>TCP connection closed</li>
                 </ul>
 
@@ -902,19 +905,24 @@
                 </ul>
 
                 <p><b>Non-Persistent HTTP</b></p>
-                <img src="https://i.ibb.co/ch7PSG5/Screen-Shot-2020-06-20-at-17-08-51.png" alt="Screen-Shot-2020-06-20-at-17-08-51">
+                <img src="https://i.ibb.co/ch7PSG5/Screen-Shot-2020-06-20-at-17-08-51.png"
+                    alt="Screen-Shot-2020-06-20-at-17-08-51">
                 <ul>
                     <li>1a. Initiates TCP connection at www.someschool.edu on port 80</li>
                     <li>1b. Waiting at port 80 to accepts connection, notifying client</li>
-                    <li>2. Client sends HTTP request message into TCP connection socket. Message indicate thw object dept/home.index</li>
+                    <li>2. Client sends HTTP request message into TCP connection socket. Message indicate thw object
+                        dept/home.index</li>
                     <li>3. Receives request message, from response, send message into it's socket</li>
                     <li>4. Closes TCP connection</li>
-                    <li>5. Receives response containing html file, displays html. Parsing html file, finds the referenced JPEG object</li>
+                    <li>5. Receives response containing html file, displays html. Parsing html file, finds the
+                        referenced JPEG object</li>
                     <li>6. Step 1-5 repeated for each 10 JPEG objects</li>
                 </ul>
 
                 <p class="minor-topic">Non-Persistent HTTP: Response Time</p>
-                <img src="https://i.ibb.co/GCPWSSs/Screen-Shot-2020-06-20-at-18-32-41.png" alt="Screen-Shot-2020-06-20-at-18-32-41">                <p>RTT</p>
+                <img src="https://i.ibb.co/GCPWSSs/Screen-Shot-2020-06-20-at-18-32-41.png"
+                    alt="Screen-Shot-2020-06-20-at-18-32-41">
+                <p>RTT</p>
                 <ul>
                     <li>Time for small packet to travel from client to sever and back</li>
                 </ul>
@@ -979,7 +987,8 @@
                 </ol>
 
                 <p class="minor-topic">Cookies: Keeping "state"</p>
-                <img src="https://i.ibb.co/MhXmr4j/Screen-Shot-2020-06-20-at-18-57-09.png" alt="Screen-Shot-2020-06-20-at-18-57-09">
+                <img src="https://i.ibb.co/MhXmr4j/Screen-Shot-2020-06-20-at-18-57-09.png"
+                    alt="Screen-Shot-2020-06-20-at-18-57-09">
 
                 <p><b>Cookies</b></p>
                 <p>What cookies can be used for:</p>
@@ -994,11 +1003,13 @@
                 <ul>
                     <li>Cookies permit sits to learn a lot about you</li>
                     <li>Uou may supply name and e-mail to sites</li>
-                    <li>Learn more by <a href="https://www.youtube.com/watch?v=QWw7Wd2gUJk">How Advertisers Use HTTP Cookies can track you</a></li>
+                    <li>Learn more by <a href="https://www.youtube.com/watch?v=QWw7Wd2gUJk">How Advertisers Use HTTP
+                            Cookies can track you</a></li>
                 </ul>
 
                 <p><b>Web Cashes (Proxy Server)</b></p>
-                <img src="https://i.ibb.co/6ZWBJn3/Screen-Shot-2020-06-20-at-19-15-54.png" alt="Screen-Shot-2020-06-20-at-19-15-54">
+                <img src="https://i.ibb.co/6ZWBJn3/Screen-Shot-2020-06-20-at-19-15-54.png"
+                    alt="Screen-Shot-2020-06-20-at-19-15-54">
                 <p><b>Goal</b></p>
                 <p>Satisfy client request without involving origin server</p>
                 <ul>
@@ -1019,7 +1030,8 @@
                 </ul>
 
                 <p class="minor-topic">Caching Example: Fatter Access Link</p>
-                <img src="https://i.ibb.co/bPFxxN2/Screen-Shot-2020-06-20-at-19-26-41.png" alt="Screen-Shot-2020-06-20-at-19-26-41"> 
+                <img src="https://i.ibb.co/bPFxxN2/Screen-Shot-2020-06-20-at-19-26-41.png"
+                    alt="Screen-Shot-2020-06-20-at-19-26-41">
                 <p>Assumptions:</p>
                 <ul>
                     <li>Avg object size: 100K bits</li>
@@ -1054,7 +1066,8 @@
                 </ul>
 
                 <p class="minor-topic">FTP: The File Transfer Protocol</p>
-                <img src="https://i.ibb.co/C9DgHd1/Screen-Shot-2020-06-20-at-19-45-47.png" alt="Screen-Shot-2020-06-20-at-19-45-47">
+                <img src="https://i.ibb.co/C9DgHd1/Screen-Shot-2020-06-20-at-19-45-47.png"
+                    alt="Screen-Shot-2020-06-20-at-19-45-47">
                 <ul>
                     <li>Transfer file to/from remote host</li>
                     <li>Client/server model</li>
@@ -1067,7 +1080,8 @@
                 </ul>
 
                 <p class="minor-topic">Electronic mail: SMTP, POP3, IMAP</p>
-                <img src="https://i.ibb.co/JyqG0r7/Screen-Shot-2020-06-20-at-19-49-50.png" alt="Screen-Shot-2020-06-20-at-19-49-50">
+                <img src="https://i.ibb.co/JyqG0r7/Screen-Shot-2020-06-20-at-19-49-50.png"
+                    alt="Screen-Shot-2020-06-20-at-19-49-50">
                 <ul>
                     <li>Mailbox contains incoming messages for user</li>
                     <li>Message queue of outgoing (to be sent) mail messages</li>
@@ -1086,10 +1100,12 @@
                 </ul>
 
                 <p class="minor-topic">Scenario: Alice Emails Bob</p>
-                <img src="https://i.ibb.co/TkkLNCg/Screen-Shot-2020-06-20-at-19-57-09.png" alt="Screen-Shot-2020-06-20-at-19-57-09">
+                <img src="https://i.ibb.co/TkkLNCg/Screen-Shot-2020-06-20-at-19-57-09.png"
+                    alt="Screen-Shot-2020-06-20-at-19-57-09">
 
                 <p class="minor-topic">Mail Access Protocols</p>
-                <img src="https://i.ibb.co/hV536Sg/Screen-Shot-2020-06-20-at-20-56-21.png" alt="Screen-Shot-2020-06-20-at-20-56-21">
+                <img src="https://i.ibb.co/hV536Sg/Screen-Shot-2020-06-20-at-20-56-21.png"
+                    alt="Screen-Shot-2020-06-20-at-20-56-21">
 
                 <p class="minor-topic">POP3 and IMAP</p>
                 <p>More about POP3</p>
@@ -1124,7 +1140,8 @@
                 <p>Domain Name System:</p>
                 <ul>
                     <li>Distributed database implemented in hierarchy of many name servers</li>
-                    <li>Application-layer protocol: hosts, name servers communicate to resolve names (address/name translation)</li>
+                    <li>Application-layer protocol: hosts, name servers communicate to resolve names (address/name
+                        translation)</li>
                     <ul>
                         <li>Note: core Internet function, implemented as application-layer protocol</li>
                         <li>Complexity at network's "edge"</li>
@@ -1145,7 +1162,7 @@
                         <li>Replicated Web servers: many IP address correspond to one name</li>
                     </ul>
                 </ul>
-                
+
                 <p>Why not centralize DND?</p>
                 <ul>
                     <li>Single point of failure</li>
@@ -1156,7 +1173,8 @@
                 </ul>
 
                 <p><b>DNS: A Distributed, Hierarchical Database</b></p>
-                <img src="https://i.ibb.co/HnTX5P9/Screen-Shot-2020-06-21-at-21-23-06.png" alt="Screen-Shot-2020-06-21-at-21-23-06">
+                <img src="https://i.ibb.co/HnTX5P9/Screen-Shot-2020-06-21-at-21-23-06.png"
+                    alt="Screen-Shot-2020-06-21-at-21-23-06">
                 <p>Client wants IP for www.amazon.com; 1st approx:</p>
                 <ul>
                     <li>Client queries root server to find com DNS server</li>
@@ -1165,7 +1183,8 @@
                 </ul>
 
                 <p><b>DNS: Root Name Servers</b></p>
-                <img src="https://i.ibb.co/N2NZg93/Screen-Shot-2020-06-21-at-21-37-05.png" alt="Screen-Shot-2020-06-21-at-21-37-05">
+                <img src="https://i.ibb.co/N2NZg93/Screen-Shot-2020-06-21-at-21-37-05.png"
+                    alt="Screen-Shot-2020-06-21-at-21-37-05">
 
                 <ul>
                     <li>Contacted by local name server that can not resolve name</li>
@@ -1180,14 +1199,16 @@
                 <p><b>TLD, Authoritative Servers</b></p>
                 <p>Top-level domain (TLD) servers:</p>
                 <ul>
-                    <li>Responsible for com, org, net, edu, aero, jobs, museums, and all top-level country domains, e.g.: uk, fr, ca, jp</li>
+                    <li>Responsible for com, org, net, edu, aero, jobs, museums, and all top-level country domains,
+                        e.g.: uk, fr, ca, jp</li>
                     <li>Network Solutions maintains server for .com TLD</li>
                     <li>Educause for .edu TLD</li>
                 </ul>
 
                 <p>Authoritative DNS servers:</p>
                 <ul>
-                    <li>Organization's own DNS server(s), providing authoritative hostname to IP mappings for organization's named hosts</li>
+                    <li>Organization's own DNS server(s), providing authoritative hostname to IP mappings for
+                        organization's named hosts</li>
                     <li>Can be maintained by organization or service provider</li>
                 </ul>
 
@@ -1206,7 +1227,8 @@
                 </ul>
 
                 <p><b>DNS Name Resolution Example</b></p>
-                <img src="https://i.ibb.co/xzW9346/Screen-Shot-2020-06-21-at-21-58-12.png" alt="Screen-Shot-2020-06-21-at-21-58-12">
+                <img src="https://i.ibb.co/xzW9346/Screen-Shot-2020-06-21-at-21-58-12.png"
+                    alt="Screen-Shot-2020-06-21-at-21-58-12">
                 <ul>
                     <li>Once (any) name server learns mapping, it caches mapping</li>
                     <ul>
@@ -1261,9 +1283,11 @@
                     <li>Register name networkutopia.com at DNS registrar (e.g., Network Solutions)</li>
                     <ul>
                         <li>Provide names, IP addresses of authoritative name server (primary and secondary)</li>
-                        <li>Registrar inserts two RRs into .com TLD server: <br> <b>(networkuthopia.com, dns1.networkuthopia.com, NS) <br> (dns1.networkutopia.com, 212.212.212.1, A)</b></li>
+                        <li>Registrar inserts two RRs into .com TLD server: <br> <b>(networkuthopia.com,
+                                dns1.networkuthopia.com, NS) <br> (dns1.networkutopia.com, 212.212.212.1, A)</b></li>
                     </ul>
-                    <li>Create authoritative server type A record for www.networkuptopia.com; type MX record for networkutopia.com</li>
+                    <li>Create authoritative server type A record for www.networkuptopia.com; type MX record for
+                        networkutopia.com</li>
                 </ul>
 
                 <p class="minor-topic">Attacking DNS</p>
@@ -1317,7 +1341,8 @@
                 </ul>
 
                 <p class="minor-topic">File Distribution: Client-Server</p>
-                <img src="https://i.ibb.co/hcmG5Rn/Screen-Shot-2020-06-21-at-23-11-43.png" alt="Screen-Shot-2020-06-21-at-23-11-43"> 
+                <img src="https://i.ibb.co/hcmG5Rn/Screen-Shot-2020-06-21-at-23-11-43.png"
+                    alt="Screen-Shot-2020-06-21-at-23-11-43">
                 <p>Server transmission</p>
                 <ul>
                     <li>Time to send one copy: F/u</li>
@@ -1332,15 +1357,513 @@
                 <p>Distribution time</p>
                 <p>D<sub>c - s</sub> &gt; max {NF/u<sub>s</sub>, F/D<sub>min</sub>}</p>
 
-                <p class="minor-topic">File</p>
+                <p class="minor-topic">File Distribution Time: P2P</p>
+                <img src="https://i.ibb.co/Jcwcqk9/Screen-Shot-2020-06-21-at-23-18-43.png"
+                    alt="Screen-Shot-2020-06-21-at-23-18-43">
+                <p>Server transmission</p>
+                <ul>
+                    <li>Time to send one copy: F/u</li>
+                    <li>Time to send N copies: NF/u,</li>
+                </ul>
+                <p>Client must download file copy</p>
+                <ul>
+                    <li>d<sub>min</sub> = min client download rate</li>
+                    <li>min client download time: F/d<sub>min</sub></li>
+                </ul>
+                <p>Distribution time</p>
+                <p>D<sub>c - s</sub> &gt; max{NF/u<sub>s</sub>, F/d<sub>min</sub>}</p>
+
+                <p class="minor-topic">File Distribution Time: P2P</p>
+                <img src="https://i.ibb.co/NLNJnHD/Screen-Shot-2020-06-21-at-23-28-36.png"
+                    alt="Screen-Shot-2020-06-21-at-23-28-36">
+
+                <p>Clients: as aggregate must download NFbits</p>
+                <ul>
+                    <li>Max upload rate (limiting max download rate) is u<sub>s</sub> + &mu; u<sub>i</sub></li>
+                </ul>
+
+                <ul>
+                    <li>D<sub>P2P</sub> &gt; max {F/u<sub>s</sub>, F/d<sub>min</sub>, NF/(U<sub>s</sub> + &mu;
+                        u<sub>i</sub>)}</li>
+                </ul>
+
+                <p class="minor-topic">Client-Server vs P2P: Example</p>
+                <img src="https://i.ibb.co/LJq1CwP/Screen-Shot-2020-06-21-at-23-36-36.png"
+                    alt="Screen-Shot-2020-06-21-at-23-36-36">
+                <p>client upload rate = u, F/u = 1 hour, u<sub>s</sub> = 10u, d<sub>min</sub> &ge; u<sub>s</sub></p>
+
+                <p class="minor-topic">P2P File Distribution: BitTorrent</p>
+                <img src="https://i.ibb.co/JrJXxgv/Screen-Shot-2020-06-21-at-23-41-44.png"
+                    alt="Screen-Shot-2020-06-21-at-23-41-44">
+
+                <p>Peer joining torrent:</p>
+                <ul>
+                    <li>Has no chunks, but will accumulate them over time from other peers</li>
+                    <li>Registers with tracker to get list of peers, connects to subset of peers ("neighbors")</li>
+                    <li>Once peer has entire file, it may (selfishly) leave or (altruistically) remain in torrent</li>
+                </ul>
+
+                <p class="minor-topic">Distributed Hash Table (DHT)</p>
+                <ul>
+                    <li>DHT: a distributed P2P database</li>
+                    <li>Database has (key, value) pairs; examples:</li>
+                    <ul>
+                        <li>Key: ss number; value: human name</li>
+                        <li>Key: movie title; value: IP address</li>
+                    </ul>
+                    <li>Distribute the (key, value) pairs over the (millions of peers)</li>
+                    <li>A peer queries DHT with key</li>
+                    <ul>
+                        <li>DHT returns values that match the key</li>
+                    </ul>
+                    <li>Peers can also insert (key, value) pairs</li>
+                </ul>
             </article>
         </section>
         <section class="main-section" id="Transport_Layer">
             <header class="topic-label-2">Transport Layer</header>
             <article>
-                <p>
-                    test
-                </p>
+                <p><b>Our goals:</b></p>
+                <ul>
+                    <li>Understand principles behind transport layer services:</li>
+                    <ul>
+                        <li>Multiplexing, Demultiplexing</li>
+                        <li>Reliable data transfer</li>
+                        <li>Flow control</li>
+                        <li>Congestion control</li>
+                    </ul>
+                    <li>Learn more Internet transport layer protocols:</li>
+                    <ul>
+                        <li>UDP: connectionless transport</li>
+                        <li>TCP: connection-oriented reliable transport</li>
+                        <li>TCP: congestion control</li>
+                    </ul>
+                </ul>
+
+                <p>Roadmap</p>
+                <ol>
+                    <li>Transport-layer services</li>
+                    <li>Multiplexing and demultiplexing</li>
+                    <li>Connectionless transport: UDP</li>
+                    <li>Principles of reliable data transfer</li>
+                    <li>Connection-oriented transport: TCP</li>
+                    <ul>
+                        <li>Segment structure</li>
+                        <li>Reliable data transfer</li>
+                        <li>Flow control</li>
+                        <li>Connection management</li>
+                    </ul>
+                    <li>Principles of congestion control</li>
+                    <li>TCP congestion control</li>
+                </ol>
+
+                <p class="minor-topic">Transport Services and Protocols</p>
+                <img src="https://i.ibb.co/bPxj3NW/Screen-Shot-2020-06-22-at-10-53-23.png"
+                    alt="Screen-Shot-2020-06-22-at-10-53-23">
+
+                <ul>
+                    <li>Provide logical communication between app processes running on different hosts</li>
+                    <li>Transport protocols run in end systems</li>
+                    <ul>
+                        <li>Send side: breaks app messages into segments, passes to network layer</li>
+                        <li>Receive side: reassembles segments into messages, passes to app layer</li>
+                    </ul>
+                    <li>More than one transport protocol available to apps</li>
+                    <ul>
+                        <li>Internet: TCP and UDP</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">Internet Transport-layer Protocols</p>
+                <ul>
+                    <li>Reliable, in-order delivery (TCP; Transmission Control Protocol)</li>
+                    <ul>
+                        <li>Congestion control</li>
+                        <li>Flow control</li>
+                        <li>Connection setup</li>
+                    </ul>
+                    <li>Unreliable, unordered delivery (UDP; User Datagram Protocol)</li>
+                    <ul>
+                        <li>No-frills extension of "best-effort" IP</li>
+                    </ul>
+                    <li>Services not available:</li>
+                    <ul>
+                        <li>Delay guarantees</li>
+                        <li>Bandwidth guarantees</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">Multiplexing and Demultiplexing</p>
+                <img src="https://i.ibb.co/1stHJp4/Screen-Shot-2020-06-22-at-12-57-10.png" alt="Screen-Shot-2020-06-22-at-12-57-10"> 
+                <p>Multiplexing at sender: handle data from multiple sockets, add transport header (later used for demultiplexing)</p>
+                <p>Demultiplexing at receiver: use header info to deliver received segments to correct socket</p>
+
+                <p>More on terminology</p>
+                <p>Port: in simple language, "Port" is a number used by a particular software to identify its data coming from internet. Each software like, Skype, Chrome, YouTube has its own port number and thats how Skype or YouTube knows which internet data is for itself.</p>
+
+                <p>Socket: "IP address and Port" together is called "Socket". It is used by another computer to send data to one particular computer's particular software.</p>
+
+                <p>IP address is used to identify the computer and port is to identify the software such as IF, Chrome, Skype etc.</p>
+
+                <p class="minor-topic">How Demultiplexing Works</p>
+                <ul>
+                    <li>Host receives IP datagrams</li>
+                    <ul>
+                        <li>Each datagram has source IP address, destination IP address</li>
+                        <li>Each datagram carries one transport-layer segment</li>
+                    </ul>
+                    <li>Host uses IP address & port numbers to direct segment to appropriate socket</li>
+                </ul>
+                <img src="https://i.ibb.co/TqyPs3r/Screen-Shot-2020-06-22-at-13-08-28.png" alt="Screen-Shot-2020-06-22-at-13-08-28">
+
+                <p class="minor-topic">Connectionless Demultiplexing</p>
+                <ul>
+                    <li>When host receives UDP segment:</li>
+                    <ul>
+                        <li>Checks destination port # in segment</li>
+                        <li>Direct UDP segment to socket with that port #</li>
+                    </ul>
+                    <li>IP datagrams with same destination port #, but different source IP addresses and/or source port numbers will be directed to same socket at destination</li>
+                </ul>
+
+                <p class="minor-topic">Connectionless Demux (Demultiplex): Example</p>
+                <img src="https://i.ibb.co/5vGpF5Z/Screen-Shot-2020-06-22-at-13-15-18.png" alt="Screen-Shot-2020-06-22-at-13-15-18">
+
+                <p class="minor-topic">Connection-Oriented Demux</p>
+                <ul>
+                    <li>TCP socket identified by 4-tuple:</li>
+                    <ul>
+                        <li>Source IP address</li>
+                        <li>Source port number</li>
+                        <li>Destination IP address</li>
+                        <li>Destination port number</li>
+                    </ul>
+                    <li>Server host may support many simultaneous TCP sockets: each socket identified by its own 4-tuple</li>
+                    <li>Web servers have different sockets for each connecting client</li>
+                    <ul>
+                        <li>Non-persistent HTTP will have different socket for each request</li>
+                    </ul>
+                </ul>
+                <img src="https://i.ibb.co/gWLmJfP/Screen-Shot-2020-06-22-at-13-21-07.png" alt="Screen-Shot-2020-06-22-at-13-21-07">
+
+                <p class="minor-topic">Connectioness Transport: UDP</p>
+                <ul>
+                    <li>Connectionless:</li>
+                    <ul>
+                        <li>No handshaking between UDP sender, receiver</li>
+                        <li>Each UDP segment handle independently of others</li>
+                    </ul>
+                    <li>UDP use:</li>
+                    <ul>
+                        <li>Streaming multimedia apps (loss tolerant, rate sensitive)</li>
+                        <li>DNS</li>
+                    </ul>
+                    <li>"Best effort" service <br> UDP segments may be:</li>
+                    <ul>
+                        <li>Lost</li>
+                        <li>Delivered out-of-order to app</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">UDP: Segment Header</p>
+                <img src="https://i.ibb.co/cC7xtkF/Screen-Shot-2020-06-22-at-13-44-20.png" alt="Screen-Shot-2020-06-22-at-13-44-20">
+                <p>Length ; in bytes of UDP segment, including header</p>
+
+                <p>Why is there a UDP?</p>
+                <ul>
+                    <li>No connection establishment (which can add delay)</li>
+                    <li>Simple: no connect state at sender, receiver</li>
+                    <li>Small header size</li>
+                    <li>No congestion control: UDP can blast away as fast as desired</li>
+                </ul>
+
+                <p class="minor-topic">Principles of Reliable data Transfer</p>
+                <img src="https://i.ibb.co/dcr4860/Screen-Shot-2020-06-22-at-14-49-30.png" alt="Screen-Shot-2020-06-22-at-14-49-30">
+
+                <p class="minor-topic">RDT: Getting Started</p>
+                <img src="https://i.ibb.co/CwFD9tp/Screen-Shot-2020-06-22-at-14-50-45.png" alt="Screen-Shot-2020-06-22-at-14-50-45">
+
+                <p class="minor0topic">RDT1.0</p>
+                <p>Reliable transfer over a reliable channel</p>
+                <ul>
+                    <li>Underlying channel perfectly reliable</li>
+                    <ul>
+                        <li>No bit errors</li>
+                        <li>No loss of packets</li>
+                    </ul>
+                    <li>Separate FSMs for sender, receiver:</li>
+                    <ul>
+                        <li>Sender sends data into underlying channel</li>
+                        <li>Receiver reads data from underlying channel</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">RDT2.0: Channel with Bit Errors</p>
+                <ul>
+                    <li>Underlying channel may flip bits in packet</li>
+                    <ul>
+                        <li>Checksum to detect bit</li>
+                    </ul>
+                    <li>The question: how to recover from errors?</li>
+                    <ul>
+                        <li>Acknowledgements (ACKs): receiver explicitly tells sender that pkt received OK</li>
+                        <li>Negative Acknowledgements (NAKs) receiver explicitly tells sender that pkt had errors</li>
+                        <li>Sender retransmits pkt on receipt on NAK</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">RDT2.0 has a Fetal Flaw!</p>
+                <p class="error">What happens if ACK/NAK corrupted?</p>
+                <ul>
+                    <li>Sender doesn't know what happened at receiver!</li>
+                    <li>Can't just retransmit: possible duplicate</li>
+                </ul>
+                <p class="error">Handling duplicates:</p>
+                <ul>
+                    <li>Sender retransmits current pkt if ACK/NAK corrupted</li>
+                    <li>Sender adds sequence number to each pkt</li>
+                    <li>Receiver discards (doesn't deliver up) duplicate pkt</li>
+                </ul>
+
+                <p class="error">Stop and wait</p>
+                <ul>
+                    <li>Sender sends one packet, then waits for receiver respond</li>
+                </ul>
+
+                <p class="error">RDT2.1: Discussion</p>
+                <p class="green">Sender:</p>
+                <ul>
+                    <li>Seq # added to pkt</li>
+                    <li>Two seq. #'s (0,1) will suffice.</li>
+                    <li>Must check if received ACK/NAK corrupted</li>
+                    <li>Twice as many states</li>
+                    <ul>
+                        <li>State must "remember" whether "expected" pkt should have seq # of 0 or 1</li>
+                    </ul>
+                </ul>
+                <p class="green">Receiver:</p>
+                <ul>
+                    <li>Must check if received packet is duplicate</li>
+                    <ul>
+                        <li>State indicates whether 0 or 1 is expected pkt seq #</li>
+                    </ul>
+                    <li>Note: receiver can not known if its last ACK/NAK received OK at sender</li>
+                </ul>
+
+                <p class="minor-topic">RDT2.2: a NAK-free Protocol</p>
+                <ul>
+                    <li>Same functionality as rdt2.1, using ACKs only</li>
+                    <li>pkt received OK</li>
+                    <ul>
+                        <li>Receiver must explicitly include seq # of pkt being ACKed</li>
+                    </ul>
+                    <li>Duplicate ACK at sender results in same action as NAK: retransmit current pkt</li>
+                </ul>
+
+                <p class="minor-topic">RDT3.0: Channels with Errors and Loss</p>
+                <p class="error">New assumption:</p>
+                <p>Checksum, seq. #, ACKs, retransmissions will be of help ... but not enough</p>
+
+                <p class="error">Approach:</p>
+                <p>Sender waits "reasonable" amount o time for ACK</p>
+                <ul>
+                    <li>Retransmits if no ACK received in this time</li>
+                    <li>If pkt(or ACK) just delayed (not lost):</li>
+                    <ul>
+                        <li>Retransmission will be duplicate, but seq. #'s already handles this</li>
+                        <li>Receiver must specify seq # of pkt being ACKed</li>
+                    </ul>
+                    <li>Requires countdown timer</li>
+                </ul>
+
+                <p class="minor-topic">RDT3.0 in Action</p>
+                <img src="https://i.ibb.co/dtq9K8Y/Screen-Shot-2020-06-22-at-16-02-24.png" alt="Screen-Shot-2020-06-22-at-16-02-24">
+
+                <img src="https://i.ibb.co/QJHbdby/Screen-Shot-2020-06-22-at-16-03-34.png" alt="Screen-Shot-2020-06-22-at-16-03-34">
+
+                <p class="minor-topic">Performance of RDT3.0</p>
+                <ul>
+                    <li>Rdt3.0 is correct, but performance stinks</li>
+                    <li>e.g.: Gbps link, 15ms prop. delay, 8000 bit packet:</li>
+                    <img src="https://i.ibb.co/QYPr6XW/Screen-Shot-2020-06-22-at-16-06-37.png" alt="Screen-Shot-2020-06-22-at-16-06-37">
+                </ul>
+
+                <p class="minor-topic">Pipelined Protocols: Overview</p>
+                <p class="green">Go-back-N</p>
+                <ul>
+                    <li>Sender can have up to N unpacked packets in pipeline</li>
+                    <li>Receiver only sends cumulative ack</li>
+                    <ul>
+                        <li>doesn't ack packet if there's a gap</li>
+                    </ul>
+                    <li>Sender has timer expires,retransmit all unacked packets</li>
+                </ul>
+
+                <p class="green">Selective Repeat:</p>
+                <ul>
+                    <li>Sender can have up to N unacked packets in pipeline</li>
+                    <li>rcvr sends individual ack for each packet</li>
+                    <li>Sender maintains timer for each unpacked packet</li>
+                    <ul>
+                        <li>When timer expires, retransmit only that unpacked packet</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">Go-Back-N: Sender</p>
+                <img src="https://i.ibb.co/zxqKHWh/Screen-Shot-2020-06-22-at-16-16-09.png" alt="Screen-Shot-2020-06-22-at-16-16-09">
+
+                <img src="https://i.ibb.co/54smxym/Screen-Shot-2020-06-22-at-16-24-26.png" alt="Screen-Shot-2020-06-22-at-16-24-26">
+
+                <p class="minor-topic">Selective Repeat</p>
+                <ul>
+                    <li>Receiver individually acknowledges all  correctly received pkts</li>
+                    <ul>
+                        <li>buffers pkts, as needed, for eventual in-order delivery to upper layer</li>
+                    </ul>
+                    <li>Sender only resends pkts for which ACK not received</li>
+                    <ul>
+                        <li>sender timer for each unACKed pkt</li>
+                    </ul>
+                    <li>Sender window</li>
+                    <ul>
+                        <li>N Consecutive seq #'s</li>
+                        <li>limits seq #s of sent, unACKed pkts</li>
+                        <img src="https://i.ibb.co/ZGRc89L/Screen-Shot-2020-06-22-at-16-31-03.png" alt="Screen-Shot-2020-06-22-at-16-31-03">
+                    </ul>
+                </ul>
+
+                <p>Selective Repeat in Action</p>
+                <img src="https://i.ibb.co/dBfX3CV/Screen-Shot-2020-06-22-at-16-33-04.png" alt="Screen-Shot-2020-06-22-at-16-33-04">
+
+                <p class="minor-topic">Connection-Oriented transport: TCP</p>
+                <p><b>TCP: Overview</b></p>
+                <p>RFCs: 793,1122,1323,2018,2581</p>
+                <ul>
+                    <li>One sender, one receiver</li>
+                    <li>Reliable, in-order byte stream:</li>
+                    <ul>
+                        <li>No "message boundaries"</li>
+                    </ul>
+                    <li>Pipelined:</li>
+                    <ul>
+                        <li>TCP congestion and flow control set window size</li>
+                    </ul>
+                    <li>Full duplex data:</li>
+                    <ul>
+                        <li>Bi-directional data flow in same connection</li>
+                        <li>MSS: Maximum segment size</li>
+                    </ul>
+                    <li>Connection-oriented:</li>
+                    <ul>
+                        <li>Handshaking (exchange of control msgs) inits sender, receiver state before data exchange</li>
+                    </ul>
+                    <li>Flow controlled</li>
+                    <ul>
+                        <li>Sender will not overwhelm receiver</li>
+                    </ul>
+                </ul>
+
+                <p><b>TCP Seq. Numbers, ACKs</b></p>
+                <p>Sequence numbers:</p>
+                <ul>
+                    <li>Byte stream "number" of first byte in segment's data</li>
+                </ul>
+                <p>acknowledgements:</p>
+                <ul>
+                    <li>Seq # of next byte expected from other side</li>
+                    <li>Cumulative ACK</li>
+                </ul>
+
+                <p class="minor-topic">TCP Seq. Numbers, ACKs</p>
+                <img src="https://i.ibb.co/St7qqkd/Screen-Shot-2020-06-22-at-16-46-42.png" alt="Screen-Shot-2020-06-22-at-16-46-42">
+                <p class="purple">Q: how to set TCP timeout value?</p>
+                <ul>
+                    <li>longer than RTT</li>
+                    <ul>
+                        <li>but RTT varies</li>
+                    </ul>
+                    <li>too short: premature timeout, unnecessary retransmissions</li>
+                    <li>Too long: slow reaction to segment loss</li>
+                </ul>
+                <p class="purple">how to estimate RTT?</p>
+                <ul>
+                    <li>SampleRTT: measured time from segment transmission until ACK receipt</li>
+                    <ul>
+                        <li>ignore retransmissions</li>
+                    </ul>
+                    <li>SampleRTT will vary, want estimated RTT "smoother"</li>
+                    <ul>
+                        <li>average several recent measurements, not just current SampleRTT</li>
+                    </ul>
+                </ul>
+
+                <p class="minor-topic">TCP Round Trip, Timeout</p>
+                <p>EstimatedRTT = (1 - &#945;) * EstimatedRTT + &#945; * SampleRTT</p>
+                <p>typical value: a = 0.125</p>
+                <img src="https://i.ibb.co/Z1KtpRR/Screen-Shot-2020-06-22-at-17-13-12.png" alt="Screen-Shot-2020-06-22-at-17-13-12">
+
+                <p class="minor-topic">TCP: Retransmission Scenarios</p>
+                <img src="https://i.ibb.co/DY7v32J/Screen-Shot-2020-06-22-at-17-14-23.png" alt="Screen-Shot-2020-06-22-at-17-14-23">
+
+                <p class="minor-topic">TCP ACK Generation [RFC 1122, RFC 2581]</p>
+                <img src="https://i.ibb.co/DCH4Trg/Screen-Shot-2020-06-22-at-17-19-02.png" alt="Screen-Shot-2020-06-22-at-17-19-02">
+
+                <p>TCP Fast Retransmit</p>
+                <p>If sender receives 3 ACKs for same data ("triple duplicate ACKs"), resend unacked segment with smallest seq #</p>
+                <ul>
+                    <li>Likely that unacked segment lost, so don't wait for timeout</li>
+                </ul>
+
+                <p>TCP Fast Retransmit</p>
+                <img src="https://i.ibb.co/TMSJHSL/Screen-Shot-2020-06-22-at-17-23-35.png" alt="Screen-Shot-2020-06-22-at-17-23-35">
+
+                <p><b>TCP Flow Control</b></p>
+                <ul>
+                    <li>Receiver controls sender, so sender won't overflow receiver's buffer by transmitting too much, too fast</li>
+                </ul>
+
+                <p><b>TCP Flow Control</b></p>
+                <ul>
+                    <li>Receiver "advertises" free buffer space by including rwnd value in TCP header of receiver-to-sender segments </li>
+                    <ul>
+                        <li>RcvBuffer size set via socket options (typical default is 4096 bytes)</li>
+                        <li>Many operating systems autoadjust RcvBuffer</li>
+                    </ul>
+                    <li>Sender limits amount of unpacked ("in-flight") data to receiver's rwnd value</li>
+                    <li>Gurantees receive buffer will not overflow</li>
+                </ul>
+
+                <p><b>Agreeing to Establish a Connection</b></p>
+                <p>2-way handshake:</p>
+
+                <p><b>TCP 3-Way Handshake</b></p>
+                <img src="https://i.ibb.co/djBt6wb/Screen-Shot-2020-06-22-at-17-35-28.png" alt="Screen-Shot-2020-06-22-at-17-35-28">
+
+                <p><b>TCP: Closing a Connection</b></p>
+                <img src="https://i.ibb.co/yBp2bBR/Screen-Shot-2020-06-22-at-18-04-56.png" alt="Screen-Shot-2020-06-22-at-18-04-56">
+
+                <p><b>Principles of Congestion Control</b></p>
+                <p>Congestion:</p>
+                <ul>
+                    <li>Informally: "too many source sending too much data too fast for network to handle"</li>
+                    <li>Different from flow control!</li>
+                    <li>Manifestations:</li>
+                    <li>Lost packets (buffer overflow at routers)</li>
+                    <li>Long delays (queueing in router buffers)</li>
+                </ul>
+
+                <p><b>Congestion: Scenario</b></p>
+                <img src="https://i.ibb.co/gFN8hDc/Screen-Shot-2020-06-22-at-18-10-40.png" alt="Screen-Shot-2020-06-22-at-18-10-40">
+
+                <p>Another "cost" of congestion: when packet dropped, any "upstream transmission capacity used for that packet was wasted!"</p>
+
+                <p><b>TCP Congestion Control</b></p>
+                <p>Additive increase multiplicative Decrease (AIMD)</p>
+                <ul>
+                    <li>Approach: Sender increaes transmission rate (window size), probling for usable bandwidth, until loss occurs</li>
+                    <img src="https://i.ibb.co/vJVvSJj/Screen-Shot-2020-06-22-at-18-15-48.png" alt="Screen-Shot-2020-06-22-at-18-15-48">
+
+                </ul>
             </article>
         </section>
         <section class="main-section" id="Network_Layer">
