@@ -1,7 +1,7 @@
 # FreeCodeCamp
 ### Responsive Web Design Certificate
 
-![FCC web design cert](https://i.ibb.co/VLZDG7Q/Screen-Shot-2020-08-26-at-06-58-54.png)
+![FCC web design cert](https://i.ibb.co/zRDrLnP/Screen-Shot-2020-08-26-at-07-30-53.png)
 [Verify Certificate](https://www.freecodecamp.org/certification/fcca8de9fc8-ae81-430b-a26f-3ca8b9761fd8/responsive-web-design)
 
 - [Tribute Page](https://github.com/toninorsk/FreeCodeCamp/blob/master/1-tribute-page.html)
