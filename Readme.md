@@ -1,5 +1,7 @@
 # Free Code Camp
-## Responsive Web Design
+## Responsive Web Design Certificate
+
+![FCC web design cert](https://i.ibb.co/VLZDG7Q/Screen-Shot-2020-08-26-at-06-58-54.png)
 
 - [Tribute Page](https://github.com/toninorsk/FreeCodeCamp/blob/master/1-tribute-page.html)
 - [Survey Form](https://htmlpreview.github.io/?https://github.com/toninorsk/FreeCodeCamp/blob/master/2-survey-form.html)
